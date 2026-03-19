@@ -11,7 +11,13 @@
    git init
    git add .
    git commit -m '19-03-2026 all data uploaded'
-   git add remote origin github repo links paste here(https://github.com/Brijesh1990/frontend-19-03-2026.git)
+   git  remote add origin github repo links paste here(https://github.com/Brijesh1990/frontend-19-03-2026.git)
    git push -u origin master 
    
   ````
+
+**how to clone github**
+
+ ```
+  git clone https://github.com/Brijesh1990/frontend-19-03-2026
+ ```
