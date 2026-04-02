@@ -1,0 +1,291 @@
+/* Custom Styles overriding or extending Tailwind */
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-track {
+    background: transparent; 
+}
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1; 
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8; 
+}
+.dark ::-webkit-scrollbar-thumb {
+    background: #334155; 
+}
+.dark ::-webkit-scrollbar-thumb:hover {
+    background: #475569; 
+}
+
+/* Base animations */
+.animate-blob {
+    animation: blob 8s infinite;
+}
+.animation-delay-2000 {
+    animation-delay: 2s;
+}
+
+@keyframes blob {
+    0% { transform: translate(0px, 0px) scale(1); }
+    33% { transform: translate(30px, -50px) scale(1.1); }
+    66% { transform: translate(-20px, 20px) scale(0.9); }
+    100% { transform: translate(0px, 0px) scale(1); }
+}
+
+/* ── Hero Image Animations ── */
+
+/* Gentle float up/down */
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50%       { transform: translateY(-14px); }
+}
+.animate-float {
+    animation: float 4s ease-in-out infinite;
+}
+
+/* Float with a slight delay */
+@keyframes float-delay {
+    0%, 100% { transform: translateY(0px); }
+    50%       { transform: translateY(-10px); }
+}
+.animate-float-delay {
+    animation: float-delay 4s ease-in-out infinite;
+    animation-delay: 1.2s;
+}
+
+/* Slow spin for outer ring */
+@keyframes spin-slow {
+    from { transform: rotate(0deg) scale(1.05); }
+    to   { transform: rotate(360deg) scale(1.05); }
+}
+.animate-spin-slow {
+    animation: spin-slow 8s linear infinite;
+}
+
+/* Orbit clockwise (HTML5 dot) */
+@keyframes orbit {
+    0%   { transform: translateY(0px) rotate(0deg); }
+    25%  { transform: translateY(-8px) rotate(4deg); }
+    75%  { transform: translateY(8px) rotate(-4deg); }
+    100% { transform: translateY(0px) rotate(0deg); }
+}
+.animate-orbit {
+    animation: orbit 3.5s ease-in-out infinite;
+}
+
+/* Orbit counter-clockwise (CSS3 dot) */
+@keyframes orbit-reverse {
+    0%   { transform: translateY(0px) rotate(0deg); }
+    25%  { transform: translateY(8px) rotate(-4deg); }
+    75%  { transform: translateY(-8px) rotate(4deg); }
+    100% { transform: translateY(0px) rotate(0deg); }
+}
+.animate-orbit-reverse {
+    animation: orbit-reverse 3s ease-in-out infinite;
+}
+
+
+/* Scroll reveal effects */
+.reveal, .reveal-left, .reveal-right {
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+}
+
+.reveal {
+    transform: translateY(40px);
+}
+
+.reveal-left {
+    transform: translateX(-50px);
+}
+
+.reveal-right {
+    transform: translateX(50px);
+}
+
+.reveal.active, .reveal-left.active, .reveal-right.active {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+.reveal-on-load.active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 1s ease-out;
+}
+
+/* Scroll To Top Button */
+#scrollToTopBtn {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+}
+#scrollToTopBtn.show {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+/* Modal Animation */
+#projectModal.show {
+    display: flex;
+}
+#projectModal.show .modal-overlay {
+    opacity: 1;
+}
+#projectModal.show .modal-content {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+}
+
+/* Navbar utilities for sticky effect */
+.nav-scrolled {
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.dark .nav-scrolled {
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+/* ========================================
+   FLOATING WHATSAPP + CALL BUTTONS
+   ======================================== */
+
+/* Wrapper holding both floating buttons */
+#floating-contact-btns {
+    position: fixed;
+    bottom: 28px;
+    left: 22px;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    align-items: flex-start;
+}
+
+/* Shared base style for both buttons */
+.float-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 18px 0 0;
+    height: 52px;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    box-shadow: 0 6px 24px rgba(0,0,0,0.18);
+    cursor: pointer;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: transform 0.28s cubic-bezier(0.34,1.56,0.64,1),
+                box-shadow 0.28s ease,
+                max-width 0.45s cubic-bezier(0.4,0,0.2,1),
+                padding 0.4s ease;
+    max-width: 52px;       /* collapsed = icon only */
+    border: none;
+}
+
+.float-btn:hover {
+    transform: translateY(-4px) scale(1.04);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.22);
+    max-width: 220px;      /* expand on hover to reveal label */
+    padding: 0 20px 0 0;
+}
+
+/* Icon circle inside button */
+.float-btn-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 52px;
+    height: 52px;
+    border-radius: 999px;
+    font-size: 22px;
+    flex-shrink: 0;
+}
+
+/* WhatsApp */
+.float-btn-wa {
+    background: linear-gradient(135deg, #25d366, #128c7e);
+}
+.float-btn-wa .float-btn-icon {
+    background: rgba(0,0,0,0.12);
+}
+
+/* Call */
+.float-btn-call {
+    background: linear-gradient(135deg, #3b82f6, #6366f1);
+}
+.float-btn-call .float-btn-icon {
+    background: rgba(0,0,0,0.12);
+}
+
+/* Pulse ring animation */
+@keyframes float-pulse {
+    0%   { box-shadow: 0 0 0 0px rgba(37,211,102,0.55); }
+    70%  { box-shadow: 0 0 0 14px rgba(37,211,102,0); }
+    100% { box-shadow: 0 0 0 0px rgba(37,211,102,0); }
+}
+@keyframes call-pulse {
+    0%   { box-shadow: 0 0 0 0px rgba(59,130,246,0.55); }
+    70%  { box-shadow: 0 0 0 14px rgba(59,130,246,0); }
+    100% { box-shadow: 0 0 0 0px rgba(59,130,246,0); }
+}
+
+.float-btn-wa  { animation: float-pulse 2.2s ease-in-out infinite; }
+.float-btn-call{ animation: call-pulse  2.6s ease-in-out infinite; }
+
+/* Stop pulse on hover so it feels stable */
+.float-btn:hover { animation: none; }
+
+/* ========================================
+   GOOGLE TRANSLATE – FOOTER STYLING
+   ======================================== */
+#google_translate_element {
+    display: inline-block;
+}
+/* Hide the default Google bar / branding gadget */
+.goog-te-banner-frame,
+.goog-te-balloon-frame {
+    display: none !important;
+}
+body { top: 0 !important; }          /* prevent Google's top-offset trick   */
+
+/* Style the select dropdown itself */
+.goog-te-gadget-simple {
+    background: transparent !important;
+    border: 1px solid rgba(148,163,184,0.4) !important;
+    border-radius: 10px !important;
+    padding: 6px 10px !important;
+    font-size: 13px !important;
+    color: inherit !important;
+    cursor: pointer !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    transition: border-color 0.2s, background 0.2s !important;
+}
+.goog-te-gadget-simple:hover {
+    background: rgba(59,130,246,0.08) !important;
+    border-color: #3b82f6 !important;
+}
+.goog-te-gadget-simple .goog-te-menu-value span {
+    color: #64748b !important;
+    font-weight: 600 !important;
+}
+.dark .goog-te-gadget-simple .goog-te-menu-value span {
+    color: #94a3b8 !important;
+}
+/* Hide "Powered by Google" text to keep footer clean */
+.goog-te-gadget-simple img,
+.goog-te-gadget span:last-child {
+    display: none !important;
+}
+

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <style>
+        form{
+            background-color: white;
+            width: 90%;
+            height: auto;
+            margin: auto;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        fieldset{
+            width: 40%;
+            height: auto;
+            margin: auto;
+            /*border: 10px outset black;*/
+            border: double 10px;
+            /*border-radius: 20px; */
+            border-radius: 45px 0px 45px 0px;
+            /*border-image: url('https://png.pngtree.com/png-clipart/20220628/ourmid/pngtree-black-minimalist-border-png-image_5329495.png')  25 round; */
+             /*border-image: url('https://i.pinimg.com/736x/6c/ce/63/6cce63ebadfb08764cd1c1555c3a8221.jpg')  65 round; */
+
+             /*border-image: url('https://png.pngtree.com/png-clipart/20220628/ourmid/pngtree-black-minimalist-border-png-image_5329495.png')  25 repeat; */
+
+        }
+         legend{
+            font-size: 40px;
+            text-align: center;
+            font-weight: bold;
+        }
+        </style>
+</head>
+<body>
+
+    <div>
+        <fieldset>
+            <legend>Registration Form</legend>
+        <form action="welcome.html" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required   ><br><br>
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required  ><br><br>
+
+            <label for="gender">Gender:</label>
+            Male :<input type="radio" id="gender" name="gender" value="male" required>
+            Female :<input type="radio" id="gender" name="gender" value="female" required>
+            Other :<input type="radio" id="gender" name="gender" value="other" required><br><br>
+
+            <label for="hobbies">Hobbies:</label>
+            Play :<input type="checkbox" id="hobbies" name="hobbies" value="playing">
+            Reading :<input type="checkbox" id="hobbies" name="hobbies" value="reading">
+            Surfing :<input type="checkbox" id="hobbies" name="hobbies" value="surfing"><br><br>
+
+             <!--select country  -->
+            <label for="country">Country:</label>
+            <select id="country" name="country">
+                <option value="india">India</option>
+                <option value="usa">USA</option>
+                <option value="uk">UK</option>
+                <option value="australia">Australia</option>
+            </select><br><br>
+
+               <!--select state  -->
+            <label for="state">State:</label>
+            <select id="state" name="state">
+                <option value="maharashtra">Maharashtra</option>
+                <option value="california">California</option>
+                <option value="london">London</option>
+                <option value="sydney">Sydney</option>
+            </select><br><br>
+             
+
+               <!--select city  -->
+            <label for="city">City:</label>
+            <select id="city" name="city">
+                <option value="mumbai">Mumbai</option>
+                <option value="los angeles">Los Angeles</option>
+                <option value="london">London</option>
+                <option value="sydney">Sydney</option>
+            </select><br><br>
+        
+
+            <input type="submit" value="Submit">
+        </form>
+</fieldset>
+    </div>
+    
+</body>
+</html>
