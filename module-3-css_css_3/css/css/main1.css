@@ -1,0 +1,63 @@
+* 
+{
+font-family: fantasy;    
+}
+body 
+{
+margin: 0;
+padding: 0;    
+background-color: aliceblue;        
+overflow-x: hidden;
+}
+.header 
+{
+width: 100%;
+height: auto;
+margin: auto;
+padding: 20px;
+border: solid 2px black;
+text-align: center;
+}
+
+.content
+{
+width: 100%;
+height: auto;
+margin: auto;
+}
+.navbar
+{
+width: 19%;
+height: 500px;
+border: solid 2px black;  
+float: left;  
+text-align: center;
+}
+.content-box
+{
+width: 75%;
+height: 340px;
+padding: 35px;
+border: solid 2px black;    
+float: left;
+text-align: center
+}
+.content-box img 
+{
+float: left;
+padding: 10px;
+text-align: justify;    
+}
+.content-box p 
+{
+text-align: justify;    
+}
+.footer
+{
+width:80%;
+height: 86px;
+border: solid 2px black;
+color: black;
+float: left;
+text-align: center
+} 
