@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<title>Page Title</title>
+<link rel='stylesheet' href='main.css'>
+<style>
+*
+{
+box-sizing: border-box;
+}
+body 
+{
+font-family: Arial, sans-serif;
+margin: 0;
+padding: 0;
+}
+.container 
+{
+padding: 15px 20px;
+}
+/* pseudo-element selector */
+.container h1::before
+{
+content: "Hello, ";
+color: blue;
+}
+.container1 p::after
+{
+content: " Thank you for visiting.";
+color: green;
+}
+</style>
+</head>
+<body>
+<!-- pseudo-element selector    -->
+<div class="container">
+<h1>Welcome to My Website</h1>
+<p>This is a sample paragraph to demonstrate pseudo-element selectors in CSS.</p>
+</div>
+
+<div class="container1">
+<h1>Welcome to My Website</h1>
+<p>This is a sample paragraph to demonstrate pseudo-element selectors in CSS.</p>
+</div>
+
+</body>
+</html>
