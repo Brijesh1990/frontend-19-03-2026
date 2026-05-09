@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Page Title</title>
+    <link rel='stylesheet' href='main.css'>
+    <style>
+        .filter-shadow {
+            width: 300px;
+            height: 300px;
+            margin: auto;
+            margin-top: 5%;
+            /*filter: drop-shadow(10px 10px 5px red) */;
+            filter: drop-shadow(10px 10px 5px red) drop-shadow(-10px -10px 5px blue);
+        }
+
+        .app
+        {
+             width: 300px;
+            height: 300px;
+            margin: auto;
+            margin-top: 5%;
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+            font-weight: lighter;
+            font-style: italic;
+            font-display:block;
+             box-shadow: 10px 10px 5px red, -10px -10px 5px blue;
+             overflow: auto;
+            }
+    </style>
+</head>
+<body>
+    
+    <div class="filter-shadow">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnI9mruvurFuwO2Bos1__DNiYHmzd6uQoVZA&s" />
+    </div>
+
+    <div class="app">
+        <h1>Filter Shadow</h1>
+        <p>The filter-shadow property is used to apply a shadow effect to an element. It allows you to create a drop shadow that can be customized with various parameters such as color, offset, and blur radius.</p>
+        <p>In the example above, we have applied two drop shadows to the image. The first shadow is red with an offset of 10px in both the x and y directions and a blur radius of 5px. The second shadow is blue with an offset of -10px in both the x and y directions and a blur radius of 5px. This creates a layered shadow effect around the image.</p>
+</body>
+</html>
