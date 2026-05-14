@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed": "#e4e2dd",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "surface": "#fcf9f8",
+                        "on-primary": "#ffffff",
+                        "secondary": "#5f5e5e",
+                        "secondary-container": "#e4e2e1",
+                        "on-secondary-container": "#656464",
+                        "surface-container-low": "#f6f3f2",
+                        "on-surface": "#1c1b1b",
+                        "inverse-on-surface": "#f3f0ef",
+                        "on-primary-fixed": "#241a00",
+                        "on-secondary-fixed": "#1b1c1c",
+                        "error": "#ba1a1a",
+                        "surface-container-highest": "#e5e2e1",
+                        "on-tertiary-container": "#454542",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-fixed": "#ffe088",
+                        "error-container": "#ffdad6",
+                        "primary": "#735c00",
+                        "tertiary-fixed-dim": "#c8c6c2",
+                        "surface-tint": "#735c00",
+                        "secondary-fixed": "#e4e2e1",
+                        "tertiary-container": "#b4b3af",
+                        "inverse-primary": "#e9c349",
+                        "on-primary-fixed-variant": "#574500",
+                        "primary-fixed-dim": "#e9c349",
+                        "on-primary-container": "#554300",
+                        "surface-bright": "#fcf9f8",
+                        "on-secondary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "background": "#fcf9f8",
+                        "on-secondary-fixed-variant": "#474747",
+                        "surface-container-high": "#eae7e7",
+                        "primary-container": "#d4af37",
+                        "on-surface-variant": "#4d4635",
+                        "outline": "#7f7663",
+                        "surface-container": "#f0eded",
+                        "on-error-container": "#93000a",
+                        "on-background": "#1c1b1b",
+                        "surface-dim": "#dcd9d9",
+                        "inverse-surface": "#313030",
+                        "on-tertiary": "#ffffff",
+                        "outline-variant": "#d0c5af",
+                        "on-tertiary-fixed": "#1b1c19",
+                        "surface-variant": "#e5e2e1",
+                        "tertiary": "#5e5e5b",
+                        "on-tertiary-fixed-variant": "#474744"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "margin-mobile": "20px",
+                        "margin-desktop": "64px",
+                        "gutter": "32px",
+                        "section-gap": "128px",
+                        "container-max-width": "1200px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "label-md": ["Plus Jakarta Sans"],
+                        "body-md": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Playfair Display"],
+                        "headline-lg-mobile": ["Playfair Display"],
+                        "display-lg-mobile": ["Playfair Display"],
+                        "headline-md": ["Playfair Display"],
+                        "label-sm": ["Plus Jakarta Sans"],
+                        "display-lg": ["Playfair Display"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-lg": ["40px", {"lineHeight": "48px", "fontWeight": "600"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "display-lg-mobile": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.03em", "fontWeight": "500"}],
+                        "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md antialiased">
+<!-- TopNavBar -->
+<header class="bg-surface/80 backdrop-blur-md dark:bg-surface-dim/80 shadow-sm dark:shadow-none docked full-width top-0 sticky z-50">
+<nav class="flex justify-between items-center w-full px-margin-desktop py-4 max-w-container-max-width mx-auto">
+<div class="font-display-lg text-headline-md font-bold text-on-surface dark:text-inverse-on-surface"><a href="index.html">Aksh Dining Hall</a></div>
+<div class="hidden md:flex gap-gutter items-center">
+<a class="font-label-md text-label-md uppercase tracking-wider text-primary border-b-2 border-primary pb-1" href="menu.html">Menu</a>
+<a class="font-label-md text-label-md uppercase tracking-wider text-secondary hover:text-primary transition-colors duration-300" href="about.html">About</a>
+<a class="font-label-md text-label-md uppercase tracking-wider text-secondary hover:text-primary transition-colors duration-300" href="reservation.html">Reservations</a>
+<a class="font-label-md text-label-md uppercase tracking-wider text-secondary hover:text-primary transition-colors duration-300" href="contact.html">Contact</a>
+</div>
+<a href="account.html">
+<button class="bg-primary text-on-primary px-6 py-2 font-label-md text-label-md uppercase tracking-wider hover:opacity-80 transition-opacity active:scale-95">
+Sign In
+</button>
+</a>
+</nav>
+</header>
+<main class="max-w-container-max-width mx-auto px-margin-mobile md:px-margin-desktop py-12 md:py-24">
+<!-- Hero Section -->
+<header class="text-center mb-16 md:mb-24">
+<h1 class="font-display-lg text-headline-lg-mobile md:text-display-lg mb-6">A Table Awaits You</h1>
+<p class="font-body-lg text-body-lg text-secondary max-w-2xl mx-auto">Join us for an exceptional culinary journey. Secure your place at Aksh Dining Hall where tradition meets contemporary elegance.</p>
+</header>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Reservation Form Column -->
+<div class="lg:col-span-7">
+<section class="bg-surface-container-low p-8 md:p-12 rounded-lg shadow-sm">
+<h2 class="font-headline-md text-headline-md mb-8">Reservation Details</h2>
+<form class="space-y-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<!-- Party Size -->
+<div class="space-y-2">
+<label class="font-label-md text-label-md uppercase text-on-surface-variant block">Party Size</label>
+<div class="relative">
+<select class="w-full bg-transparent border-b border-outline py-3 px-1 focus:ring-0 focus:border-primary outline-none appearance-none font-body-md">
+<option>2 Guests</option>
+<option>3 Guests</option>
+<option>4 Guests</option>
+<option>5 Guests</option>
+<option>6 Guests</option>
+<option>7+ Guests (Call Us)</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-1/2 -translate-y-1/2 pointer-events-none text-secondary" data-icon="expand_more">expand_more</span>
+</div>
+</div>
+<!-- Date Picker Mock -->
+<div class="space-y-2">
+<label class="font-label-md text-label-md uppercase text-on-surface-variant block">Date</label>
+<div class="relative">
+<input class="w-full bg-transparent border-b border-outline py-3 px-1 focus:ring-0 focus:border-primary outline-none font-body-md" type="date" value="2024-11-20"/>
+</div>
+</div>
+</div>
+<!-- Time Slots -->
+<div class="space-y-4">
+<label class="font-label-md text-label-md uppercase text-on-surface-variant block">Select Time</label>
+<div class="grid grid-cols-3 md:grid-cols-4 gap-3">
+<button class="py-3 px-2 border border-outline text-center font-label-md text-label-md hover:border-primary transition-colors" type="button">18:00</button>
+<button class="py-3 px-2 border border-outline text-center font-label-md text-label-md hover:border-primary transition-colors" type="button">18:30</button>
+<button class="py-3 px-2 border-2 border-primary bg-primary/5 text-primary text-center font-label-md text-label-md" type="button">19:00</button>
+<button class="py-3 px-2 border border-outline text-center font-label-md text-label-md hover:border-primary transition-colors" type="button">19:30</button>
+<button class="py-3 px-2 border border-outline text-center font-label-md text-label-md hover:border-primary transition-colors" type="button">20:00</button>
+<button class="py-3 px-2 border border-outline text-center font-label-md text-label-md hover:border-primary transition-colors" type="button">20:30</button>
+<button class="py-3 px-2 border border-outline text-center font-label-md text-label-md hover:border-primary transition-colors" type="button">21:00</button>
+<button class="py-3 px-2 border border-outline text-center font-label-md text-label-md hover:border-primary transition-colors" type="button">21:30</button>
+</div>
+</div>
+<!-- Special Requests -->
+<div class="space-y-2">
+<label class="font-label-md text-label-md uppercase text-on-surface-variant block">Special Requests</label>
+<textarea class="w-full bg-transparent border border-outline rounded-lg p-4 focus:ring-1 focus:ring-primary focus:border-primary outline-none font-body-md resize-none" placeholder="Dietary restrictions, allergies, or special occasions..." rows="3"></textarea>
+</div>
+<!-- CTA -->
+<button class="w-full bg-primary text-on-primary py-4 font-label-md text-label-md uppercase tracking-widest hover:opacity-90 transition-opacity active:scale-[0.98] transition-transform" type="submit">
+                            Confirm Reservation
+                        </button>
+</form>
+</section>
+</div>
+<!-- Sidebar Info Column -->
+<div class="lg:col-span-5 space-y-gutter">
+<!-- Atmosphere Image -->
+<div class="aspect-square relative overflow-hidden rounded-lg shadow-lg">
+<img alt="Aksh Dining Room" class="object-cover w-full h-full" data-alt="A luxurious high-end dining hall interior with warm amber lighting reflecting off polished wooden tables and crystal glassware. The atmosphere is sophisticated and intimate, with plush velvet seating and minimalist architectural details in cream and gold. Soft shadows create a sense of tactile luxury and a serene, upscale dining experience." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAey7rjIH8E78uGcPD7vBYpx2NPTeEz_aXV43RYnPjRgfhDY842uYi1kvtDdqMa6-Ua38R2OZl1en9FlCDKYn5X7SLqwGLV1WeaOOH_1RIv1Sk48TI08Jdh1V-NuQJP7rNFaho0Ebp1-cC6glppbMoynYPUCts2A1evQ0_le0EPeZMJyryV3fIVU9CxeG9W1EwyFw5pOyrdqVB4WLiTmL84djh130Mjboakg8QKMU8Eic0RKfoSnlkNa51I8K_Bwa5kOoEXtUSKrnTd"/>
+</div>
+<!-- Cancellation Policy -->
+<section class="bg-surface-container-lowest p-8 border-l-4 border-primary shadow-sm">
+<h3 class="font-label-md text-label-md uppercase text-primary mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px]" data-icon="info">info</span>
+                        Cancellation Policy
+                    </h3>
+<p class="font-body-md text-secondary mb-4">We understand plans change. Reservations can be cancelled or modified up to 24 hours prior to your booking time at no charge.</p>
+<p class="font-body-md text-secondary">Late cancellations or no-shows may incur a fee of $25 per person to support our culinary team's preparations.</p>
+</section>
+<!-- Location Details -->
+<section class="space-y-4">
+<h3 class="font-headline-md text-headline-md">Location</h3>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary" data-icon="location_on">location_on</span>
+<div>
+<p class="font-body-md font-bold">128 Heritage Way</p>
+<p class="font-body-md text-secondary">New York, NY 10012</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary" data-icon="call">call</span>
+<p class="font-body-md">+1 (212) 555-0198</p>
+</div>
+<div class="w-full h-48 bg-surface-container-high rounded-lg overflow-hidden grayscale">
+<div class="w-full h-full flex items-center justify-center bg-secondary-container">
+<!-- In a real app, a map would render here -->
+<span class="material-symbols-outlined text-4xl text-outline" data-icon="map">map</span>
+<span class="sr-only" data-location="New York City">New York City Map</span>
+</div>
+</div>
+</section>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-highest dark:bg-inverse-surface mt-section-gap">
+<div class="flex flex-col md:flex-row justify-between items-start gap-gutter w-full px-margin-desktop py-12 max-w-container-max-width mx-auto">
+<div class="space-y-4">
+<div class="font-display-lg text-headline-md text-primary dark:text-primary-fixed-dim">Aksh Dining Hall</div>
+<p class="font-body-md text-secondary dark:text-secondary-fixed-dim max-w-xs">Curating unforgettable dining experiences since 2012.</p>
+</div>
+<div class="grid grid-cols-2 gap-12">
+<div class="space-y-3 flex flex-col">
+<span class="font-label-md text-label-md uppercase tracking-wider text-on-surface font-bold">Explore</span>
+<a class="font-body-md text-secondary dark:text-secondary-fixed-dim hover:text-primary transition-colors" href="#">Menu</a>
+<a class="font-body-md text-secondary dark:text-secondary-fixed-dim hover:text-primary transition-colors" href="#">Private Events</a>
+<a class="font-body-md text-secondary dark:text-secondary-fixed-dim hover:text-primary transition-colors" href="#">Careers</a>
+</div>
+<div class="space-y-3 flex flex-col">
+<span class="font-label-md text-label-md uppercase tracking-wider text-on-surface font-bold">Legal</span>
+<a class="font-body-md text-secondary dark:text-secondary-fixed-dim hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="font-body-md text-secondary dark:text-secondary-fixed-dim hover:text-primary transition-colors" href="#">Terms of Service</a>
+<a class="font-body-md text-secondary dark:text-secondary-fixed-dim hover:text-primary transition-colors" href="#">Accessibility</a>
+</div>
+</div>
+</div>
+<div class="w-full px-margin-desktop py-8 border-t border-outline-variant/30 max-w-container-max-width mx-auto text-center md:text-left">
+<span class="font-body-md text-secondary dark:text-secondary-fixed-dim">© 2024 Aksh Dining Hall. All rights reserved.</span>
+</div>
+</footer>
+</body></html>

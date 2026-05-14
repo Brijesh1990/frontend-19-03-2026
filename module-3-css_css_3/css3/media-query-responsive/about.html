@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Playfair+Display:wght@600;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed": "#e4e2dd",
+                    "secondary-fixed-dim": "#c8c6c5",
+                    "surface": "#fcf9f8",
+                    "on-primary": "#ffffff",
+                    "secondary": "#5f5e5e",
+                    "secondary-container": "#e4e2e1",
+                    "on-secondary-container": "#656464",
+                    "surface-container-low": "#f6f3f2",
+                    "on-surface": "#1c1b1b",
+                    "inverse-on-surface": "#f3f0ef",
+                    "on-primary-fixed": "#241a00",
+                    "on-secondary-fixed": "#1b1c1c",
+                    "error": "#ba1a1a",
+                    "surface-container-highest": "#e5e2e1",
+                    "on-tertiary-container": "#454542",
+                    "surface-container-lowest": "#ffffff",
+                    "primary-fixed": "#ffe088",
+                    "error-container": "#ffdad6",
+                    "primary": "#735c00",
+                    "tertiary-fixed-dim": "#c8c6c2",
+                    "surface-tint": "#735c00",
+                    "secondary-fixed": "#e4e2e1",
+                    "tertiary-container": "#b4b3af",
+                    "inverse-primary": "#e9c349",
+                    "on-primary-fixed-variant": "#574500",
+                    "primary-fixed-dim": "#e9c349",
+                    "on-primary-container": "#554300",
+                    "surface-bright": "#fcf9f8",
+                    "on-secondary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "background": "#fcf9f8",
+                    "on-secondary-fixed-variant": "#474747",
+                    "surface-container-high": "#eae7e7",
+                    "primary-container": "#d4af37",
+                    "on-surface-variant": "#4d4635",
+                    "outline": "#7f7663",
+                    "surface-container": "#f0eded",
+                    "on-error-container": "#93000a",
+                    "on-background": "#1c1b1b",
+                    "surface-dim": "#dcd9d9",
+                    "inverse-surface": "#313030",
+                    "on-tertiary": "#ffffff",
+                    "outline-variant": "#d0c5af",
+                    "on-tertiary-fixed": "#1b1c19",
+                    "surface-variant": "#e5e2e1",
+                    "tertiary": "#5e5e5b",
+                    "on-tertiary-fixed-variant": "#474744"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "unit": "8px",
+                    "margin-mobile": "20px",
+                    "margin-desktop": "64px",
+                    "gutter": "32px",
+                    "section-gap": "128px",
+                    "container-max-width": "1200px"
+            },
+            "fontFamily": {
+                    "body-lg": ["Plus Jakarta Sans"],
+                    "label-md": ["Plus Jakarta Sans"],
+                    "body-md": ["Plus Jakarta Sans"],
+                    "headline-lg": ["Playfair Display"],
+                    "headline-lg-mobile": ["Playfair Display"],
+                    "display-lg-mobile": ["Playfair Display"],
+                    "headline-md": ["Playfair Display"],
+                    "label-sm": ["Plus Jakarta Sans"],
+                    "display-lg": ["Playfair Display"]
+            },
+            "fontSize": {
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-lg": ["40px", {"lineHeight": "48px", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "display-lg-mobile": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.03em", "fontWeight": "500"}],
+                    "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .canvas-bg { background-color: #fcf9f8; }
+        .text-shadow-sm { text-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+    </style>
+</head>
+<body class="canvas-bg text-on-background selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+
+<header class="bg-surface/80 backdrop-blur-md dark:bg-surface-dim/80 shadow-sm dark:shadow-none docked full-width top-0 sticky z-50">
+<nav class="flex justify-between items-center w-full px-margin-desktop py-4 max-w-container-max-width mx-auto">
+<div class="font-display-lg text-headline-md font-bold text-on-surface dark:text-inverse-on-surface"><a href="index.html">Aksh Dining Hall</a></div>
+<div class="hidden md:flex gap-gutter items-center">
+<a class="font-label-md text-label-md uppercase tracking-wider text-primary border-b-2 border-primary pb-1" href="menu.html">Menu</a>
+<a class="font-label-md text-label-md uppercase tracking-wider text-secondary hover:text-primary transition-colors duration-300" href="about.html">About</a>
+<a class="font-label-md text-label-md uppercase tracking-wider text-secondary hover:text-primary transition-colors duration-300" href="reservation.html">Reservations</a>
+<a class="font-label-md text-label-md uppercase tracking-wider text-secondary hover:text-primary transition-colors duration-300" href="contact.html">Contact</a>
+</div>
+<a href="account.html">
+<button class="bg-primary text-on-primary px-6 py-2 font-label-md text-label-md uppercase tracking-wider hover:opacity-80 transition-opacity active:scale-95">
+Sign In
+</button>
+</a>
+</nav>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative h-[819px] flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="A wide-angle professional photograph of a luxury dining room at dusk. Soft warm ambient lighting illuminates elegant table settings with charcoal linens and gold accents. The atmosphere is serene and sophisticated, with high ceilings and minimalist architectural details that evoke a sense of quiet luxury and modern minimalism." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAgIpgvtMHXd5tPoHxaD-q_vVplJuMATTG9iT9unq9hTzYc7FICoLLA34gjL48_sGvIOdyzQ0-csWJlXzKqBYMCPdoaTt_6IZDmX3oWJ6dGZIpCgpBxuRKpPTlBA-pWTSgGY8NPYWx1gY62EENts6YwqFixLp2b5T2c-Cs_uB7m4AHmhPw3JpR2NldztXodbdV1yBy39eb1VtTkhrN3iSg3vQYDbl4rUYKf0cYg-xDZC5FflBYjkvrFHXq1l137TFWcA-MYdxtWTAx"/>
+<div class="absolute inset-0 bg-black/40"></div>
+</div>
+<div class="relative z-10 text-center text-white px-margin-mobile">
+<h1 class="font-display-lg text-display-lg md:text-display-lg text-display-lg-mobile mb-4 text-shadow-sm">A Legacy of Taste</h1>
+<p class="font-body-lg text-body-lg max-w-2xl mx-auto opacity-90">Crafting unforgettable culinary journeys through tradition, precision, and the finest local harvests.</p>
+</div>
+</section>
+<!-- Our Story Section -->
+<section class="py-section-gap max-w-container-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-5 space-y-6">
+<span class="font-label-md text-label-md uppercase tracking-widest text-primary">Est. 1994</span>
+<h2 class="font-headline-lg text-headline-lg md:text-headline-lg text-headline-lg-mobile text-on-surface">Our Story</h2>
+<p class="font-body-lg text-body-lg text-secondary">Born from a passion for ancestral recipes and modern culinary techniques, Aksh Dining Hall began as a small family gathering space. Over three decades, it has evolved into a sanctuary for those who appreciate the art of slow dining and authentic flavors.</p>
+<p class="font-body-md text-body-md text-secondary">Every dish we serve tells a story of heritage—of seasons changing, of farmers tending to the earth, and of chefs who treat every ingredient with the reverence it deserves.</p>
+</div>
+<div class="md:col-span-6 md:col-start-8">
+<div class="aspect-[4/5] bg-surface-container-high rounded-xl overflow-hidden shadow-sm">
+<img class="w-full h-full object-cover" data-alt="An intimate black and white portrait of an elderly chef with weathered hands carefully arranging fresh herbs on a pristine white ceramic plate. The lighting is dramatic and warm, highlighting the textures of the food and the focused expression of the chef, emphasizing a theme of tradition and culinary mastery in a high-end minimalist kitchen." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAR-I3QJD3dx1DEANTZTgFqv8GBNqyASxCAiwNODaQjhwe9_owZstLFesbPtYUd32yqwaP8-MjO8Wsle3P-yA2cgApSGeUCxekk7Wa5QuurUlkg7GReQA7mXW79cWa_p-mV9FW9TLX0R7UCj-uYbWGXTq_gr_DBZ13pt33YEVo5pD4v6bBDsolhGvSx6xiEW5eT4WdgSUOeByyyuX0jFjlqZzn2E6fNxVwbZKorRcnlukZdqbYsP-KnjI3uBy20nX0T3pDePNUg6Mjq"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Our Philosophy (Bento Grid Style) -->
+<section class="py-section-gap bg-surface-container-low">
+<div class="max-w-container-max-width mx-auto px-margin-mobile md:px-margin-desktop text-center mb-16">
+<span class="font-label-md text-label-md uppercase tracking-widest text-primary">Core Values</span>
+<h2 class="font-headline-lg text-headline-lg md:text-headline-lg text-headline-lg-mobile mt-4">Our Philosophy</h2>
+</div>
+<div class="max-w-container-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Card 1 -->
+<div class="md:col-span-2 bg-surface p-12 flex flex-col justify-center space-y-6 shadow-sm border-b-4 border-primary">
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="eco">eco</span>
+<h3 class="font-headline-md text-headline-md">Farm-to-Table Excellence</h3>
+<p class="font-body-md text-body-md text-secondary">We partner exclusively with local regenerative farms within a 50-mile radius. This commitment ensures that every vegetable, grain, and protein on your plate is harvested at its nutritional and flavorful peak, honoring the land that sustains us.</p>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-highest relative group overflow-hidden shadow-sm">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A lush close-up of vibrant, organic heritage vegetables arranged artistically on a rustic wooden table. The morning sunlight filters through a nearby window, creating a warm, golden glow. The image emphasizes the raw, natural beauty of farm-fresh ingredients, perfectly aligning with a luxury farm-to-table brand aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHa6njBxrkTGnjJRFZTASUnwrZCpK7N45fcKw7GG2QEZw86xmAornfWzCvcQ8WEoWbu5SXXc9SOP4jpAK0nLEwc0Mf35dJqDYdkqy6k_el9yUFvPuEuluYChp_rSq66G0zhU9aHI4FC62EoaTTKpbUDTCTYCiIORhsmDADiZpaSPYtmvMLRe7l_b79NSpyjg7L4rFqFYEozwg1VYseC2RqKqtK2mCNSFoQ6dZLBT57zjtSPoYYoIIH_2ZeVGU-RZSq8EcYIz0Hn2PB"/>
+<div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-highest relative group overflow-hidden shadow-sm">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A high-contrast photo of a professional kitchen environment where a chef is carefully tempering spices in a copper pan. Steam rises in a soft mist, captured against a dark background. The scene feels energetic yet controlled, highlighting the precision and sensory experience of traditional cooking techniques in a modern luxury dining hall." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2z-pGvZR8WYgFfbGIrYxp1tzkD9xmvtSpK05x_l51ggD9sPMVyURqUSFScP2hrrZcBFUlEhiGssRVp1vx-5r-JIqkZ94MisF3uy2Wr__0db2xJNwtGweWZfKiveEEltThsvHyc1G6r1NNwpFRIMWKAlud_UHzMckaM5Oni5zLf_40VJdQ7MrgBIq5XpPBxSLknCXMRNUDAXGY0-epHBT6Z5KF4yl8CmJroib6eFMh_opwy3Fnh0hrVr8i-w-ssf9Gn3PEKwRT49gI"/>
+</div>
+<!-- Card 4 -->
+<div class="md:col-span-2 bg-inverse-surface text-inverse-on-surface p-12 flex flex-col justify-center space-y-6">
+<span class="material-symbols-outlined text-primary-fixed text-4xl" data-icon="auto_awesome">auto_awesome</span>
+<h3 class="font-headline-md text-headline-md">Tradition Reimagined</h3>
+<p class="font-body-md text-body-md opacity-80">Our culinary team respects the heritage of classical techniques while fearlessly exploring modern gastronomy. We believe that true innovation stems from a deep understanding of the past, allowing us to create dishes that are both nostalgic and groundbreaking.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- The Culinary Team -->
+<section class="py-section-gap max-w-container-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-gutter">
+<div class="max-w-xl">
+<span class="font-label-md text-label-md uppercase tracking-widest text-primary">The Visionaries</span>
+<h2 class="font-headline-lg text-headline-lg md:text-headline-lg text-headline-lg-mobile mt-4">The Culinary Team</h2>
+<p class="font-body-lg text-body-lg text-secondary mt-4">Led by award-winning Executive Chef Akshara Varma, our kitchen is a symphony of diverse talents unified by a single goal: culinary perfection.</p>
+</div>
+<div class="hidden md:block">
+<button class="border border-outline px-8 py-3 font-label-md text-label-md uppercase tracking-wider hover:bg-on-surface hover:text-surface transition-all">View Our Awards</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Chef 1 -->
+<div class="space-y-6">
+<div class="aspect-[3/4] bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A professional studio portrait of a woman in a clean white chef's coat with charcoal gray accents. She has a confident, warm smile and her arms are crossed. The background is a soft, neutral cream color, emphasizing a clean and premium aesthetic that reflects the culinary team's expertise and approachable luxury." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEs8UwHbnto0uz-bAqR069myEn8hf5s_hHQ3YIHZyiJrb5oT74-41FEZykuAf5Khegm9samVQ0WDMW5EnSL4lmcjbRpRJtCF67MNpI-aMUR_KmXliAubzr0-DBbhdJD78X6T0Fo5zEXRnjX2EhB-k6pwWOIVrTubCW2Kw6YO063lasQKqJREv8RVXhkwbfLdPT3oLFqTEY3JHaeIGggjt3LdWV0zJBWch2JkvchvVwONpOTIUMW5B03D88Xqh5el-448NzmT4jClez"/>
+</div>
+<div>
+<h4 class="font-headline-md text-headline-md">Akshara Varma</h4>
+<p class="font-label-md text-label-md text-primary uppercase mt-1">Executive Chef</p>
+<p class="font-body-md text-body-md text-secondary mt-4">With 15 years of experience in Michelin-starred kitchens across Europe and Asia, Akshara brings a global perspective to local ingredients.</p>
+</div>
+</div>
+<!-- Chef 2 -->
+<div class="space-y-6">
+<div class="aspect-[3/4] bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A portrait of a male pastry chef in a modern kitchen setting. He is holding a delicate dessert garnished with gold leaf. The lighting is soft and focused, highlighting his meticulous attention to detail and the high-quality, artisanal nature of the dining hall's pastry offerings. The mood is sophisticated and artistic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVodA4O8PVj-nXioAkSD_ecT9ukT5fkpyXjKoXkUVNK8_mhtmV0pJgryt0zUcPlNABmQEwYq7kvp23VXZFHQEe0yktxWVBU9LJpU0yUsUq3nL6Qm-VuVakXjwf-P0d_tfAdGZzvNmbr_2yN4rx9jyIu-74C-WqqcPKQowf0Cjs2APt37ARo8h8RDkVzsq_CLBElgvb24oopIvAtRTpDGbPXg-Bqsb_ASbVi7MOIB0aW5poHbB-NUrEjprxQ7jtjepshHHgP61Sfm59"/>
+</div>
+<div>
+<h4 class="font-headline-md text-headline-md">Julian Rossi</h4>
+<p class="font-label-md text-label-md text-primary uppercase mt-1">Pastry Architect</p>
+<p class="font-body-md text-body-md text-secondary mt-4">Julian treats desserts as structural art, blending geometric precision with organic seasonal flavors to create stunning finales.</p>
+</div>
+</div>
+<!-- Chef 3 -->
+<div class="space-y-6">
+<div class="aspect-[3/4] bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A chef in a high-end minimalist kitchen, focused on the precise plating of a gourmet dish. The environment is clean with stainless steel surfaces and warm wood accents. The lighting is bright yet atmospheric, showcasing the professional and dedicated culture of the culinary team at Aksh Dining Hall." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrquG8HlgFigtEpCPNyYuTT87hUT0DTzMwxW6h2zJYdkqJT1OTF2S7gqJsB5SwYSG0q85RQCD7CzS-fdYmDOwqrUmc5XF2Fqxi7c1MsV7ADEdCLZGW-2LARD5J7yOkOhhIXTUWnCO_s4e8cYdZQxk1yx4jQhpuCOcUGP79v2L_MLEWLx2fmRrvMhARfy-bVnk8DV_w4i9H632_9ElGYdnyJCpkkQWo7csO2gSieE2mnkPEEJYdSAUdddnap2jWMxZGCZA6nlPyT_qe"/>
+</div>
+<div>
+<h4 class="font-headline-md text-headline-md">Elena Chen</h4>
+<p class="font-label-md text-label-md text-primary uppercase mt-1">Sous Chef</p>
+<p class="font-body-md text-body-md text-secondary mt-4">A specialist in fermentation and preservation, Elena ensures our larder is always filled with unique, house-made accents.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Call to Action Section -->
+<section class="py-section-gap bg-secondary-container/30">
+<div class="max-w-container-max-width mx-auto px-margin-mobile md:px-margin-desktop text-center">
+<h2 class="font-display-lg text-display-lg-mobile md:text-headline-lg mb-8">Join Us at Our Table</h2>
+<p class="font-body-lg text-body-lg text-secondary max-w-xl mx-auto mb-10">We invite you to experience the passion and precision that goes into every moment at Aksh Dining Hall.</p>
+<div class="flex flex-col md:flex-row justify-center gap-6">
+<button class="bg-on-surface text-surface px-10 py-4 rounded-lg font-label-md text-label-md uppercase tracking-wider hover:opacity-90 transition-opacity">Book a Reservation</button>
+<button class="border border-on-surface text-on-surface px-10 py-4 rounded-lg font-label-md text-label-md uppercase tracking-wider hover:bg-on-surface hover:text-surface transition-all">Explore the Menu</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-highest dark:bg-inverse-surface mt-auto">
+<div class="flex flex-col md:flex-row justify-between items-start gap-gutter w-full px-margin-desktop py-section-gap max-w-container-max-width mx-auto">
+<div class="space-y-6 max-w-sm">
+<span class="font-display-lg text-headline-md text-primary dark:text-primary-fixed-dim">Aksh Dining Hall</span>
+<p class="font-body-md text-body-md text-secondary dark:text-secondary-fixed-dim">A curated dining experience celebrating the harmony of tradition and innovation. Join us for a journey through taste.</p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-secondary hover:text-primary cursor-pointer" data-icon="potted_plant">potted_plant</span>
+<span class="material-symbols-outlined text-secondary hover:text-primary cursor-pointer" data-icon="restaurant">restaurant</span>
+<span class="material-symbols-outlined text-secondary hover:text-primary cursor-pointer" data-icon="wine_bar">wine_bar</span>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-2 gap-12">
+<div class="space-y-4">
+<h5 class="font-label-md text-label-md uppercase tracking-widest text-on-surface dark:text-inverse-on-surface">Explore</h5>
+<ul class="space-y-2">
+<li><a class="font-body-md text-body-md text-secondary dark:text-secondary-fixed-dim hover:text-primary transition-colors" href="#">Menu</a></li>
+<li><a class="font-body-md text-body-md text-primary font-bold" href="#">About Us</a></li>
+<li><a class="font-body-md text-body-md text-secondary dark:text-secondary-fixed-dim hover:text-primary transition-colors" href="#">Reservations</a></li>
+<li><a class="font-body-md text-body-md text-secondary dark:text-secondary-fixed-dim hover:text-primary transition-colors" href="#">Contact</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h5 class="font-label-md text-label-md uppercase tracking-widest text-on-surface dark:text-inverse-on-surface">Legal</h5>
+<ul class="space-y-2">
+<li><a class="font-body-md text-body-md text-secondary dark:text-secondary-fixed-dim hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="font-body-md text-body-md text-secondary dark:text-secondary-fixed-dim hover:text-primary transition-colors" href="#">Terms of Service</a></li>
+<li><a class="font-body-md text-body-md text-secondary dark:text-secondary-fixed-dim hover:text-primary transition-colors" href="#">Careers</a></li>
+<li><a class="font-body-md text-body-md text-secondary dark:text-secondary-fixed-dim hover:text-primary transition-colors" href="#">Accessibility</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="max-w-container-max-width mx-auto px-margin-desktop py-8 border-t border-outline/10 text-center md:text-left">
+<span class="font-body-md text-body-md text-secondary dark:text-secondary-fixed-dim">© 2024 Aksh Dining Hall. All rights reserved.</span>
+</div>
+</footer>
+</body></html>
