@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Playfair+Display:wght@400;600;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed": "#e4e2dd",
+                    "secondary-fixed-dim": "#c8c6c5",
+                    "surface": "#fcf9f8",
+                    "on-primary": "#ffffff",
+                    "secondary": "#5f5e5e",
+                    "secondary-container": "#e4e2e1",
+                    "on-secondary-container": "#656464",
+                    "surface-container-low": "#f6f3f2",
+                    "on-surface": "#1c1b1b",
+                    "inverse-on-surface": "#f3f0ef",
+                    "on-primary-fixed": "#241a00",
+                    "on-secondary-fixed": "#1b1c1c",
+                    "error": "#ba1a1a",
+                    "surface-container-highest": "#e5e2e1",
+                    "on-tertiary-container": "#454542",
+                    "surface-container-lowest": "#ffffff",
+                    "primary-fixed": "#ffe088",
+                    "error-container": "#ffdad6",
+                    "primary": "#735c00",
+                    "tertiary-fixed-dim": "#c8c6c2",
+                    "surface-tint": "#735c00",
+                    "secondary-fixed": "#e4e2e1",
+                    "tertiary-container": "#b4b3af",
+                    "inverse-primary": "#e9c349",
+                    "on-primary-fixed-variant": "#574500",
+                    "primary-fixed-dim": "#e9c349",
+                    "on-primary-container": "#554300",
+                    "surface-bright": "#fcf9f8",
+                    "on-secondary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "background": "#fcf9f8",
+                    "on-secondary-fixed-variant": "#474747",
+                    "surface-container-high": "#eae7e7",
+                    "primary-container": "#d4af37",
+                    "on-surface-variant": "#4d4635",
+                    "outline": "#7f7663",
+                    "surface-container": "#f0eded",
+                    "on-error-container": "#93000a",
+                    "on-background": "#1c1b1b",
+                    "surface-dim": "#dcd9d9",
+                    "inverse-surface": "#313030",
+                    "on-tertiary": "#ffffff",
+                    "outline-variant": "#d0c5af",
+                    "on-tertiary-fixed": "#1b1c19",
+                    "surface-variant": "#e5e2e1",
+                    "tertiary": "#5e5e5b",
+                    "on-tertiary-fixed-variant": "#474744"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "unit": "8px",
+                    "margin-mobile": "20px",
+                    "margin-desktop": "64px",
+                    "gutter": "32px",
+                    "section-gap": "128px",
+                    "container-max-width": "1200px"
+            },
+            "fontFamily": {
+                    "body-lg": ["Plus Jakarta Sans"],
+                    "label-md": ["Plus Jakarta Sans"],
+                    "body-md": ["Plus Jakarta Sans"],
+                    "headline-lg": ["Playfair Display"],
+                    "headline-lg-mobile": ["Playfair Display"],
+                    "display-lg-mobile": ["Playfair Display"],
+                    "headline-md": ["Playfair Display"],
+                    "label-sm": ["Plus Jakarta Sans"],
+                    "display-lg": ["Playfair Display"]
+            },
+            "fontSize": {
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-lg": ["40px", {"lineHeight": "48px", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "display-lg-mobile": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.03em", "fontWeight": "500"}],
+                    "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #fcf9f8;
+            color: #1c1b1b;
+        }
+        .menu-underline {
+            position: relative;
+        }
+        .menu-underline::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-color: #d0c5af;
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<header class="bg-surface/80 backdrop-blur-md dark:bg-surface-dim/80 shadow-sm dark:shadow-none docked full-width top-0 sticky z-50">
+<nav class="flex justify-between items-center w-full px-margin-desktop py-4 max-w-container-max-width mx-auto">
+<div class="font-display-lg text-headline-md font-bold text-on-surface dark:text-inverse-on-surface"><a href="index.html">Aksh Dining Hall</a></div>
+<div class="hidden md:flex gap-gutter items-center">
+<a class="font-label-md text-label-md uppercase tracking-wider text-primary border-b-2 border-primary pb-1" href="menu.html">Menu</a>
+<a class="font-label-md text-label-md uppercase tracking-wider text-secondary hover:text-primary transition-colors duration-300" href="about.html">About</a>
+<a class="font-label-md text-label-md uppercase tracking-wider text-secondary hover:text-primary transition-colors duration-300" href="reservation.html">Reservations</a>
+<a class="font-label-md text-label-md uppercase tracking-wider text-secondary hover:text-primary transition-colors duration-300" href="contact.html">Contact</a>
+</div>
+<a href="account.html">
+<button class="bg-primary text-on-primary px-6 py-2 font-label-md text-label-md uppercase tracking-wider hover:opacity-80 transition-opacity active:scale-95">
+Sign In
+</button>
+</a>
+</nav>
+</header>
+<main class="max-w-container-max-width mx-auto px-margin-mobile md:px-margin-desktop py-section-gap">
+<!-- Page Header -->
+<div class="text-center mb-section-gap">
+<span class="font-label-md text-label-md text-primary uppercase tracking-[0.2em] mb-4 block">The Culinary Experience</span>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg mb-6">Seasonal Menu</h1>
+<p class="max-w-2xl mx-auto font-body-lg text-body-lg text-secondary">
+                A curated selection of artisanal dishes prepared with locally sourced ingredients and a commitment to timeless culinary traditions.
+            </p>
+</div>
+<!-- Section: Appetizers -->
+<section class="mb-section-gap">
+<div class="flex flex-col md:flex-row gap-gutter items-start mb-16">
+<div class="w-full md:w-1/3">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-4 menu-underline pb-2 inline-block">Appetizers</h2>
+<p class="font-body-md text-body-md text-secondary italic">The prelude to your journey.</p>
+</div>
+<div class="w-full md:w-2/3 grid grid-cols-1 gap-12">
+<div class="flex flex-col md:flex-row gap-8 items-center bg-surface-container-low p-6">
+<div class="w-full md:w-48 h-48 overflow-hidden flex-shrink-0">
+<img alt="Garden Heirloom Bruschetta" class="w-full h-full object-cover" data-alt="A close-up, high-contrast photograph of artisanal bruschetta topped with vibrant heirloom tomatoes, fresh basil, and a drizzle of balsamic glaze. The lighting is warm and golden, casting soft shadows on a rustic wooden surface. The aesthetic is clean, minimalist, and luxury-focused, reflecting a premium dining atmosphere with deep rich tones and crisp highlights." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiwCB0I2CHggeV6BWR1Q0R7clNwx3fB1wmn9mbCn1FDuRg_VbH45u0MvScKuvxlYrInMDfPYLDaDF2UIg8n11YYifL_EpCUIWGD45qRKezOByfWt052IzGpU_uFlA7Ww8kTrp8XO2jK4x4y3RBMFriux_A2Lk2cp8rt48wjx_Tyd978bg1BEZ2QHRNud3V90hDHo0pqF27AiE_O5ky-fY9YxmFoPffeBg30rtfI5DbQ5eJekMgQatpWOvxCyfi6LptLRV0mA9t8leE"/>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-baseline mb-2">
+<h3 class="font-headline-md text-headline-md">Heirloom Bruschetta</h3>
+<span class="font-label-md text-label-md text-primary">$18</span>
+</div>
+<p class="font-body-md text-body-md text-secondary mb-4">Charred sourdough, whipped house ricotta, marinated tomatoes, and garden herbs.</p>
+<div class="flex gap-2">
+<span class="px-2 py-1 border border-outline font-label-sm text-label-sm text-secondary uppercase">Vegan</span>
+<span class="px-2 py-1 border border-outline font-label-sm text-label-sm text-secondary uppercase">Gluten-Free Available</span>
+</div>
+</div>
+</div>
+<div class="group">
+<div class="flex justify-between items-baseline mb-2">
+<h3 class="font-headline-md text-headline-md">Truffle Arancini</h3>
+<span class="font-label-md text-label-md text-primary">$22</span>
+</div>
+<p class="font-body-md text-body-md text-secondary mb-4">Wild mushroom risotto spheres, black truffle essence, and aged parmesan fondue.</p>
+<div class="flex gap-2">
+<span class="px-2 py-1 border border-outline font-label-sm text-label-sm text-secondary uppercase">Vegetarian</span>
+</div>
+</div>
+<div class="group">
+<div class="flex justify-between items-baseline mb-2">
+<h3 class="font-headline-md text-headline-md">Seared Scallops</h3>
+<span class="font-label-md text-label-md text-primary">$26</span>
+</div>
+<p class="font-body-md text-body-md text-secondary mb-4">U10 scallops, parsnip silk, crispy prosciutto, and burnt orange reduction.</p>
+<div class="flex gap-2">
+<span class="px-2 py-1 border border-outline font-label-sm text-label-sm text-secondary uppercase">Gluten-Free</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section: Mains -->
+<section class="mb-section-gap">
+<div class="flex flex-col md:flex-row-reverse gap-gutter items-start mb-16">
+<div class="w-full md:w-1/3 md:text-right">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-4 menu-underline pb-2 inline-block">Mains</h2>
+<p class="font-body-md text-body-md text-secondary italic">The core of the experience.</p>
+</div>
+<div class="w-full md:w-2/3 grid grid-cols-1 gap-12">
+<div class="flex flex-col md:flex-row gap-8 items-center bg-surface-container-low p-6">
+<div class="w-full md:w-48 h-48 overflow-hidden flex-shrink-0">
+<img alt="Aged Wagyu Ribeye" class="w-full h-full object-cover" data-alt="A professional, high-end food photograph of a perfectly seared Wagyu ribeye steak, sliced to reveal a medium-rare center. The plate is minimalist white porcelain, garnished with a sprig of rosemary and sea salt flakes. Lighting is warm and atmospheric, emphasizing the rich textures and deep browns of the crust against a soft-focus background of a luxury dining table." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1_Bfh9dG1dcvZfAO5Wjs__3oUe0HfwgTVcJ-ROAOWFJyeAuQbg9YjE_NssqlDgOzxLH9bOVJLC5OglW0rSVB0M4O6aqaMISq8FWNihHxux_-W6u-V_Bqo6poc_dJKUkT8LjEJ_Hgy731lxHkS3qrJa2nx8XLDbIrx4RDK9tDAkYm_F7oxupU2TPP0OLzAxL5SCmRhngdD2YLrx7SGDrwR1beuGQvvNDrB4zp2RbATIif9MPqjd0k02vxNhr1fNBZKOpFQQxNA5pbU"/>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-baseline mb-2">
+<h3 class="font-headline-md text-headline-md">Dry-Aged Wagyu</h3>
+<span class="font-label-md text-label-md text-primary">$65</span>
+</div>
+<p class="font-body-md text-body-md text-secondary mb-4">45-day aged ribeye, roasted marrow butter, charred leeks, and red wine jus.</p>
+<div class="flex gap-2">
+<span class="px-2 py-1 border border-outline font-label-sm text-label-sm text-secondary uppercase">Signature Dish</span>
+<span class="px-2 py-1 border border-outline font-label-sm text-label-sm text-secondary uppercase">Gluten-Free</span>
+</div>
+</div>
+</div>
+<div class="group">
+<div class="flex justify-between items-baseline mb-2">
+<h3 class="font-headline-md text-headline-md">Miso Glazed Sea Bass</h3>
+<span class="font-label-md text-label-md text-primary">$48</span>
+</div>
+<p class="font-body-md text-body-md text-secondary mb-4">Pan-seared Chilean sea bass, ginger-infused dashi, bok choy, and sesame radish.</p>
+<div class="flex gap-2">
+<span class="px-2 py-1 border border-outline font-label-sm text-label-sm text-secondary uppercase">Gluten-Free</span>
+</div>
+</div>
+<div class="group">
+<div class="flex justify-between items-baseline mb-2">
+<h3 class="font-headline-md text-headline-md">Saffron Risotto</h3>
+<span class="font-label-md text-label-md text-primary">$38</span>
+</div>
+<p class="font-body-md text-body-md text-secondary mb-4">Acquerello rice, Persian saffron, honey-roasted squash, and pine nut crumble.</p>
+<div class="flex gap-2">
+<span class="px-2 py-1 border border-outline font-label-sm text-label-sm text-secondary uppercase">Vegan</span>
+<span class="px-2 py-1 border border-outline font-label-sm text-label-sm text-secondary uppercase">Gluten-Free</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section: Desserts -->
+<section>
+<div class="flex flex-col md:flex-row gap-gutter items-start mb-16">
+<div class="w-full md:w-1/3">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-4 menu-underline pb-2 inline-block">Desserts</h2>
+<p class="font-body-md text-body-md text-secondary italic">A sweet conclusion.</p>
+</div>
+<div class="w-full md:w-2/3 grid grid-cols-1 gap-12">
+<div class="flex flex-col md:flex-row gap-8 items-center bg-surface-container-low p-6">
+<div class="w-full md:w-48 h-48 overflow-hidden flex-shrink-0">
+<img alt="Dark Chocolate Ganache" class="w-full h-full object-cover" data-alt="An elegant dessert presentation of a dark chocolate ganache tart, garnished with edible gold leaf and fresh raspberries. The shot is overhead, showcasing geometric precision and rich, velvety textures. Lighting is soft and editorial, highlighting the gloss of the chocolate and the vibrant red of the berries against a warm, neutral surface that evokes high-end culinary artistry." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDh7UBZHRK8JsyY2MzzWHlScIGxWTbfpsOMwbvv4SmD1WsGNWkdLgSZER8XpVtOUbP5C6I0D5E64Ha_g-OVXoTK3OhNJjgESS2uOYlYl0aG_IoAC5TloYAz8jQr9nX4YKBNwErqlMs-_wyGgBaqoucLdQt80tZwnETiXdm0TN4lQZTNkS-1jLNO1_f67WI85kx6Lt0VTxJK1OUOR98c_QqA-9_ym-n61f069tgmskZLYzpDI0pKHxNVFQ6KBXxhqYI6GEW7-Z_Mac5Z"/>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-baseline mb-2">
+<h3 class="font-headline-md text-headline-md">Midnight Ganache</h3>
+<span class="font-label-md text-label-md text-primary">$16</span>
+</div>
+<p class="font-body-md text-body-md text-secondary mb-4">70% dark chocolate, fleur de sel, raspberry coulis, and gold leaf.</p>
+<div class="flex gap-2">
+<span class="px-2 py-1 border border-outline font-label-sm text-label-sm text-secondary uppercase">Vegan</span>
+<span class="px-2 py-1 border border-outline font-label-sm text-label-sm text-secondary uppercase">Gluten-Free</span>
+</div>
+</div>
+</div>
+<div class="group">
+<div class="flex justify-between items-baseline mb-2">
+<h3 class="font-headline-md text-headline-md">Lavender Panna Cotta</h3>
+<span class="font-label-md text-label-md text-primary">$14</span>
+</div>
+<p class="font-body-md text-body-md text-secondary mb-4">Honey-infused cream, culinary lavender, honeycomb shards, and macerated figs.</p>
+<div class="flex gap-2">
+<span class="px-2 py-1 border border-outline font-label-sm text-label-sm text-secondary uppercase">Gluten-Free</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-highest dark:bg-inverse-surface mt-section-gap">
+<div class="flex flex-col md:flex-row justify-between items-start gap-gutter w-full px-margin-desktop py-section-gap max-w-container-max-width mx-auto">
+<div class="flex flex-col gap-4">
+<div class="font-display-lg text-headline-md text-primary dark:text-primary-fixed-dim">Aksh Dining Hall</div>
+<p class="font-body-md text-body-md text-secondary dark:text-secondary-fixed-dim max-w-xs">Elevating the art of dining through precise technique and exceptional service.</p>
+<div class="flex gap-4 mt-4">
+<span class="material-symbols-outlined text-primary cursor-pointer hover:opacity-80 transition-opacity" data-icon="restaurant">restaurant</span>
+<span class="material-symbols-outlined text-primary cursor-pointer hover:opacity-80 transition-opacity" data-icon="wine_bar">wine_bar</span>
+<span class="material-symbols-outlined text-primary cursor-pointer hover:opacity-80 transition-opacity" data-icon="local_bar">local_bar</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-x-16 gap-y-4">
+<a class="font-body-md text-body-md text-secondary dark:text-secondary-fixed-dim hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="font-body-md text-body-md text-secondary dark:text-secondary-fixed-dim hover:text-primary transition-colors" href="#">Terms of Service</a>
+<a class="font-body-md text-body-md text-secondary dark:text-secondary-fixed-dim hover:text-primary transition-colors" href="#">Careers</a>
+<a class="font-body-md text-body-md text-secondary dark:text-secondary-fixed-dim hover:text-primary transition-colors" href="#">Accessibility</a>
+</div>
+<div class="flex flex-col gap-2 md:text-right">
+<p class="font-body-md text-body-md text-on-surface dark:text-inverse-on-surface">© 2024 Aksh Dining Hall. All rights reserved.</p>
+<p class="font-label-sm text-label-sm text-secondary">Crafted with intentionality.</p>
+</div>
+</div>
+</footer>
+</body></html>

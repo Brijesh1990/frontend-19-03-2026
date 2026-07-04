@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang='en'>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pluss.in</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+<!-- Plus Header Section -->
+<section id="pluss-header" class="bg-yellow-400 overflow-hidden">
+  <div class="max-w-full mx-auto">
+    <div class="relative flex items-center justify-center h-11 px-4">
+
+      <!-- Left Arrow -->
+      <button
+        class="absolute left-4 text-black hover:scale-110 transition-transform"
+        id="prevBtn"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none"
+          viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            stroke-width="2" d="M15 19l-7-7 7-7" />
+        </svg>
+      </button>
+
+      <!-- Slider Text -->
+      <div class="relative w-full max-w-md overflow-hidden">
+        <div
+          id="slider"
+          class="flex transition-transform duration-700 ease-in-out"
+        >
+          <div class="min-w-full text-center">
+            <p class="text-sm md:text-base font-medium text-black">
+              Free Shipping Available Across India
+            </p>
+          </div>
+
+          <div class="min-w-full text-center">
+            <p class="text-sm md:text-base font-medium text-black">
+              Get Flat 20% OFF On Your First Order
+            </p>
+          </div>
+
+          <div class="min-w-full text-center">
+            <p class="text-sm md:text-base font-medium text-black">
+              Easy Returns & Secure Payments
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Arrow -->
+      <button
+        class="absolute right-4 text-black hover:scale-110 transition-transform"
+        id="nextBtn"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none"
+          viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+      </button>
+
+    </div>
+  </div>
+</section>
+<!-- Navbar -->
+
+  <!-- Hidden Toggle -->
+  <input type="checkbox" id="menu-toggle" class="peer hidden">
+
+  <!-- Overlay -->
+  <label
+    for="menu-toggle"
+    class="fixed inset-0 bg-black/40 z-40 hidden peer-checked:block lg:hidden">
+  </label>
+
+  <!-- Mobile Sidebar -->
+  <aside
+    class="fixed top-0 left-0 h-screen w-72 bg-white z-50
+           -translate-x-full peer-checked:translate-x-0
+           transition-transform duration-300 ease-in-out
+           lg:hidden">
+
+    <!-- Sidebar Header -->
+    <div class="flex items-center justify-between p-5 border-b">
+
+      <h2 class="text-4xl font-black">
+       <a href="index.html" class="decoration-0">plusS</a>
+      </h2>
+
+      <label
+        for="menu-toggle"
+        class="cursor-pointer text-3xl font-light">
+        ✕
+      </label>
+
+    </div>
+
+    <!-- Mobile Menu -->
+    <nav class="flex flex-col">
+
+      <a href="#" class="px-5 py-4 border-b hover:bg-gray-50">
+        Men
+      </a>
+
+      <a href="#" class="px-5 py-4 border-b hover:bg-gray-50">
+        Women
+      </a>
+
+      <a href="#" class="px-5 py-4 border-b hover:bg-gray-50">
+        Return / Exchange
+      </a>
+
+      <a href="#" class="px-5 py-4 border-b hover:bg-gray-50">
+        About Us
+      </a>
+
+      <a href="#" class="px-5 py-4 border-b hover:bg-gray-50">
+        Store Locator
+      </a>
+
+    </nav>
+
+  </aside>
+
+  <!-- Navbar -->
+  <header class="bg-white border-b">
+
+    <div class="max-w-7xl mx-auto px-4 lg:px-8">
+
+      <div class="flex items-center justify-between h-20">
+
+        <!-- Left -->
+        <div class="flex items-center gap-4">
+
+          <!-- Hamburger -->
+          <label
+            for="menu-toggle"
+            class="lg:hidden cursor-pointer">
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-7 h-7"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor">
+
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+
+          </label>
+
+          <!-- Logo -->
+          <a href="index.html">
+            <h1 class="text-3xl md:text-5xl font-black">
+              plusS
+            </h1>
+          </a>
+
+        </div>
+
+        <!-- Desktop Menu -->
+        <nav class="hidden lg:flex items-center gap-8 text-[18px]">
+
+          <a href="#" class="flex items-center gap-1">
+            Men
+            <span class="text-xs">⌄</span>
+          </a>
+
+          <a href="#" class="flex items-center gap-1">
+            Women
+            <span class="text-xs">⌄</span>
+          </a>
+
+          <a href="#">
+            Return/Exchange
+          </a>
+
+          <a href="#">
+            About Us
+          </a>
+
+          <a href="#">
+            Store Locator
+          </a>
+
+        </nav>
+
+        <!-- Icons -->
+        <div class="flex items-center gap-4 md:gap-6">
+
+          <!-- Search -->
+          <button>
+            <svg xmlns="http://www.w3.org/2000/svg"
+              class="w-6 h-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor">
+
+              <circle cx="11" cy="11" r="7" stroke-width="2"/>
+              <path d="m20 20-3.5-3.5" stroke-width="2"/>
+
+            </svg>
+          </button>
+
+          <!-- User -->
+          <button>
+            <svg xmlns="http://www.w3.org/2000/svg"
+              class="w-6 h-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor">
+
+              <circle cx="12" cy="8" r="4" stroke-width="2"/>
+              <path d="M4 20c0-4 3-6 8-6s8 2 8 6"
+                stroke-width="2"/>
+
+            </svg>
+          </button>
+
+          <!-- Cart -->
+          <button>
+            <svg xmlns="http://www.w3.org/2000/svg"
+              class="w-6 h-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor">
+
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M5 7h14v12H5z"/>
+
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 7V5a3 3 0 016 0v2"/>
+
+            </svg>
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Announcement Bar -->
+    <div class="border-t overflow-hidden">
+
+      <div
+        class="flex whitespace-nowrap animate-[marquee_20s_linear_infinite] py-3 gap-16 text-sm md:text-base">
+
+        <span>Comfort & Fit Guarantee</span>
+        <span>|</span>
+
+        <span>Loved by 1,00,000+ Customers</span>
+        <span>|</span>
+
+        <span>Easy Return & Exchange Apply</span>
+        <span>|</span>
+
+        <span>COD Available</span>
+        <span>|</span>
+
+        <span>Comfort & Fit Guarantee</span>
+        <span>|</span>
+
+        <span>Loved by 1,00,000+ Customers</span>
+
+      </div>
+
+    </div>
+
+</header>
+
+<!-- create an account page -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24">
+
+        <!-- Login Section -->
+        <div>
+
+            <h2 class="text-3xl font-medium mb-8">
+                Log In
+            </h2>
+
+            <form class="space-y-5">
+
+                <input
+                    type="email"
+                    placeholder="Email"
+                    class="w-full border border-gray-300 rounded-md px-4 py-4 outline-none focus:border-black"
+                >
+
+                <input
+                    type="password"
+                    placeholder="Password"
+                    class="w-full border border-gray-300 rounded-md px-4 py-4 outline-none focus:border-black"
+                >
+
+                <a
+                    href="#"
+                    class="inline-block underline text-gray-800"
+                >
+                    Forgot your password?
+                </a>
+
+                <div class="pt-4">
+                    <button
+                        type="submit"
+                        class="bg-black text-white px-10 py-4 rounded-md hover:bg-gray-800 transition"
+                    >
+                        Sign In
+                    </button>
+                </div>
+
+            </form>
+
+        </div>
+
+        <!-- Register Section -->
+        <div>
+
+            <h2 class="text-3xl font-medium mb-8">
+                New Customer
+            </h2>
+
+            <p class="text-gray-600 text-lg leading-8 mb-8">
+                Sign up for early Sale access plus tailored new arrivals,
+                trends and promotions. To opt out, click unsubscribe in our
+                emails.
+            </p>
+
+            <button
+                class="bg-black text-white px-10 py-4 rounded-md hover:bg-gray-800 transition"
+            >
+                Register
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- footer -->
+
+
+<!-- pluss in footer -->
+<footer class="bg-black text-white relative">
+
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 py-16">
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+
+            <!-- Logo -->
+            <div>
+                <h2 class="text-6xl font-bold text-white">
+                    plus<span class="font-light">S</span>
+                </h2>
+            </div>
+
+            <!-- Men -->
+            <div>
+                <h3 class="text-yellow-400 text-xl mb-5 font-medium">
+                    Men
+                </h3>
+
+                <ul class="space-y-3 text-gray-300">
+                    <li><a href="#">Tops</a></li>
+                    <li><a href="#">Bottoms</a></li>
+                    <li><a href="#">Men's Sportswear</a></li>
+                    <li><a href="#">Winter Wear</a></li>
+                    <li><a href="#">Accessories</a></li>
+                </ul>
+            </div>
+
+            <!-- Women -->
+            <div>
+                <h3 class="text-yellow-400 text-xl mb-5 font-medium">
+                    Women
+                </h3>
+
+                <ul class="space-y-3 text-gray-300">
+                    <li><a href="#">Tops</a></li>
+                    <li><a href="#">Dresses & Jumpsuits</a></li>
+                    <li><a href="#">Bottoms</a></li>
+                    <li><a href="#">Jackets</a></li>
+                    <li><a href="#">Ethnicwear</a></li>
+                    <li><a href="#">Lingerie</a></li>
+                    <li><a href="#">Accessories</a></li>
+                    <li><a href="#">Co-ord Sets</a></li>
+                </ul>
+            </div>
+
+            <!-- Help + Newsletter -->
+            <div>
+
+                <h3 class="text-yellow-400 text-xl mb-5 font-medium">
+                    Help
+                </h3>
+
+                <ul class="space-y-3 text-gray-300 mb-8">
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Shipping</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Returns & Refund Policy</a></li>
+                    <li><a href="#">Returns & Exchange</a></li>
+                    <li><a href="#">Terms & Condition</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Inclusive Fashion News</a></li>
+                </ul>
+
+                <div>
+                    <h2 class="text-4xl text-yellow-400 mb-3">
+                        Sign up and save
+                    </h2>
+
+                    <p class="text-gray-300 mb-5">
+                        Be the first to know about new collections and exclusive offers.
+                    </p>
+
+                    <div class="flex">
+
+                        <input
+                            type="email"
+                            placeholder="Enter your email"
+                            class="w-full px-4 py-3 bg-white text-black rounded-l-md outline-none">
+
+                        <button
+                            class="bg-yellow-400 text-black px-6 rounded-r-md font-semibold hover:bg-yellow-300 transition">
+                            Subscribe
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Bottom -->
+        <div class="border-t border-gray-800 mt-12 pt-6 text-center text-gray-400 text-sm">
+            © 2026 PlusS Fashion. All Rights Reserved.
+        </div>
+
+    </div>
+
+</footer>
+
+<!-- Floating Buttons -->
+
+<div class="fixed right-5 bottom-24 z-50">
+
+    <!-- Call Button -->
+    <a
+        href="tel:+919998003879"
+        class="flex items-center justify-center w-14 h-14 rounded-full bg-green-600 text-white shadow-lg animate-bounce mb-4">
+
+        <svg xmlns="http://www.w3.org/2000/svg"
+             class="w-6 h-6"
+             fill="none"
+             viewBox="0 0 24 24"
+             stroke="currentColor">
+
+            <path stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.129a11.042 11.042 0 005.516 5.516l1.129-2.257a1 1 0 011.21-.502l4.493 1.498A1 1 0 0121 15.72V19a2 2 0 01-2 2h-1C9.163 21 3 14.837 3 7V5z"/>
+        </svg>
+
+    </a>
+
+    <!-- WhatsApp Button -->
+
+    <a
+        href="https://wa.me/919998003879?text=Hello%20I%20need%20more%20information"
+        target="_blank"
+        class="flex items-center justify-center w-16 h-16 rounded-full bg-green-500 text-white shadow-xl animate-pulse">
+
+        <svg xmlns="http://www.w3.org/2000/svg"
+             class="w-8 h-8"
+             fill="currentColor"
+             viewBox="0 0 24 24">
+
+            <path d="M20.52 3.48A11.79 11.79 0 0012.04 0C5.4 0 .02 5.38.02 12.02c0 2.12.55 4.19 1.6 6.02L0 24l6.11-1.59a12.01 12.01 0 005.93 1.51h.01c6.63 0 12.01-5.38 12.01-12.01 0-3.21-1.25-6.23-3.54-8.43zM12.05 21.7a9.64 9.64 0 01-4.91-1.34l-.35-.2-3.62.94.97-3.53-.23-.36a9.62 9.62 0 1116.14-10.58 9.62 9.62 0 01-7.99 15.07zm5.28-7.21c-.29-.15-1.7-.84-1.96-.94-.26-.1-.45-.15-.64.15-.19.29-.74.94-.91 1.13-.17.19-.34.22-.63.07-.29-.15-1.22-.45-2.33-1.44-.86-.76-1.44-1.7-1.61-1.99-.17-.29-.02-.45.13-.6.13-.13.29-.34.43-.51.14-.17.19-.29.29-.48.1-.19.05-.36-.02-.51-.07-.15-.64-1.54-.88-2.11-.23-.55-.47-.48-.64-.49h-.55c-.19 0-.51.07-.77.36-.26.29-1.01.98-1.01 2.39s1.03 2.78 1.17 2.97c.15.19 2.03 3.11 4.92 4.36.69.3 1.23.48 1.65.62.69.22 1.31.19 1.8.12.55-.08 1.7-.69 1.94-1.36.24-.67.24-1.24.17-1.36-.07-.12-.26-.19-.55-.34z"/>
+        </svg>
+
+    </a>
+
+</div>
+
+<!-- Scroll To Top Button -->
+
+<button
+    id="scrollTopBtn"
+    class="fixed bottom-6 right-6 z-50 w-12 h-12 bg-yellow-400 text-black rounded-full shadow-lg hidden hover:scale-110 transition">
+
+    ↑
+
+</button>
+
+
+<!-- create register and its load automatically after 3 second  -->
+<!-- Modal Overlay -->
+<div
+  id="accountModal"
+  class="fixed inset-0 z-50 hidden justify-center bg-black/60 backdrop-blur-md overflow-y-auto p-4 transition-all duration-300"
+>
+  <!-- Modal Container -->
+  <div
+    class="relative w-full  max-w-md sm:max-w-lg lg:max-w-xl bg-white rounded-3xl shadow-2xl p-6 sm:p-8 lg:p-10 animate-modal"
+  >
+
+    <!-- Close Button -->
+    <button
+      id="closeModal"
+      class="absolute top-4 right-4 text-gray-500 hover:text-black text-3xl transition duration-300 hover:rotate-90"
+    >
+      &times;
+    </button>
+
+    <!-- Header -->
+    <div class="text-center mb-8">
+      <h2 class="text-2xl sm:text-3xl font-bold text-gray-900">
+        Create Account
+      </h2>
+      <p class="mt-2 text-gray-500">
+        Join us and start your journey today
+      </p>
+    </div>
+
+    <!-- Form -->
+    <form class="space-y-4">
+
+      <input
+        type="text"
+        placeholder="Full Name"
+        class="w-full px-4 py-3 border rounded-xl focus:ring-2 focus:ring-black outline-none transition"
+      >
+
+      <input
+        type="text"
+        placeholder="Username"
+        class="w-full px-4 py-3 border rounded-xl focus:ring-2 focus:ring-black outline-none transition"
+      >
+
+      <input
+        type="email"
+        placeholder="Email Address"
+        class="w-full px-4 py-3 border rounded-xl focus:ring-2 focus:ring-black outline-none transition"
+      >
+
+      <input
+        type="tel"
+        placeholder="Phone Number"
+        class="w-full px-4 py-3 border rounded-xl focus:ring-2 focus:ring-black outline-none transition"
+      >
+
+      <input
+        type="password"
+        placeholder="Password"
+        class="w-full px-4 py-3 border rounded-xl focus:ring-2 focus:ring-black outline-none transition"
+      >
+
+      <input
+        type="password"
+        placeholder="Confirm Password"
+        class="w-full px-4 py-3 border rounded-xl focus:ring-2 focus:ring-black outline-none transition"
+      >
+
+      <div class="flex items-center gap-2">
+        <input type="checkbox" id="terms" class="accent-black">
+        <label for="terms" class="text-sm text-gray-600">
+          I agree to Terms & Conditions
+        </label>
+      </div>
+
+      <button
+        type="submit"
+        class="w-full bg-black text-white py-3 rounded-xl hover:bg-gray-800 transition duration-300"
+      >
+        Create Account
+      </button>
+
+      <a href="account.html"><button
+        type="button"
+        class="w-full border border-black py-3 rounded-xl hover:bg-black hover:text-white transition duration-300"
+      >
+        Already Have an Account?
+      </button></a>
+
+    </form>
+
+  </div>
+</div>
+<!-- call main js -->
+<script src="js/main.js"></script> 
+
+</body>
+</html>

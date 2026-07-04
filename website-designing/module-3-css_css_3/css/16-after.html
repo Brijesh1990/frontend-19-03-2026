@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<title>Page Title</title>
+<link rel='stylesheet' href='main.css'>
+<style>
+body 
+{
+margin: 0;
+padding: 0;    
+}    
+
+.navbar 
+{
+width: 100%;
+height: auto;
+margin: auto;
+padding: 5px;
+background-color: black;    
+}
+.navbar ul li 
+{
+display: inline-block;
+padding: 0px 10px;    
+}
+.navbar a 
+{
+text-decoration: none;
+list-style-type: none;
+color: white;    
+}
+.navbar li:after 
+{
+content:"|";
+color: white;   
+margin: 20px;
+}
+
+.list-app ul li 
+{
+text-decoration: none;
+list-style-type: none;    
+}    
+.list-app ul li a 
+{
+color: black;
+text-decoration: none;    
+}
+.list-app ul li::after
+{
+content: "🍋";   
+}    
+.active::after 
+{
+content:"|";
+display: none;   
+}
+</style>
+</head>
+<body>
+<nav class="navbar">
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">Our services</a></li>
+<li><a href="#">Menu</a></li>
+<li><a href="#">Feedback</a></li>
+<li><a href="#">Account</a></li>
+<li  class="active"><a href="#">Contact us</a></li>
+</ul>
+</nav>
+
+<div class="list-app">
+<ul>
+<li><a href="#">banana</a></li>
+<li><a href="#">papaya</a></li>
+<li><a href="#">orange</a></li>
+<li><a href="#">kerry</a></li>
+<li><a href="#">lichy</a></li>
+<li><a href="#">grapes</a></li>
+</ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Aksh Dining Hall Admin</title>
+<!-- Tailwind CSS 4 -->
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<!-- custom css -->
+<link rel="stylesheet" href="css/style.css"> 
+</head>
+
+<body class="bg-[#0f0f0f] text-white">
+
+<!-- ================= DASHBOARD ================= -->
+<section id="dashboard" class="min-h-screen bg-[#0d0d0d]">
+<div class="flex flex-col lg:flex-row">
+<!-- Sidebar -->
+<aside class="w-full lg:w-72 bg-[#141414] border-r border-gray-800 min-h-screen p-6 sidebar-scroll">
+
+<div class="mb-10">
+<h1 class="title-font text-3xl font-bold text-yellow-400">
+Aksh Admin
+</h1>
+</div>
+
+<nav class="space-y-3">
+
+<a href="dashboard.html" class="block bg-yellow-500 text-black px-5 py-3 rounded-xl font-semibold">
+Dashboard
+</a>
+
+<a href="reservation.html" class="block hover:bg-[#1f1f1f] px-5 py-3 rounded-xl transition">
+Reservations
+</a>
+
+
+<a href="menu.html" class="block hover:bg-[#1f1f1f] px-5 py-3 rounded-xl transition">
+Menu
+</a>
+
+<a href="orders.html" class="block hover:bg-[#1f1f1f] px-5 py-3 rounded-xl transition">
+Orders
+</a>
+
+<a href="custmers.html" class="block hover:bg-[#1f1f1f] px-5 py-3 rounded-xl transition">
+Customers
+</a>
+
+<a href="#" class="block hover:bg-[#1f1f1f] px-5 py-3 rounded-xl transition">
+Analytics
+</a>
+
+<a href="#" class="block hover:bg-[#1f1f1f] px-5 py-3 rounded-xl transition bg-red-500 text-white w-30">
+Logout
+</a>
+
+</nav>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 p-6 lg:p-10">
+<!-- Top -->
+<div class="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6 mb-10">
+
+<div>
+<h2 class="title-font text-4xl font-bold">
+Restaurant Dashboard
+</h2>
+
+<p class="text-gray-400 mt-2">
+Welcome back, Admin
+</p>
+</div>
+
+<img 
+src="https://images.unsplash.com/photo-1600891964092-4316c288032e?q=80&w=1200&auto=format&fit=crop"
+class="w-full lg:w-72 h-40 object-cover rounded-3xl floating"
+>
+</div>
+<!-- Cards -->
+
+<!-- ================= MENU MANAGEMENT SECTION ================= -->
+
+<div class="gap-8">
+  <!-- ================= ADD MENU FORM ================= -->
+  <div class="glass rounded-3xl p-6">
+
+    <div class="mb-8">
+      <h2 class="title-font text-3xl font-bold text-yellow-400">
+        Add Menu Item
+      </h2>
+
+      <p class="text-gray-400 mt-2">
+        Add new dishes to Aksh Dining Hall menu
+      </p>
+    </div>
+
+    <form class="space-y-5">
+
+      <!-- Dish Name -->
+
+      <div>
+        <label class="block mb-2 text-sm text-gray-300">
+          Dish Name
+        </label>
+
+        <input 
+          type="text"
+          placeholder="Enter dish name"
+          class="w-full bg-[#1b1b1b] border border-gray-700 rounded-xl px-4 py-3 focus:outline-none focus:border-yellow-500"
+        >
+      </div>
+
+      <!-- Category -->
+
+      <div>
+        <label class="block mb-2 text-sm text-gray-300">
+          Category
+        </label>
+
+        <select class="w-full bg-[#1b1b1b] border border-gray-700 rounded-xl px-4 py-3 focus:outline-none focus:border-yellow-500">
+
+          <option>Starter</option>
+          <option>Main Course</option>
+          <option>Dessert</option>
+          <option>Beverage</option>
+
+        </select>
+      </div>
+
+      <!-- Price -->
+
+      <div>
+        <label class="block mb-2 text-sm text-gray-300">
+          Price
+        </label>
+
+        <input 
+          type="number"
+          placeholder="Enter price"
+          class="w-full bg-[#1b1b1b] border border-gray-700 rounded-xl px-4 py-3 focus:outline-none focus:border-yellow-500"
+        >
+      </div>
+
+      <!-- Image -->
+
+      <div>
+        <label class="block mb-2 text-sm text-gray-300">
+          Upload Dish Image
+        </label>
+
+        <input 
+          type="file"
+          class="w-full bg-[#1b1b1b] border border-gray-700 rounded-xl px-4 py-3 text-gray-400"
+        >
+      </div>
+
+      <!-- Description -->
+
+      <div>
+        <label class="block mb-2 text-sm text-gray-300">
+          Description
+        </label>
+
+        <textarea 
+          rows="4"
+          placeholder="Dish description..."
+          class="w-full bg-[#1b1b1b] border border-gray-700 rounded-xl px-4 py-3 focus:outline-none focus:border-yellow-500"
+        ></textarea>
+      </div>
+
+      <!-- Status -->
+
+      <div class="flex items-center gap-3">
+
+        <input 
+          type="checkbox"
+          id="available"
+          checked
+          class="w-5 h-5 accent-yellow-500"
+        >
+
+        <label for="available" class="text-gray-300">
+          Available
+        </label>
+
+      </div>
+
+      <!-- Buttons -->
+
+      <div class="flex flex-col sm:flex-row gap-4 pt-3">
+
+        <button 
+          type="submit"
+          class="bg-yellow-500 hover:bg-yellow-600 text-black font-semibold px-6 py-3 rounded-xl transition-all duration-300 cursor-pointer"
+        >
+          Add Menu
+        </button>
+
+        <button 
+          type="reset"
+          class="border border-gray-700 hover:bg-[#222] px-6 py-3 rounded-xl transition-all duration-300 cursor-pointer"
+        >
+          Reset
+        </button>
+
+      </div>
+
+    </form>
+
+  </div>
+
+  <!-- ================= MENU TABLE ================= -->
+
+  <div class="glass rounded-3xl p-6 overflow-auto mt-5">
+
+    <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
+
+      <div>
+        <h2 class="title-font text-3xl font-bold text-yellow-400">
+          Manage Menu
+        </h2>
+
+        <p class="text-gray-400 mt-2">
+          Edit and manage all menu items
+        </p>
+      </div>
+
+      <!-- Search -->
+
+      <input 
+        type="text"
+        placeholder="Search menu..."
+        class="bg-[#1b1b1b] border border-gray-700 rounded-xl px-4 py-3 focus:outline-none focus:border-yellow-500"
+      >
+
+    </div>
+
+    <!-- Table -->
+
+    <div class="overflow-x-auto">
+      <table class="w-full min-w-[850px]">
+
+        <thead>
+
+          <tr class="border-b border-gray-700 text-left">
+
+            <th class="pb-4">Image</th>
+            <th class="pb-4">Dish</th>
+            <th class="pb-4">Category</th>
+            <th class="pb-4">Price</th>
+            <th class="pb-4">Status</th>
+            <th class="pb-4">Actions</th>
+
+          </tr>
+
+        </thead>
+
+        <tbody>
+
+          <!-- Row 1 -->
+
+          <tr class="border-b border-gray-800 hover:bg-[#1b1b1b] transition">
+
+            <td class="py-4">
+
+              <img 
+                src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=800&auto=format&fit=crop"
+                class="w-16 h-16 rounded-xl object-cover"
+              >
+
+            </td>
+
+            <td>Truffle Wagyu</td>
+
+            <td>Starter</td>
+
+            <td class="text-yellow-400 font-semibold">
+              ₹2,500
+            </td>
+
+            <td>
+
+              <span class="bg-green-500/20 text-green-400 px-4 py-1 rounded-full text-sm">
+                Available
+              </span>
+
+            </td>
+
+            <td>
+
+              <div class="flex gap-3">
+
+                <button class="bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded-lg text-sm transition">
+                  Edit
+                </button>
+
+                <button class="bg-red-500 hover:bg-red-600 px-4 py-2 rounded-lg text-sm transition">
+                  Delete
+                </button>
+
+              </div>
+
+            </td>
+
+          </tr>
+
+          <!-- Row 2 -->
+
+          <tr class="border-b border-gray-800 hover:bg-[#1b1b1b] transition">
+
+            <td class="py-4">
+
+              <img 
+                src="https://images.unsplash.com/photo-1559847844-d721426d6edc?q=80&w=800&auto=format&fit=crop"
+                class="w-16 h-16 rounded-xl object-cover"
+              >
+
+            </td>
+
+            <td>Atlantic Sea Bass</td>
+
+            <td>Main Course</td>
+
+            <td class="text-yellow-400 font-semibold">
+              ₹1,800
+            </td>
+
+            <td>
+
+              <span class="bg-yellow-500/20 text-yellow-400 px-4 py-1 rounded-full text-sm">
+                Limited
+              </span>
+
+            </td>
+
+            <td>
+
+              <div class="flex gap-3">
+
+                <button class="bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded-lg text-sm transition">
+                  Edit
+                </button>
+
+                <button class="bg-red-500 hover:bg-red-600 px-4 py-2 rounded-lg text-sm transition">
+                  Delete
+                </button>
+
+              </div>
+
+            </td>
+
+          </tr>
+
+          <!-- Row 3 -->
+
+          <tr class="hover:bg-[#1b1b1b] transition">
+
+            <td class="py-4">
+
+              <img 
+                src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?q=80&w=800&auto=format&fit=crop"
+                class="w-16 h-16 rounded-xl object-cover"
+              >
+
+            </td>
+
+            <td>Italian Pizza</td>
+
+            <td>Fast Food</td>
+
+            <td class="text-yellow-400 font-semibold">
+              ₹950
+            </td>
+
+            <td>
+
+              <span class="bg-green-500/20 text-green-400 px-4 py-1 rounded-full text-sm">
+                Available
+              </span>
+
+            </td>
+
+            <td>
+
+              <div class="flex gap-3">
+
+                <button class="bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded-lg text-sm transition">
+                  Edit
+                </button>
+
+                <button class="bg-red-500 hover:bg-red-600 px-4 py-2 rounded-lg text-sm transition">
+                  Delete
+                </button>
+
+              </div>
+
+            </td>
+
+          </tr>
+
+        </tbody>
+
+      </table>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+</main>
+</div>
+</section>
+
+</body>
+</html>

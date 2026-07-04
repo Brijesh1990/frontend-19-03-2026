@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Page Title</title>
+    <link rel='stylesheet' href='main.css'>
+    <style>
+        .box-shadow {
+            width: 50%;
+            margin: auto;
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+            font-weight: lighter;
+            font-style: italic;
+            font-display:block;
+            border: solid 2px black;
+            padding: 25px;
+            text-align: justify;
+           /*box-shadow: 10px 10px 10px 10px rgba(255, 0, 0, 0.8); */
+           box-shadow: 0px 25px 15px  rgba(0, 0, 255, 0.8);
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="box-shadow">
+        <h1>Box Shadow</h1>
+        <p>The box-shadow property adds shadow effects around an element's frame. You can set multiple effects separated by commas. A box shadow is described by X and Y offsets relative to the element, blur and spread radius, and color.</p>
+        <p>Values:</p>
+        <ul>
+            <li><strong>none</strong> - No shadow is applied. This is default.</li>
+            <li><strong>offset-x</strong> - Required. The horizontal offset of the shadow. Negative values place the shadow to the left of the element.</li>
+            <li><strong>offset-y</strong> - Required. The vertical offset of the shadow. Negative values place the shadow above the element.</li>
+            <li><strong>blur-radius</strong> - Optional. The blur radius. The higher the number, the more blurred the shadow will be. If omitted, it is 0 (the shadow's edge is sharp).</li>
+            <li><strong>spread-radius</strong> - Optional. The spread radius. Positive values cause the shadow to expand in all directions, while negative values cause it to contract. If omitted, it is 0.</li>
+            <li><strong>color</strong> - Optional. The color of the shadow. If omitted, it defaults to a fully transparent black (rgba(0, 0, 0, 0)).</li>
+        </ul>
+    </div>
+</body>
+</html>

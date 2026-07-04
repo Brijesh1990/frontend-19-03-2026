@@ -1,0 +1,83 @@
+:root 
+{
+--bg-color-success:#18d26e;
+--bg-color-dark:#0f0f0f;
+--bg-color-white:#ffffff;
+--text-color-success:#18d26e;
+--text-color-dark:#0f0f0f;
+--text-color-white:#ffffff;
+
+}
+body 
+{
+background-color: var(--bg-color-dark);    
+}
+#main-section
+{
+width: 100%;
+height: 100vh;
+background: url(../images/hero-bg.jpg) no-repeat;
+background-size: cover;
+background-position: center;    
+z-index: 10 !important;   
+}
+.navbar 
+{
+width: 80%;
+height: auto;
+margin: auto;    
+}
+.navbar ul li 
+{
+display: inline-block; 
+padding: 0px 18px;   
+}
+.navbar ul li a 
+{
+text-decoration: none;
+list-style-type: none;
+color: white;  
+font-size: 20px;
+text-transform: capitalize;  
+}
+#footer
+{
+width: 100%;
+height: auto;
+/*
+bottom: 0;
+position: sticky !important;
+*/
+background-color: var(--bg-color-dark);
+}
+.footer-links li 
+{
+display: block;
+text-decoration: none;
+list-style-type: none;    
+padding: 3px 0px;
+}
+.footer-links li a 
+{
+text-decoration: none;
+list-style-type: none;
+color: white;    
+}
+
+@media only screen and (max-width:580px)
+{
+#main-section
+{
+width: 100%;
+height: 60vh;
+background: url(../images/hero-bg.jpg) no-repeat;
+background-size: cover;
+background-position: center;    
+z-index: 10 !important;   
+}
+.navbar ul li 
+{
+display: block; 
+padding: 5px 0px;   
+}    
+}

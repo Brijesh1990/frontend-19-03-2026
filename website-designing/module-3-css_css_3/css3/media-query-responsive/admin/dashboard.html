@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Aksh Dining Hall Admin</title>
+<!-- Tailwind CSS 4 -->
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<!-- custom css -->
+<link rel="stylesheet" href="css/style.css"> 
+</head>
+
+<body class="bg-[#0f0f0f] text-white">
+
+<!-- ================= DASHBOARD ================= -->
+<section id="dashboard" class="min-h-screen bg-[#0d0d0d]">
+<div class="flex flex-col lg:flex-row">
+<!-- Sidebar -->
+<aside class="w-full lg:w-72 bg-[#141414] border-r border-gray-800 min-h-screen p-6 sidebar-scroll">
+
+<div class="mb-10">
+<h1 class="title-font text-3xl font-bold text-yellow-400">
+Aksh Admin
+</h1>
+</div>
+
+<nav class="space-y-3">
+
+<a href="dashboard.html" class="block bg-yellow-500 text-black px-5 py-3 rounded-xl font-semibold">
+Dashboard
+</a>
+
+<a href="reservation.html" class="block hover:bg-[#1f1f1f] px-5 py-3 rounded-xl transition">
+Reservations
+</a>
+
+
+<a href="menu.html" class="block hover:bg-[#1f1f1f] px-5 py-3 rounded-xl transition">
+Menu
+</a>
+
+<a href="orders.html" class="block hover:bg-[#1f1f1f] px-5 py-3 rounded-xl transition">
+Orders
+</a>
+
+<a href="custmers.html" class="block hover:bg-[#1f1f1f] px-5 py-3 rounded-xl transition">
+Customers
+</a>
+
+<a href="#" class="block hover:bg-[#1f1f1f] px-5 py-3 rounded-xl transition">
+Analytics
+</a>
+
+<a href="#" class="block hover:bg-[#1f1f1f] px-5 py-3 rounded-xl transition bg-red-500 text-white w-30">
+Logout
+</a>
+
+</nav>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 p-6 lg:p-10">
+<!-- Top -->
+<div class="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6 mb-10">
+
+<div>
+<h2 class="title-font text-4xl font-bold">
+Restaurant Dashboard
+</h2>
+
+<p class="text-gray-400 mt-2">
+Welcome back, Admin
+</p>
+</div>
+
+<img 
+src="https://images.unsplash.com/photo-1600891964092-4316c288032e?q=80&w=1200&auto=format&fit=crop"
+class="w-full lg:w-72 h-40 object-cover rounded-3xl floating"
+>
+
+</div>
+
+<!-- Cards -->
+
+<div class="grid md:grid-cols-2 xl:grid-cols-4 gap-6 mb-10">
+
+<div class="glass rounded-3xl p-6 hover:scale-105 transition duration-300">
+<h3 class="text-gray-400">Today's Revenue</h3>
+<h1 class="text-4xl font-bold mt-4 text-yellow-400">₹58K</h1>
+</div>
+
+<div class="glass rounded-3xl p-6 hover:scale-105 transition duration-300">
+<h3 class="text-gray-400">Reservations</h3>
+<h1 class="text-4xl font-bold mt-4 text-yellow-400">128</h1>
+</div>
+
+<div class="glass rounded-3xl p-6 hover:scale-105 transition duration-300">
+<h3 class="text-gray-400">Orders</h3>
+<h1 class="text-4xl font-bold mt-4 text-yellow-400">342</h1>
+</div>
+
+<div class="glass rounded-3xl p-6 hover:scale-105 transition duration-300">
+<h3 class="text-gray-400">Customers</h3>
+<h1 class="text-4xl font-bold mt-4 text-yellow-400">1.2K</h1>
+</div>
+
+</div>
+
+<!-- Image Grid -->
+
+<div class="grid lg:grid-cols-3 gap-6 mb-10">
+
+<div class="zoom rounded-3xl overflow-hidden h-80">
+<img 
+src="https://images.unsplash.com/photo-1552566626-52f8b828add9?q=80&w=1200&auto=format&fit=crop"
+class="w-full h-full object-cover"
+>
+</div>
+
+<div class="zoom rounded-3xl overflow-hidden h-80">
+<img 
+src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?q=80&w=1200&auto=format&fit=crop"
+class="w-full h-full object-cover"
+>
+</div>
+
+<div class="zoom rounded-3xl overflow-hidden h-80">
+<img 
+src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=80&w=1200&auto=format&fit=crop"
+class="w-full h-full object-cover"
+>
+</div>
+
+</div>
+
+<!-- Recent Orders -->
+
+<div class="glass rounded-3xl p-6 overflow-auto">
+
+<div class="flex justify-between items-center mb-6">
+<h2 class="title-font text-3xl">
+Recent Orders
+</h2>
+
+<button class="bg-yellow-500 text-black px-5 py-2 rounded-xl font-semibold">
+View All
+</button>
+</div>
+
+<table class="w-full min-w-[700px]">
+
+<thead>
+<tr class="border-b border-gray-700 text-left">
+<th class="pb-4">Customer</th>
+<th class="pb-4">Table</th>
+<th class="pb-4">Amount</th>
+<th class="pb-4">Status</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr class="border-b border-gray-800">
+<td class="py-4">Rahul Sharma</td>
+<td>Table 5</td>
+<td>₹3,200</td>
+<td>
+<span class="bg-green-500/20 text-green-400 px-4 py-1 rounded-full text-sm">
+Completed
+</span>
+</td>
+</tr>
+
+<tr class="border-b border-gray-800">
+<td class="py-4">Priya Patel</td>
+<td>Table 2</td>
+<td>₹2,100</td>
+<td>
+<span class="bg-yellow-500/20 text-yellow-400 px-4 py-1 rounded-full text-sm">
+Pending
+</span>
+</td>
+</tr>
+
+<tr>
+<td class="py-4">Amit Verma</td>
+<td>Table 8</td>
+<td>₹4,850</td>
+<td>
+<span class="bg-blue-500/20 text-blue-400 px-4 py-1 rounded-full text-sm">
+Processing
+</span>
+</td>
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+</main>
+</div>
+</section>
+<script>
+function login(e){
+e.preventDefault();
+document.getElementById("loginSection").classList.add("hidden");
+document.getElementById("dashboard").classList.remove("hidden");
+}
+</script>
+</body>
+</html>

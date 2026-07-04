@@ -1,0 +1,47 @@
+.content 
+{
+margin-top: 10% !important;    
+}
+.navbar-link
+{
+margin-left: 40%;    
+}
+.navbar-link li 
+{
+display: inline-block;
+padding: 0px 25px;
+text-decoration: none;
+list-style-type: none;
+color: white;    
+}
+.navbar-link a 
+{
+text-decoration: none;
+list-style-type: none;
+color: white;     
+}
+.dropdown:hover .dropdown-menu{
+display: block;
+}
+
+@media only screen and (max-width:580px)
+{
+.content{
+width: 90% !important;
+height: auto !important;
+margin: auto !important;
+margin-top: 25% !important;
+}   
+.navbar-link
+{
+margin-left: 0% !important;    
+}
+.navbar-link li 
+{
+display: block;
+padding: 5px 5px;
+text-decoration: none;
+list-style-type: none;
+color: white;    
+} 
+}

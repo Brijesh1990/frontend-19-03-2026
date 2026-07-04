@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<!-- custome css -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="css/style.css">
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+</head>
+<body>
+<!-- myntra navigations -->
+<nav class="nav navbar-expand-md shadow bg-white">
+<a href="index.html" class="navbar-brand ms-5"><img src="https://cdn.iconscout.com/icon/free/png-256/free-myntra-icon-svg-download-png-2249158.png" class="img-fluid w-25"></a> 
+<button type="button" data-bs-toggle="collapse" data-bs-target="#btnColl" class="navbar-toggler btn btn-lg btn-white text-dark">
+<span class="bi bi-grid fs-1"></span>    
+</button>
+<div class="collapse navbar-collapse" id="btnColl" >
+<ul>
+<li><a href="mens.html">Men</a></li>
+<li><a href="womens.html">WoMen</a></li>
+<li><a href="kids.html">Kids</a></li>
+<li><a href="homeloved.html">Home Loved</a></li>
+<li><a href="studio.html">Studio</a></li>
+<li class="ms-5 search-box">
+<form>
+<div class="input-group border border-1">
+<button type="button" class="btn btn-transparent"><span class="bi bi-search"></span></button> 
+<input type="text" placeholder="search your products here...." class="form-control border-0">
+</div>
+</form>    
+</li>
+<li><a href="#" data-bs-toggle="modal" data-bs-target="#account" class="btn btn-sm btn-dark text-white">Account <span class="bi bi-person-plus"></span></a></li>
+<li><a href="bags.html">Bag <span class="bi bi-bag-x-fill"></span></a></li>
+</ul>
+</div>
+</nav>    
+
+<!-- Product Details Section -->
+<div class="container my-5">
+
+    <div class="row">
+
+        <!-- Product Gallery -->
+        <div class="col-lg-5">
+
+            <div class="row">
+
+                <!-- Thumbnails -->
+                <div class="col-3">
+
+                    <img src="https://plus.unsplash.com/premium_photo-1684407616442-8d5a1b7c978e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y29zbWV0aWN8ZW58MHx8MHx8fDA%3D"
+                         class="img-fluid border rounded mb-3 thumbnail-img"
+                         onclick="changeImage(this)">
+
+                    <img src="https://plus.unsplash.com/premium_photo-1684407616442-8d5a1b7c978e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y29zbWV0aWN8ZW58MHx8MHx8fDA%3D"
+                         class="img-fluid border rounded mb-3 thumbnail-img"
+                         onclick="changeImage(this)">
+
+                    <img src="https://plus.unsplash.com/premium_photo-1684407616442-8d5a1b7c978e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y29zbWV0aWN8ZW58MHx8MHx8fDA%3D"
+                         class="img-fluid border rounded thumbnail-img"
+                         onclick="changeImage(this)">
+
+                </div>
+
+                <!-- Main Image -->
+                <div class="col-9">
+                    <img src="https://plus.unsplash.com/premium_photo-1684407616442-8d5a1b7c978e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y29zbWV0aWN8ZW58MHx8MHx8fDA%3D"
+                         class="img-fluid shadow rounded product-main-img"
+                         id="mainImage">
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Product Information -->
+        <div class="col-lg-7">
+
+            <h2 class="fw-bold">Roadster Men Solid Cotton T-Shirt</h2>
+
+            <div class="mb-2">
+                <span class="badge bg-success">
+                    4.5 ★
+                </span>
+                <span class="text-muted">
+                    2,564 Ratings & 420 Reviews
+                </span>
+            </div>
+
+            <hr>
+
+            <h3 class="fw-bold">
+                ₹599
+                <span class="fs-5 text-muted text-decoration-line-through">
+                    ₹999
+                </span>
+
+                <span class="text-success fs-6">
+                    40% OFF
+                </span>
+            </h3>
+
+            <p class="text-success">
+                Inclusive of all taxes
+            </p>
+
+            <hr>
+
+            <!-- Size -->
+            <h6 class="fw-bold">Select Size</h6>
+
+            <div class="mb-4">
+
+                <button class="btn btn-outline-dark rounded-circle me-2">S</button>
+                <button class="btn btn-outline-dark rounded-circle me-2">M</button>
+                <button class="btn btn-outline-dark rounded-circle me-2">L</button>
+                <button class="btn btn-outline-dark rounded-circle me-2">XL</button>
+
+            </div>
+
+            <!-- Quantity -->
+            <h6 class="fw-bold">Quantity</h6>
+
+            <div class="input-group quantity-box mb-4">
+
+                <button class="btn btn-outline-secondary">-</button>
+
+                <input type="text"
+                       class="form-control text-center"
+                       value="1">
+
+                <button class="btn btn-outline-secondary">+</button>
+
+            </div>
+
+            <!-- Buttons -->
+            <div class="d-flex flex-wrap gap-3">
+
+                <a href="cart.html"
+                   class="btn btn-danger btn-lg">
+                    <i class="bi bi-bag-fill"></i>
+                    Add To Cart
+                </a>
+
+                <button class="btn btn-dark btn-lg">
+                    Buy Now
+                </button>
+
+            </div>
+
+            <hr>
+
+            <!-- Description -->
+            <h4>Product Description</h4>
+
+            <p>
+                Premium quality cotton t-shirt designed for everyday comfort.
+                Soft breathable fabric with stylish fit. Perfect for casual wear,
+                office wear and outdoor activities.
+            </p>
+
+            <ul>
+                <li>100% Cotton</li>
+                <li>Regular Fit</li>
+                <li>Round Neck</li>
+                <li>Half Sleeves</li>
+                <li>Machine Wash</li>
+                <li>Made in India</li>
+            </ul>
+
+        </div>
+
+    </div>
+
+    <!-- Customer Reviews -->
+    <div class="mt-5">
+
+        <h3 class="fw-bold mb-4">
+            Customer Reviews
+        </h3>
+
+        <div class="card border-0 shadow-sm mb-3">
+            <div class="card-body">
+                <h5>Rahul Patel</h5>
+                <div class="text-warning">★★★★★</div>
+                <p>
+                    Excellent quality and perfect fitting.
+                    Totally worth the price.
+                </p>
+            </div>
+        </div>
+
+        <div class="card border-0 shadow-sm mb-3">
+            <div class="card-body">
+                <h5>Neha Sharma</h5>
+                <div class="text-warning">★★★★☆</div>
+                <p>
+                    Fabric is very soft and delivery was quick.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Write Review -->
+    <div class="card border-0 shadow mt-5">
+
+        <div class="card-body">
+
+            <h4 class="mb-4">
+                Write Your Review
+            </h4>
+
+            <form>
+
+                <div class="mb-3">
+                    <input type="text"
+                           class="form-control"
+                           placeholder="Enter Name">
+                </div>
+
+                <div class="mb-3">
+                    <select class="form-select">
+                        <option>Select Rating</option>
+                        <option>★★★★★</option>
+                        <option>★★★★☆</option>
+                        <option>★★★☆☆</option>
+                        <option>★★☆☆☆</option>
+                        <option>★☆☆☆☆</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <textarea class="form-control"
+                              rows="5"
+                              placeholder="Write Review"></textarea>
+                </div>
+
+                <button class="btn btn-danger">
+                    Submit Review
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <!-- Similar Products -->
+    <div class="mt-5">
+
+        <h3 class="fw-bold mb-4">
+            Similar Products
+        </h3>
+
+        <div class="row g-4">
+
+            <!-- Product 1 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="card product-card border-0 shadow-sm h-100">
+
+                    <img src="https://plus.unsplash.com/premium_photo-1684407616442-8d5a1b7c978e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y29zbWV0aWN8ZW58MHx8MHx8fDA%3D"
+                         class="card-img-top similar-img">
+
+                    <div class="card-body">
+                        <h6>Puma Casual Shirt</h6>
+                        <p>₹899</p>
+
+                        <a href="product-puma.html"
+                           class="btn btn-outline-dark w-100">
+                            View Product
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="card product-card border-0 shadow-sm h-100">
+
+                    <img src="https://plus.unsplash.com/premium_photo-1684407616442-8d5a1b7c978e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y29zbWV0aWN8ZW58MHx8MHx8fDA%3D"
+                         class="card-img-top similar-img">
+
+                    <div class="card-body">
+                        <h6>Levis Jeans</h6>
+                        <p>₹1399</p>
+
+                        <a href="product-levis.html"
+                           class="btn btn-outline-dark w-100">
+                            View Product
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="card product-card border-0 shadow-sm h-100">
+
+                    <img src="https://plus.unsplash.com/premium_photo-1684407616442-8d5a1b7c978e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y29zbWV0aWN8ZW58MHx8MHx8fDA%3D"
+                         class="card-img-top similar-img">
+
+                    <div class="card-body">
+                        <h6>Adidas Jacket</h6>
+                        <p>₹1999</p>
+
+                        <a href="product-adidas.html"
+                           class="btn btn-outline-dark w-100">
+                            View Product
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="card product-card border-0 shadow-sm h-100">
+
+                    <img src="https://plus.unsplash.com/premium_photo-1684407616442-8d5a1b7c978e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y29zbWV0aWN8ZW58MHx8MHx8fDA%3D"
+                         class="card-img-top similar-img">
+
+                    <div class="card-body">
+                        <h6>Zara Dress</h6>
+                        <p>₹1799</p>
+
+                        <a href="product-zara.html"
+                           class="btn btn-outline-dark w-100">
+                            View Product
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+function changeImage(img){
+    document.getElementById("mainImage").src = img.src;
+}
+</script>
+<!-- Client Testimonials -->
+<section class="container my-5">
+    <div class="text-center mb-5">
+        <h2 class="fw-bold">What Our Clients Say About Us</h2>
+        <p class="text-muted">Trusted by thousands of happy customers across India.</p>
+    </div>
+
+    <div id="clientCarousel" class="carousel slide" data-bs-ride="carousel">
+
+        <div class="carousel-inner">
+
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+                <div class="row g-4">
+
+                    <div class="col-lg-4 col-md-4 col-12 client-testimonials">
+                        <div class="card border-0 shadow-sm text-center h-100 p-3 ">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg"
+                                 class="rounded-circle mx-auto client-img"
+                                 alt="">
+                            <div class="card-body">
+                                <h5>Priya Sharma</h5>
+                                <small class="text-muted">Ahmedabad</small>
+                                <p class="mt-3">
+                                    Amazing quality products and fast delivery.
+                                    Highly recommended.
+                                </p>
+                                <div class="text-warning">★★★★★</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-12 client-testimonials">
+                        <div class="card border-0 shadow-sm text-center h-100 p-3">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg"
+                                 class="rounded-circle mx-auto client-img"
+                                 alt="">
+                            <div class="card-body">
+                                <h5>Rahul Patel</h5>
+                                <small class="text-muted">Surat</small>
+                                <p class="mt-3">
+                                    Excellent service and genuine products.
+                                    Will shop again.
+                                </p>
+                                <div class="text-warning">★★★★★</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-12 client-testimonials">
+                        <div class="card border-0 shadow-sm text-center h-100 p-3">
+                            <img src="https://randomuser.me/api/portraits/women/68.jpg"
+                                 class="rounded-circle mx-auto client-img"
+                                 alt="">
+                            <div class="card-body">
+                                <h5>Neha Verma</h5>
+                                <small class="text-muted">Mumbai</small>
+                                <p class="mt-3">
+                                    Great discounts and premium collections.
+                                    Loved the experience.
+                                </p>
+                                <div class="text-warning">★★★★★</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+                <div class="row g-4">
+
+                    <div class="col-lg-4 col-md-4 col-12 client-testimonials">
+                        <div class="card border-0 shadow-sm text-center h-100 p-3">
+                            <img src="https://randomuser.me/api/portraits/men/55.jpg"
+                                 class="rounded-circle mx-auto client-img"
+                                 alt="">
+                            <div class="card-body">
+                                <h5>Arjun Singh</h5>
+                                <small class="text-muted">Delhi</small>
+                                <p class="mt-3">
+                                    Best online shopping platform for fashion.
+                                </p>
+                                <div class="text-warning">★★★★★</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-12 client-testimonials">
+                        <div class="card border-0 shadow-sm text-center h-100 p-3">
+                            <img src="https://randomuser.me/api/portraits/women/22.jpg"
+                                 class="rounded-circle mx-auto client-img"
+                                 alt="">
+                            <div class="card-body">
+                                <h5>Kajal Mehta</h5>
+                                <small class="text-muted">Pune</small>
+                                <p class="mt-3">
+                                    Stylish collections and affordable prices.
+                                </p>
+                                <div class="text-warning">★★★★★</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-12 client-testimonials">
+                        <div class="card border-0 shadow-sm text-center h-100 p-3">
+                            <img src="https://randomuser.me/api/portraits/men/67.jpg"
+                                 class="rounded-circle mx-auto client-img"
+                                 alt="">
+                            <div class="card-body">
+                                <h5>Vikram Shah</h5>
+                                <small class="text-muted">Rajkot</small>
+                                <p class="mt-3">
+                                    Easy returns and excellent customer support.
+                                </p>
+                                <div class="text-warning">★★★★★</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Controls -->
+        <button class="carousel-control-prev"
+                type="button"
+                data-bs-target="#clientCarousel"
+                data-bs-slide="prev">
+
+            <span class="carousel-control-prev-icon bg-dark rounded-circle p-3"></span>
+        </button>
+
+        <button class="carousel-control-next"
+                type="button"
+                data-bs-target="#clientCarousel"
+                data-bs-slide="next">
+
+            <span class="carousel-control-next-icon bg-dark rounded-circle p-3"></span>
+        </button>
+
+    </div>
+</section>
+
+<!-- footer start here  -->
+
+<!-- Footer -->
+<footer class="bg-dark text-white mt-5 pt-5 pb-3">
+<div class="container">
+
+<div class="row">
+
+<div class="col-lg-3 col-md-6 mb-4">
+<h5>Myntra Clone</h5>
+<p>
+Shop fashion, footwear, accessories,
+beauty products and lifestyle items at
+best prices.
+</p>
+</div>
+
+<div class="col-lg-3 col-md-6 mb-4">
+<h5>Quick Links</h5>
+<ul class="list-unstyled">
+<li><a href="#" class="text-white text-decoration-none">Men</a></li>
+<li><a href="#" class="text-white text-decoration-none">Women</a></li>
+<li><a href="#" class="text-white text-decoration-none">Kids</a></li>
+<li><a href="#" class="text-white text-decoration-none">Home</a></li>
+</ul>
+</div>
+
+<div class="col-lg-3 col-md-6 mb-4">
+<h5>Customer Support</h5>
+<ul class="list-unstyled">
+<li><a href="#" class="text-white text-decoration-none">Contact Us</a></li>
+<li><a href="#" class="text-white text-decoration-none">FAQ</a></li>
+<li><a href="#" class="text-white text-decoration-none">Returns</a></li>
+<li><a href="#" class="text-white text-decoration-none">Track Orders</a></li>
+</ul>
+</div>
+
+<div class="col-lg-3 col-md-6 mb-4">
+<h5>Follow Us</h5>
+
+<a href="#" class="text-white fs-4 me-3">
+<i class="bi bi-facebook"></i>
+</a>
+
+<a href="#" class="text-white fs-4 me-3">
+<i class="bi bi-instagram"></i>
+</a>
+
+<a href="#" class="text-white fs-4 me-3">
+<i class="bi bi-twitter"></i>
+</a>
+
+<a href="#" class="text-white fs-4">
+<i class="bi bi-youtube"></i>
+</a>
+
+</div>
+
+</div>
+
+<hr>
+
+<div class="text-center">
+© 2025 Myntra Clone. All Rights Reserved.
+</div>
+
+</div>
+</footer>
+
+
+
+<!-- create a account modal -->
+<div class="modal fade" role="dialog" id="account">
+<div class="modal-dialog">
+<div class="modal-content">   
+<div class="card border-0  p-0 mx-auto bg-white mt-5">
+<div class="card-header bg-white">
+<button type="button" class="btn btn-sm btn-transparent text-danger fs-3 float-end" data-bs-dismiss="modal">&times;</button>      
+<img src="images/login.png" class="img-fluid w-100">    
+<form class="p-5">
+<h2>SignUp</h2>
+<div class="form-group mt-3">
+<input type="text" placeholder="+91 | Mobile Numbers" class="form-control">
+</div>
+
+<div class="form-group mt-3">
+<input type="password" placeholder="Enter your Password" class="form-control">
+</div>
+
+<div class="form-group mt-3">
+<input type="password" placeholder="Enter your confirmed password" class="form-control">
+</div>
+
+<div class="form-group mt-3">
+<textarea type="text" placeholder="Enter your address" class="form-control"></textarea>
+</div>
+
+
+<div class="form-group mt-3">
+<input type="submit" class="btn btn-lg btn-secondary text-white" value="Register">
+<input type="submit" class="btn btn-lg btn-danger ms-3 text-white" value="Reset">
+</div>
+
+<div class="form-group mt-3">
+<span>Already have an account <span class=""><a href="account.html" class="text-danger">Login here ?</a></span></span>
+</div>
+</form>
+</div>    
+</div> 
+
+</div>    
+</div>    
+</div> 
+</body>
+</html>

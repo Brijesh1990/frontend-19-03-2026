@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<!-- custome css -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="css/style.css">
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+</head>
+<body>
+<!-- myntra navigations -->
+<nav class="nav navbar-expand-md shadow bg-white">
+<a href="index.html" class="navbar-brand ms-5"><img src="https://cdn.iconscout.com/icon/free/png-256/free-myntra-icon-svg-download-png-2249158.png" class="img-fluid w-25"></a> 
+<button type="button" data-bs-toggle="collapse" data-bs-target="#btnColl" class="navbar-toggler btn btn-lg btn-white text-dark">
+<span class="bi bi-grid fs-1"></span>    
+</button>
+<div class="collapse navbar-collapse" id="btnColl" >
+<ul>
+<li><a href="mens.html">Men</a></li>
+<li><a href="womens.html">WoMen</a></li>
+<li><a href="kids.html">Kids</a></li>
+<li><a href="homeloved.html">Home Loved</a></li>
+<li><a href="studio.html">Studio</a></li>
+<li class="ms-5 search-box">
+<form>
+<div class="input-group border border-1">
+<button type="button" class="btn btn-transparent"><span class="bi bi-search"></span></button> 
+<input type="text" placeholder="search your products here...." class="form-control border-0">
+</div>
+</form>    
+</li>
+<li><a href="#" data-bs-toggle="modal" data-bs-target="#account" class="btn btn-sm btn-dark text-white">Account <span class="bi bi-person-plus"></span></a></li>
+<li><a href="bags.html">Bag <span class="bi bi-bag-x-fill"></span></a></li>
+</ul>
+</div>
+</nav>    
+
+<!-- view cart page here -->
+<!-- View Cart Page -->
+<div class="container my-5">
+
+    <h2 class="fw-bold mb-4">
+        Shopping Bag <span class="text-muted">(3 Items)</span>
+    </h2>
+
+    <div class="row">
+
+        <!-- Cart Items -->
+        <div class="col-lg-8">
+
+            <!-- Product 1 -->
+            <div class="card shadow-sm border-0 mb-4">
+                <div class="row g-0 align-items-center">
+
+                    <div class="col-md-3">
+                        <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab"
+                             class="img-fluid rounded-start h-100"
+                             alt="">
+                    </div>
+
+                    <div class="col-md-9">
+                        <div class="card-body">
+
+                            <div class="d-flex justify-content-between">
+                                <h5 class="fw-bold">Roadster T-Shirt</h5>
+
+                                <button class="btn btn-sm btn-outline-danger">
+                                    <i class="bi bi-trash"></i>
+                                </button>
+                            </div>
+
+                            <p class="text-muted">
+                                Men Solid Round Neck Cotton T-Shirt
+                            </p>
+
+                            <p>
+                                Size : <strong>M</strong> |
+                                Color : <strong>Black</strong>
+                            </p>
+
+                            <div class="d-flex justify-content-between align-items-center">
+
+                                <div>
+                                    <span class="fw-bold fs-5">₹599</span>
+                                    <span class="text-decoration-line-through text-muted">
+                                        ₹999
+                                    </span>
+                                    <span class="text-success">
+                                        40% OFF
+                                    </span>
+                                </div>
+
+                                <div class="input-group quantity-box">
+                                    <button class="btn btn-outline-secondary">-</button>
+                                    <input type="text" value="1"
+                                           class="form-control text-center">
+                                    <button class="btn btn-outline-secondary">+</button>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="card shadow-sm border-0 mb-4">
+                <div class="row g-0 align-items-center">
+
+                    <div class="col-md-3">
+                        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff"
+                             class="img-fluid rounded-start h-100"
+                             alt="">
+                    </div>
+
+                    <div class="col-md-9">
+                        <div class="card-body">
+
+                            <div class="d-flex justify-content-between">
+                                <h5 class="fw-bold">Nike Running Shoes</h5>
+
+                                <button class="btn btn-sm btn-outline-danger">
+                                    <i class="bi bi-trash"></i>
+                                </button>
+                            </div>
+
+                            <p class="text-muted">
+                                Lightweight Sports Running Shoes
+                            </p>
+
+                            <p>
+                                Size : <strong>9</strong> |
+                                Color : <strong>White</strong>
+                            </p>
+
+                            <div class="d-flex justify-content-between align-items-center">
+
+                                <div>
+                                    <span class="fw-bold fs-5">₹2499</span>
+                                    <span class="text-decoration-line-through text-muted">
+                                        ₹4999
+                                    </span>
+                                    <span class="text-success">
+                                        50% OFF
+                                    </span>
+                                </div>
+
+                                <div class="input-group quantity-box">
+                                    <button class="btn btn-outline-secondary">-</button>
+                                    <input type="text" value="1"
+                                           class="form-control text-center">
+                                    <button class="btn btn-outline-secondary">+</button>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="card shadow-sm border-0 mb-4">
+                <div class="row g-0 align-items-center">
+
+                    <div class="col-md-3">
+                        <img src="https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb"
+                             class="img-fluid rounded-start h-100"
+                             alt="">
+                    </div>
+
+                    <div class="col-md-9">
+                        <div class="card-body">
+
+                            <div class="d-flex justify-content-between">
+                                <h5 class="fw-bold">Levis Jeans</h5>
+
+                                <button class="btn btn-sm btn-outline-danger">
+                                    <i class="bi bi-trash"></i>
+                                </button>
+                            </div>
+
+                            <p class="text-muted">
+                                Slim Fit Stretchable Denim Jeans
+                            </p>
+
+                            <p>
+                                Size : <strong>32</strong> |
+                                Color : <strong>Blue</strong>
+                            </p>
+
+                            <div class="d-flex justify-content-between align-items-center">
+
+                                <div>
+                                    <span class="fw-bold fs-5">₹1399</span>
+                                    <span class="text-decoration-line-through text-muted">
+                                        ₹2499
+                                    </span>
+                                    <span class="text-success">
+                                        44% OFF
+                                    </span>
+                                </div>
+
+                                <div class="input-group quantity-box">
+                                    <button class="btn btn-outline-secondary">-</button>
+                                    <input type="text" value="1"
+                                           class="form-control text-center">
+                                    <button class="btn btn-outline-secondary">+</button>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Price Details -->
+        <div class="col-lg-4 price-details">
+            <div class="card border-0 shadow-sm sticky-top">
+
+                <div class="card-header bg-white">
+                    <h4 class="fw-bold mb-0">
+                        Price Details
+                    </h4>
+                </div>
+
+                <div class="card-body">
+
+                    <div class="d-flex justify-content-between mb-3">
+                        <span>Total MRP</span>
+                        <span>₹8,497</span>
+                    </div>
+
+                    <div class="d-flex justify-content-between mb-3 text-success">
+                        <span>Discount on MRP</span>
+                        <span>- ₹4,000</span>
+                    </div>
+
+                    <div class="d-flex justify-content-between mb-3">
+                        <span>Coupon Discount</span>
+                        <span class="text-success">- ₹200</span>
+                    </div>
+
+                    <div class="d-flex justify-content-between mb-3">
+                        <span>Delivery Charges</span>
+                        <span class="text-success">FREE</span>
+                    </div>
+
+                    <hr>
+
+                    <div class="d-flex justify-content-between fw-bold fs-5">
+                        <span>Total Amount</span>
+                        <span>₹4,297</span>
+                    </div>
+
+                    <button class="btn btn-danger w-100 mt-4 py-3">
+                        PLACE ORDER
+                    </button>
+
+                    <div class="mt-4">
+
+                        <h6>Apply Coupon</h6>
+
+                        <div class="input-group">
+                            <input type="text"
+                                   class="form-control"
+                                   placeholder="Enter Coupon Code">
+
+                            <button class="btn btn-dark">
+                                Apply
+                            </button>
+                        </div>
+
+                    </div>
+
+                    <div class="alert alert-success mt-4 mb-0">
+                        <i class="bi bi-shield-check"></i>
+                        100% Secure Payment
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+<!-- Client Testimonials -->
+<section class="container my-5">
+    <div class="text-center mb-5">
+        <h2 class="fw-bold">What Our Clients Say About Us</h2>
+        <p class="text-muted">Trusted by thousands of happy customers across India.</p>
+    </div>
+
+    <div id="clientCarousel" class="carousel slide" data-bs-ride="carousel">
+
+        <div class="carousel-inner">
+
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+                <div class="row g-4">
+
+                    <div class="col-lg-4 col-md-4 col-12 client-testimonials">
+                        <div class="card border-0 shadow-sm text-center h-100 p-3 ">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg"
+                                 class="rounded-circle mx-auto client-img"
+                                 alt="">
+                            <div class="card-body">
+                                <h5>Priya Sharma</h5>
+                                <small class="text-muted">Ahmedabad</small>
+                                <p class="mt-3">
+                                    Amazing quality products and fast delivery.
+                                    Highly recommended.
+                                </p>
+                                <div class="text-warning">★★★★★</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-12 client-testimonials">
+                        <div class="card border-0 shadow-sm text-center h-100 p-3">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg"
+                                 class="rounded-circle mx-auto client-img"
+                                 alt="">
+                            <div class="card-body">
+                                <h5>Rahul Patel</h5>
+                                <small class="text-muted">Surat</small>
+                                <p class="mt-3">
+                                    Excellent service and genuine products.
+                                    Will shop again.
+                                </p>
+                                <div class="text-warning">★★★★★</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-12 client-testimonials">
+                        <div class="card border-0 shadow-sm text-center h-100 p-3">
+                            <img src="https://randomuser.me/api/portraits/women/68.jpg"
+                                 class="rounded-circle mx-auto client-img"
+                                 alt="">
+                            <div class="card-body">
+                                <h5>Neha Verma</h5>
+                                <small class="text-muted">Mumbai</small>
+                                <p class="mt-3">
+                                    Great discounts and premium collections.
+                                    Loved the experience.
+                                </p>
+                                <div class="text-warning">★★★★★</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+                <div class="row g-4">
+
+                    <div class="col-lg-4 col-md-4 col-12 client-testimonials">
+                        <div class="card border-0 shadow-sm text-center h-100 p-3">
+                            <img src="https://randomuser.me/api/portraits/men/55.jpg"
+                                 class="rounded-circle mx-auto client-img"
+                                 alt="">
+                            <div class="card-body">
+                                <h5>Arjun Singh</h5>
+                                <small class="text-muted">Delhi</small>
+                                <p class="mt-3">
+                                    Best online shopping platform for fashion.
+                                </p>
+                                <div class="text-warning">★★★★★</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-12 client-testimonials">
+                        <div class="card border-0 shadow-sm text-center h-100 p-3">
+                            <img src="https://randomuser.me/api/portraits/women/22.jpg"
+                                 class="rounded-circle mx-auto client-img"
+                                 alt="">
+                            <div class="card-body">
+                                <h5>Kajal Mehta</h5>
+                                <small class="text-muted">Pune</small>
+                                <p class="mt-3">
+                                    Stylish collections and affordable prices.
+                                </p>
+                                <div class="text-warning">★★★★★</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-12 client-testimonials">
+                        <div class="card border-0 shadow-sm text-center h-100 p-3">
+                            <img src="https://randomuser.me/api/portraits/men/67.jpg"
+                                 class="rounded-circle mx-auto client-img"
+                                 alt="">
+                            <div class="card-body">
+                                <h5>Vikram Shah</h5>
+                                <small class="text-muted">Rajkot</small>
+                                <p class="mt-3">
+                                    Easy returns and excellent customer support.
+                                </p>
+                                <div class="text-warning">★★★★★</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Controls -->
+        <button class="carousel-control-prev"
+                type="button"
+                data-bs-target="#clientCarousel"
+                data-bs-slide="prev">
+
+            <span class="carousel-control-prev-icon bg-dark rounded-circle p-3"></span>
+        </button>
+
+        <button class="carousel-control-next"
+                type="button"
+                data-bs-target="#clientCarousel"
+                data-bs-slide="next">
+
+            <span class="carousel-control-next-icon bg-dark rounded-circle p-3"></span>
+        </button>
+
+    </div>
+</section>
+
+<!-- footer start here  -->
+<!-- Footer -->
+<footer class="bg-dark text-white mt-5 pt-5 pb-3">
+<div class="container">
+
+<div class="row">
+
+<div class="col-lg-3 col-md-6 mb-4">
+<h5>Myntra Clone</h5>
+<p>
+Shop fashion, footwear, accessories,
+beauty products and lifestyle items at
+best prices.
+</p>
+</div>
+
+<div class="col-lg-3 col-md-6 mb-4">
+<h5>Quick Links</h5>
+<ul class="list-unstyled">
+<li><a href="#" class="text-white text-decoration-none">Men</a></li>
+<li><a href="#" class="text-white text-decoration-none">Women</a></li>
+<li><a href="#" class="text-white text-decoration-none">Kids</a></li>
+<li><a href="#" class="text-white text-decoration-none">Home</a></li>
+</ul>
+</div>
+
+<div class="col-lg-3 col-md-6 mb-4">
+<h5>Customer Support</h5>
+<ul class="list-unstyled">
+<li><a href="#" class="text-white text-decoration-none">Contact Us</a></li>
+<li><a href="#" class="text-white text-decoration-none">FAQ</a></li>
+<li><a href="#" class="text-white text-decoration-none">Returns</a></li>
+<li><a href="#" class="text-white text-decoration-none">Track Orders</a></li>
+</ul>
+</div>
+
+<div class="col-lg-3 col-md-6 mb-4">
+<h5>Follow Us</h5>
+
+<a href="#" class="text-white fs-4 me-3">
+<i class="bi bi-facebook"></i>
+</a>
+
+<a href="#" class="text-white fs-4 me-3">
+<i class="bi bi-instagram"></i>
+</a>
+
+<a href="#" class="text-white fs-4 me-3">
+<i class="bi bi-twitter"></i>
+</a>
+
+<a href="#" class="text-white fs-4">
+<i class="bi bi-youtube"></i>
+</a>
+
+</div>
+
+</div>
+
+<hr>
+
+<div class="text-center">
+© 2025 Myntra Clone. All Rights Reserved.
+</div>
+
+</div>
+</footer>
+
+<!-- create a account modal -->
+<div class="modal fade" role="dialog" id="account">
+<div class="modal-dialog">
+<div class="modal-content">   
+<div class="card border-0  p-0 mx-auto bg-white mt-5">
+<div class="card-header bg-white">
+<button type="button" class="btn btn-sm btn-transparent text-danger fs-3 float-end" data-bs-dismiss="modal">&times;</button>      
+<img src="images/login.png" class="img-fluid w-100">    
+<form class="p-5">
+<h2>SignUp</h2>
+<div class="form-group mt-3">
+<input type="text" placeholder="+91 | Mobile Numbers" class="form-control">
+</div>
+
+<div class="form-group mt-3">
+<input type="password" placeholder="Enter your Password" class="form-control">
+</div>
+
+<div class="form-group mt-3">
+<input type="password" placeholder="Enter your confirmed password" class="form-control">
+</div>
+
+<div class="form-group mt-3">
+<textarea type="text" placeholder="Enter your address" class="form-control"></textarea>
+</div>
+
+
+<div class="form-group mt-3">
+<input type="submit" class="btn btn-lg btn-secondary text-white" value="Register">
+<input type="submit" class="btn btn-lg btn-danger ms-3 text-white" value="Reset">
+</div>
+
+<div class="form-group mt-3">
+<span>Already have an account <span class=""><a href="account.html" class="text-danger">Login here ?</a></span></span>
+</div>
+</form>
+</div>    
+</div> 
+
+</div>    
+</div>    
+</div> 
+</body>
+</html>

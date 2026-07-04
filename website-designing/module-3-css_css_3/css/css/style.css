@@ -1,0 +1,21 @@
+body 
+{
+background-color: coral;    
+}
+div 
+{
+width: 60%;
+height: auto;
+margin: auto;
+margin-top: 5%;
+padding: 25px;
+background-color: white;
+border-radius: 25px;   
+text-align: center;
+}
+
+div h1 
+{
+color: black !important;
+font-size: 45px !important;
+}

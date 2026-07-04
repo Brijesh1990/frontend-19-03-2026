@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<title>Page Title</title>
+<link rel='stylesheet' href='main.css'>
+<style>
+#flag
+{
+    list-style-type: none;
+}    
+#flag  li::before
+{
+    content: "⛳";
+    margin-right: 10px;
+    list-style-type: none;
+}
+#flag1
+{
+    list-style-type: none;
+}
+#flag1 li::after
+{
+    content: "⚽";
+    margin-right: 10px;
+    list-style-type: none;
+}
+
+#email-icons
+{
+    list-style-type: none;
+}
+#email-icons li::before
+{
+    content: "📧";
+    margin-right: 10px;
+    list-style-type: none;
+}
+#books
+{
+    list-style-type: none;
+}
+#books li::before
+{
+    content: "📚";
+    margin-right: 10px;
+    list-style-type: none;
+}
+#movies
+{
+    list-style-type: none;
+}
+#movies li::before
+{
+    content: "🎬";
+    margin-right: 10px;
+    list-style-type: none;
+}
+</style>
+
+</head>
+<body>
+<ul>
+  <li>Banana</li>
+  <li>Apple</li>
+  <li>Guvava</li>
+  <li>Pineapple</li>
+  <li>Stroberry</li>
+  <li>grapes</li>  
+</ul>
+
+<ul id="flag1">
+  <li>Banana</li>
+  <li>Apple</li>
+  <li>Guvava</li>
+  <li>Pineapple</li>
+  <li>Stroberry</li>
+  <li>grapes</li>  
+</ul>
+
+<ul type='circle'>
+  <li>Banana</li>
+  <li>Apple</li>
+  <li>Guvava</li>
+  <li>Pineapple</li>
+  <li>Stroberry</li>
+  <li>grapes</li>  
+</ul>
+
+<ul id="flag">
+  <li>Banana</li>
+  <li>Apple</li>
+  <li>Guvava</li>
+  <li>Pineapple</li>
+  <li>Stroberry</li>
+  <li>grapes</li>  
+</ul>
+
+<ol>
+    <li>Banana</li>
+    <li>Apple</li>
+    <li>Guvava</li>
+    <li>Pineapple</li>
+    <li>Stroberry</li>
+    <li>grapes</li>
+</ol>
+
+<ol type="a">
+    <li>Banana</li>
+    <li>Apple</li>
+    <li>Guvava</li>
+    <li>Pineapple</li>
+    <li>Stroberry</li>
+    <li>grapes</li>
+</ol>
+
+<ol type="A">
+    <li>Banana</li>
+    <li>Apple</li>
+    <li>Guvava</li>
+    <li>Pineapple</li>
+    <li>Stroberry</li>
+    <li>grapes</li>
+</ol>
+
+<ol type="i">
+    <li>Banana</li>
+    <li>Apple</li>
+    <li>Guvava</li>
+    <li>Pineapple</li>
+    <li>Stroberry</li>
+    <li>grapes</li>
+</ol>
+
+
+<ol id="email-icons">
+    <li>Banana</li>
+    <li>Apple</li>
+    <li>Guvava</li>
+    <li>Pineapple</li>
+    <li>Stroberry</li>
+    <li>grapes</li>
+</ol>
+
+<h1>nested list</h1>
+<ol>
+    <li>List of books
+        <ul id="books">
+            <li>python</li>
+            <li>react js</li>
+            <li>angular</li>
+        </ul>
+    </li>
+    <li>List of movies
+        <ul id="movies">
+            <li>Avengers</li>
+            <li>Spiderman</li>
+            <li>Batman</li>
+        </ul>
+</ol>
+</body>
+</html>
