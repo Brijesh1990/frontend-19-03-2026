@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Invoice Bill</title>
+    <script src="js/bill.js"></script>
+</head>
+<body>
+
+    <center>
+        <h1>ABC Technologies Pvt. Ltd. <button id="btn" style="float: right; padding:8px" onclick="prnt()">Print bill/Invoice</button></h1>
+        <p>Rajkot, Gujarat - 360001</p>
+        <p>Email: info@abctechnologies.com</p>
+        <p>Phone: +91 99999 99999</p>
+        <hr width="80%">
+    </center>
+
+    <h2 align="center">INVOICE</h2>
+
+    <table width="100%" border="0">
+        <tr>
+            <td>
+                <b>Invoice No:</b> INV-1001<br>
+                <b>Date:</b> 11-Jul-2026
+            </td>
+
+            <td align="right">
+                <b>Customer Name:</b> Brijesh Pandey<br>
+                <b>Mobile:</b> +91 9876543210
+            </td>
+        </tr>
+    </table>
+
+    <br>
+
+    <table border="1" width="100%" cellpadding="8" cellspacing="0">
+        <tr>
+            <th>No</th>
+            <th>Product Name</th>
+            <th>Qty</th>
+            <th>Price</th>
+            <th>Total</th>
+        </tr>
+
+        <tr>
+            <td align="center">1</td>
+            <td>Laptop</td>
+            <td align="center">1</td>
+            <td align="right">₹55,000</td>
+            <td align="right">₹55,000</td>
+        </tr>
+
+        <tr>
+            <td align="center">2</td>
+            <td>Wireless Mouse</td>
+            <td align="center">2</td>
+            <td align="right">₹800</td>
+            <td align="right">₹1,600</td>
+        </tr>
+
+        <tr>
+            <td align="center">3</td>
+            <td>Keyboard</td>
+            <td align="center">1</td>
+            <td align="right">₹1,200</td>
+            <td align="right">₹1,200</td>
+        </tr>
+
+        <tr>
+            <td colspan="4" align="right"><b>Sub Total</b></td>
+            <td align="right">₹57,800</td>
+        </tr>
+
+        <tr>
+            <td colspan="4" align="right"><b>GST (18%)</b></td>
+            <td align="right">₹10,404</td>
+        </tr>
+
+        <tr>
+            <td colspan="4" align="right"><b>Grand Total</b></td>
+            <td align="right"><b>₹68,204</b></td>
+        </tr>
+    </table>
+
+    <br>
+
+    <table width="100%" border="1" cellpadding="8">
+        <tr>
+            <td>
+                <b>Payment Method</b><br>
+                Cash / UPI / Card / Net Banking
+            </td>
+
+            <td>
+                <b>Bank Details</b><br>
+                Bank Name : SBI<br>
+                A/C No : 1234567890<br>
+                IFSC : SBIN0001234
+            </td>
+        </tr>
+    </table>
+
+    <br>
+
+    <b>Terms & Conditions</b>
+
+    <ol>
+        <li>Goods once sold will not be taken back.</li>
+        <li>Payment due within 7 days.</li>
+        <li>Warranty as per manufacturer policy.</li>
+        <li>This is a computer-generated invoice.</li>
+    </ol>
+
+    <br><br>
+
+    <table width="100%">
+        <tr>
+            <td>
+                Customer Signature
+                <br><br><br>
+                ______________________
+            </td>
+
+            <td align="right">
+                Authorized Signature
+                <br><br><br>
+                ______________________
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>
