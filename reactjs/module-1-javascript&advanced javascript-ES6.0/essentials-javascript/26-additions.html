@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+
+<script>
+function display(e)
+{
+    e.preventDefault();
+    var a=parseInt(document.getElementById("a").value);
+    var b=parseInt(document.getElementById("b").value);
+    var c=a+b;
+    document.getElementById("res").innerHTML=+c;
+    return false;
+}    
+</script>
+</head>
+<body>
+<p id="res"></p>    
+<form onsubmit="return display(event)" method="post">
+ <input type="text" id="a" placeholder="Enter a values :*" />
+ <br/>
+ 
+ <input type="text" id="b" placeholder="Enter b values :*" />
+ <br>
+ <input type="submit" value="Submit">   
+</form>
+
+</body>
+</html>

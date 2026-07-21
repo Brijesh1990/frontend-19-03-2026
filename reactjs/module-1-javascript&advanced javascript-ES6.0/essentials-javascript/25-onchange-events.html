@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<style>
+.cart 
+{
+    width: 60%;
+    height: auto;
+    margin: auto;
+    margin-top: 5%;
+}    
+</style>
+<script>
+function crt()
+{
+    var p=document.getElementById("price").value;
+    var q=document.getElementById("qty").value;
+    var res=p*q;
+    document.getElementById("tot").innerHTML=+res;
+}    
+</script>
+</head>
+<body>
+<div class="cart">
+    <h1>🛒 Cart(1)</h1>
+    <table align="center" width="100%" border="2">
+        <tr>
+            <th>#</th>
+            <th>photo</th>
+            <th>pname</th>
+            <th>price</th>
+            <th>QTY</th>
+            <th>desc</th>
+        </tr>
+        <tr align="center">
+            <td>1</td>
+            <td><img src="https://assets.ajio.com/medias/sys_master/root/20240202/xnza/65bd1a5816fd2c6e6ad5123b/-473Wx593H-467038556-white-MODEL.jpg" width="80px" height="80px" /></td>
+            <td>rebook shoes</td>
+            <td>Rs. <input type="text" id="price"  value="8500" readonly style="border: none; width: 50px;"/> -/</td>
+            <td><input type="number" onchange="crt()" id="qty" value="1" min="1" max="10" /></td>
+            <td>Good products</td>
+        </tr>
+        <tr>
+            <td align="right" colspan="6">
+                <h1>Subtotal of Products Rs. <label id="tot">8500</label></h1>
+            </td>
+        </tr>
+
+    </table>
+</div>  
+</body>
+</html>

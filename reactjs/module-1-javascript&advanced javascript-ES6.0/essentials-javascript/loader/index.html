@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Management System</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="css/loader.css">
+    <!-- external js -->
+    <script src="js/loader.js"></script> 
+</head>
+<body onload="mainContent()">
+<div id="loader"></div>    
+<main id="main-content">    
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">
+            <i class="bi bi-heart-pulse-fill"></i> PetCare
+        </a>
+
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a href="index.html" class="nav-link active">Dashboard</a></li>
+                <li class="nav-item"><a href="pets.html" class="nav-link">Pets</a></li>
+                <li class="nav-item"><a href="owners.html" class="nav-link">Owners</a></li>
+                <li class="nav-item"><a href="appointment.html" class="nav-link">Appointments</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Dashboard -->
+<div class="container my-4">
+
+    <h2 class="mb-4">Pet Management Dashboard</h2>
+
+    <div class="row g-4">
+
+        <div class="col-lg-3 col-md-6">
+            <div class="card shadow border-0">
+                <div class="card-body text-center">
+                    <i class="bi bi-heart-fill text-danger display-4"></i>
+                    <h3 class="mt-3">125</h3>
+                    <p>Total Pets</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+            <div class="card shadow border-0">
+                <div class="card-body text-center">
+                    <i class="bi bi-people-fill text-primary display-4"></i>
+                    <h3 class="mt-3">82</h3>
+                    <p>Owners</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+            <div class="card shadow border-0">
+                <div class="card-body text-center">
+                    <i class="bi bi-calendar-check-fill text-success display-4"></i>
+                    <h3 class="mt-3">15</h3>
+                    <p>Appointments</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+            <div class="card shadow border-0">
+                <div class="card-body text-center">
+                    <i class="bi bi-capsule-pill text-warning display-4"></i>
+                    <h3 class="mt-3">40</h3>
+                    <p>Treatments</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Add Pet -->
+    <div class="card shadow mt-5">
+        <div class="card-header bg-primary text-white">
+            <h4>Add New Pet</h4>
+        </div>
+
+        <div class="card-body">
+
+            <form>
+
+                <div class="row">
+
+                    <div class="col-md-6 mb-3">
+                        <label>Pet Name</label>
+                        <input type="text" class="form-control">
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <label>Owner Name</label>
+                        <input type="text" class="form-control">
+                    </div>
+
+                    <div class="col-md-4 mb-3">
+                        <label>Species</label>
+                        <select class="form-select">
+                            <option>Dog</option>
+                            <option>Cat</option>
+                            <option>Bird</option>
+                            <option>Rabbit</option>
+                            <option>Fish</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-4 mb-3">
+                        <label>Breed</label>
+                        <input type="text" class="form-control">
+                    </div>
+
+                    <div class="col-md-4 mb-3">
+                        <label>Age</label>
+                        <input type="number" class="form-control">
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <label>Gender</label>
+                        <select class="form-select">
+                            <option>Male</option>
+                            <option>Female</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <label>Contact Number</label>
+                        <input type="text" class="form-control">
+                    </div>
+
+                    <div class="col-12">
+                        <button class="btn btn-primary">
+                            <i class="bi bi-plus-circle"></i>
+                            Add Pet
+                        </button>
+
+                        <button class="btn btn-secondary">
+                            Reset
+                        </button>
+                    </div>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <!-- Table -->
+
+    <div class="card shadow mt-5">
+
+        <div class="card-header bg-success text-white">
+            <h4>Pet Records</h4>
+        </div>
+
+        <div class="card-body">
+
+            <div class="table-responsive">
+
+                <table class="table table-bordered table-hover">
+
+                    <thead class="table-dark">
+
+                    <tr>
+                        <th>ID</th>
+                        <th>Pet</th>
+                        <th>Owner</th>
+                        <th>Species</th>
+                        <th>Breed</th>
+                        <th>Age</th>
+                        <th>Gender</th>
+                        <th>Contact</th>
+                        <th>Action</th>
+                    </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                    <tr>
+                        <td>1</td>
+                        <td>Rocky</td>
+                        <td>John</td>
+                        <td>Dog</td>
+                        <td>Labrador</td>
+                        <td>4</td>
+                        <td>Male</td>
+                        <td>9876543210</td>
+                        <td>
+                            <button class="btn btn-sm btn-warning">
+                                <i class="bi bi-pencil-square"></i>
+                            </button>
+
+                            <button class="btn btn-sm btn-danger">
+                                <i class="bi bi-trash"></i>
+                            </button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>2</td>
+                        <td>Bella</td>
+                        <td>Smith</td>
+                        <td>Cat</td>
+                        <td>Persian</td>
+                        <td>2</td>
+                        <td>Female</td>
+                        <td>9876500000</td>
+                        <td>
+                            <button class="btn btn-warning btn-sm">
+                                <i class="bi bi-pencil"></i>
+                            </button>
+
+                            <button class="btn btn-danger btn-sm">
+                                <i class="bi bi-trash"></i>
+                            </button>
+                        </td>
+                    </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

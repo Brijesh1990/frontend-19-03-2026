@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+
+<script>
+function display(e)
+{
+    e.preventDefault();
+    var nm=document.getElementById("nm").value;
+    alert('name is :'+nm)
+    // console.log("my name is :"+nm)
+    return false;
+}    
+</script>
+</head>
+<body>
+<form onsubmit="return display(event)" method="post">
+ <input type="text" id="nm" placeholder="Enter Name *" />
+ <input type="submit" value="Submit">   
+</form>
+
+</body>
+</html>
