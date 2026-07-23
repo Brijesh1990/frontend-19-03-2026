@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+</head>
+<body>
+
+    <center>
+    <p id="res"></p>
+    <form>
+        <label>Enter a values : </label>
+        <br>
+        <input type="text" id="a" placeholder="Enter a values :">
+        <br>
+        <label>Enter b values : </label>
+        <br>
+        <input type="text" id="b" placeholder="Enter a values :">
+        <br>
+        <button type="button" id="btn">click for Add</button>
+    </form>
+    </center> 
+   
+     <script>
+        var btn=document.getElementById("btn");
+        btn.addEventListener("dblclick",function(){
+        
+        var a=parseInt(document.getElementById("a").value);
+        var b=parseInt(document.getElementById("b").value);    
+        //using third variable 
+        
+        /*var temp;
+        temp=a; // 10
+        a=b;    // 20
+        b=temp  // 10   
+        //alert(a)
+         document.getElementById("res").innerHTML="After Swap:<br>A = " + a + "<br>B = " + b;
+
+         */ 
+ 
+        //without using third variables 
+        a=a+b; // 30
+        b=a-b; // 10
+        a=a-b; // 20 
+        //alert(a)
+         document.getElementById("res").innerHTML="After Swap:<br>A = " + a + "<br>B = " + b;
+
+        })
+    </script>
+</body>
+</html>

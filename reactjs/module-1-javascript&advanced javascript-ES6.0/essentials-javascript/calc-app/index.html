@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scientific Calculator</title>
+<!-- Tailwind CSS v4 -->
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<script src="js/main.js"></script>
+</head>
+<body class="min-h-screen bg-slate-900 flex items-center justify-center p-4">
+
+<div class="w-full max-w-md rounded-3xl bg-slate-800 shadow-2xl border border-slate-700 overflow-hidden">
+
+<!-- Display -->
+<div class="bg-slate-900 p-6 border-b border-slate-700">
+
+<input type="text" id="result" placeholder="0" style="text-align: right; color:white;" class=" txt-2xl w-full" />
+</div>
+
+<!-- Calculator Buttons -->
+<table class="w-full border-collapse text-center">
+<tbody>
+
+<tr>
+<td><button class="w-full h-14 bg-slate-700 hover:bg-slate-600 text-white font-semibold">Rad</button></td>
+<td><button class="w-full h-14 bg-slate-700 hover:bg-slate-600 text-white font-semibold">Deg</button></td>
+<td><button class="w-full h-14 bg-slate-700 hover:bg-slate-600 text-white font-semibold">(</button></td>
+<td><button class="w-full h-14 bg-slate-700 hover:bg-slate-600 text-white font-semibold">)</button></td>
+<td><button class="w-full h-14 bg-red-500 hover:bg-red-600 text-white font-bold" type="button" onclick="clrAll()">AC</button></td>
+</tr>
+
+<tr>
+<td><button class="w-full h-14 bg-slate-700 hover:bg-slate-600 text-white">sin</button></td>
+<td><button class="w-full h-14 bg-slate-700 hover:bg-slate-600 text-white">cos</button></td>
+<td><button class="w-full h-14 bg-slate-700 hover:bg-slate-600 text-white">tan</button></td>
+<td><button class="w-full h-14 bg-slate-700 hover:bg-slate-600 text-white">π</button></td>
+<td><button class="w-full h-14 bg-orange-500 hover:bg-orange-600 text-white">÷</button></td>
+</tr>
+
+<tr>
+<td><button class="w-full h-14 bg-slate-700 hover:bg-slate-600 text-white">ln</button></td>
+<td><button class="w-full h-14 bg-slate-700 hover:bg-slate-600 text-white">log</button></td>
+<td><button class="w-full h-14 bg-slate-700 hover:bg-slate-600 text-white">√</button></td>
+<td><button class="w-full h-14 bg-slate-700 hover:bg-slate-600 text-white">x²</button></td>
+<td><button class="w-full h-14 bg-orange-500 hover:bg-orange-600 text-white">×</button></td>
+</tr>
+
+<tr>
+<td><button class="w-full h-14 bg-slate-100 hover:bg-white text-slate-900">7</button></td>
+<td><button class="w-full h-14 bg-slate-100 hover:bg-white text-slate-900">8</button></td>
+<td><button class="w-full h-14 bg-slate-100 hover:bg-white text-slate-900">9</button></td>
+<td><button class="w-full h-14 bg-slate-700 hover:bg-slate-600 text-white">xʸ</button></td>
+<td><button class="w-full h-14 bg-orange-500 hover:bg-orange-600 text-white">−</button></td>
+</tr>
+
+<tr>
+<td><button class="w-full h-14 bg-slate-100 hover:bg-white text-slate-900">4</button></td>
+<td><button class="w-full h-14 bg-slate-100 hover:bg-white text-slate-900">5</button></td>
+<td><button class="w-full h-14 bg-slate-100 hover:bg-white text-slate-900">6</button></td>
+<td><button class="w-full h-14 bg-slate-700 hover:bg-slate-600 text-white">e</button></td>
+<td><button class="w-full h-14 bg-orange-500 hover:bg-orange-600 text-white">+</button></td>
+</tr>
+
+<tr>
+<td><button class="w-full h-14 bg-slate-100 hover:bg-white text-slate-900" type="button" value="1" onclick="return inpValue(this.value)">1</button></td>
+<td><button class="w-full h-14 bg-slate-100 hover:bg-white text-slate-900" type="button" value="2" onclick="return inpValue(this.value)">2</button></td>
+<td><button class="w-full h-14 bg-slate-100 hover:bg-white text-slate-900" type="button" value="3" onclick="return inpValue(this.value)">3</button></td>
+<td><button class="w-full h-14 bg-slate-700 hover:bg-slate-600 text-white">%</button></td>
+<td rowspan="2">
+<button class="w-full h-[112px] bg-emerald-500 hover:bg-emerald-600 text-white text-2xl font-bold">
+=
+</button>
+</td>
+</tr>
+
+<tr>
+<td colspan="2">
+<button class="w-full h-14 bg-slate-100 hover:bg-white text-slate-900">
+0
+</button>
+</td>
+<td>
+<button class="w-full h-14 bg-slate-100 hover:bg-white text-slate-900">
+.
+</button>
+</td>
+<td>
+<button class="w-full h-14 bg-slate-700 hover:bg-slate-600 text-white">
+±
+</button>
+</td>
+</tr>
+
+</tbody>
+</table>
+
+</div>
+
+</body>
+</html>
