@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator UI</title>
+
+    <!-- Tailwind CSS v4 -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-gray-100">
+
+<div class="min-h-screen bg-white flex">
+
+    <!-- Calculator -->
+    <div class="flex-1 flex flex-col">
+
+        <!-- Header -->
+        <header class="h-16 flex items-center justify-between px-5">
+
+            <div class="flex items-center gap-4">
+
+                <!-- Menu -->
+                <button class="text-2xl">
+                    ☰
+                </button>
+
+                <h1 class="text-3xl font-semibold">
+                    Standard
+                </h1>
+
+            </div>
+
+            <!-- Expand -->
+            <button class="text-xl">
+                ⛶
+            </button>
+
+        </header>
+
+        <!-- Display -->
+        <section class="px-6 pt-4">
+
+            <div class="text-right text-gray-500 text-lg">
+                √(25)
+            </div>
+
+            <div class="text-right text-7xl font-light">
+                5
+            </div>
+
+        </section>
+
+        <!-- Memory -->
+        <div class="grid grid-cols-6 gap-2 px-4 py-6 text-gray-600 text-sm">
+
+            <button class="py-2 rounded hover:bg-gray-100">MC</button>
+            <button class="py-2 rounded hover:bg-gray-100">MR</button>
+            <button class="py-2 rounded hover:bg-gray-100">M+</button>
+            <button class="py-2 rounded hover:bg-gray-100">M−</button>
+            <button class="py-2 rounded hover:bg-gray-100">MS</button>
+            <button class="py-2 rounded hover:bg-gray-100">M▼</button>
+
+        </div>
+
+        <!-- Buttons -->
+        <main class="flex-1 px-2 pb-2">
+
+            <div class="grid grid-cols-4 gap-1 h-full">
+
+                <!-- Row 1 -->
+                <button class="bg-gray-100 hover:bg-gray-200 rounded-xl text-xl">% </button>
+                <button class="bg-gray-100 hover:bg-gray-200 rounded-xl text-xl">CE</button>
+                <button class="bg-gray-100 hover:bg-gray-200 rounded-xl text-xl">C</button>
+                <button class="bg-gray-100 hover:bg-gray-200 rounded-xl text-xl">⌫</button>
+
+                <!-- Row 2 -->
+                <button class="bg-gray-100 hover:bg-gray-200 rounded-xl text-xl">1/x</button>
+                <button class="bg-gray-100 hover:bg-gray-200 rounded-xl text-xl">x²</button>
+                <button class="bg-gray-100 hover:bg-gray-200 rounded-xl text-xl">²√x</button>
+                <button class="bg-gray-100 hover:bg-gray-200 rounded-xl text-2xl">÷</button>
+
+                <!-- Row 3 -->
+                <button class="bg-white hover:bg-gray-100 rounded-xl text-2xl">7</button>
+                <button class="bg-white hover:bg-gray-100 rounded-xl text-2xl">8</button>
+                <button class="bg-white hover:bg-gray-100 rounded-xl text-2xl">9</button>
+                <button class="bg-gray-100 hover:bg-gray-200 rounded-xl text-2xl">×</button>
+
+                <!-- Row 4 -->
+                <button class="bg-white hover:bg-gray-100 rounded-xl text-2xl">4</button>
+                <button class="bg-white hover:bg-gray-100 rounded-xl text-2xl">5</button>
+                <button class="bg-white hover:bg-gray-100 rounded-xl text-2xl">6</button>
+                <button class="bg-gray-100 hover:bg-gray-200 rounded-xl text-2xl">−</button>
+
+                <!-- Row 5 -->
+                <button class="bg-white hover:bg-gray-100 rounded-xl text-2xl">1</button>
+                <button class="bg-white hover:bg-gray-100 rounded-xl text-2xl">2</button>
+                <button class="bg-white hover:bg-gray-100 rounded-xl text-2xl">3</button>
+                <button class="bg-gray-100 hover:bg-gray-200 rounded-xl text-2xl">+</button>
+
+                <!-- Row 6 -->
+                <button class="bg-white hover:bg-gray-100 rounded-xl text-xl">±</button>
+                <button class="bg-white hover:bg-gray-100 rounded-xl text-2xl">0</button>
+                <button class="bg-white hover:bg-gray-100 rounded-xl text-2xl">.</button>
+
+                <button class="bg-blue-700 hover:bg-blue-800 text-white rounded-xl text-3xl">
+                    =
+                </button>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <!-- History Panel -->
+    <aside class="hidden lg:flex w-80 border-l bg-white flex-col">
+
+        <div class="flex justify-center gap-10 py-6 font-medium">
+
+            <button class="border-b-2 border-blue-600 pb-2">
+                History
+            </button>
+
+            <button class="text-gray-500">
+                Memory
+            </button>
+
+        </div>
+
+        <div class="flex-1 flex items-start justify-center pt-8 text-gray-500">
+            There's no history yet.
+        </div>
+
+    </aside>
+
+</div>
+
+</body>
+</html>
