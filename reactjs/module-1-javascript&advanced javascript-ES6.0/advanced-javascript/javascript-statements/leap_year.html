@@ -1,0 +1,16 @@
+<script>
+function disp()
+{    
+var year=document.getElementById("year").value;
+if (year%4==0)
+{
+    document.write("THis is a leap years")
+}
+else
+{
+    document.write("THis is a not leap years")
+}
+}
+</script>
+<input type="text" id="year" />
+<button type="button" onclick="disp()">Find leap years</button>
