@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Test</title>
+</head>
+<body>
+
+<script type="module">
+import { header, nav, content, footer } from './gui.js';
+document.body.insertAdjacentHTML('beforebegin', header());
+document.body.insertAdjacentHTML('afterbegin', nav());
+document.body.insertAdjacentHTML('beforeend', content());
+document.body.insertAdjacentHTML('afterend', footer());
+</script>
+
+</body>
+</html>

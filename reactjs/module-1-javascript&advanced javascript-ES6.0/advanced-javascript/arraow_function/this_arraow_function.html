@@ -1,0 +1,12 @@
+<script>
+const person = {
+name: 'Alice',
+
+  greet: function() {
+    setTimeout(() => {
+      console.log(this.name); // "Alice"
+    }, 1500);
+  }
+};
+person.greet();
+</script>

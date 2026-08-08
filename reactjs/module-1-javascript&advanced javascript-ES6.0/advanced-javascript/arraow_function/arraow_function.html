@@ -1,0 +1,112 @@
+## Arrow Functions in JavaScript
+
+Arrow functions are a compact way to write function expressions in JavaScript. They were introduced in ES6 and use the `=>` syntax.
+
+### Basic syntax
+
+```js
+const add = (a, b) => {
+  return a + b;
+};
+```
+
+### Shorter form with implicit return
+
+If the function body has only one expression, you can omit `return` and the braces:
+
+```js
+const add = (a, b) => a + b;
+```
+
+### No parameters
+
+Use empty parentheses when there are no arguments:
+
+```js
+const sayHello = () => console.log('Hello');
+```
+
+### One parameter
+
+You can omit parentheses around a single argument:
+
+```js
+const square = x => x * x;
+```
+
+### Multiple parameters
+
+```js
+const multiply = (x, y) => x * y;
+```
+
+### Returning an object
+
+Wrap the object in parentheses to return it directly:
+
+```js
+const createUser = (name, age) => ({ name, age });
+```
+
+### Function body with multiple statements
+
+Use curly braces and `return` when you need more than one statement:
+
+```js
+const greet = name => {
+  const message = `Hello, ${name}!`;
+  console.log(message);
+  return message;
+};
+```
+
+### Arrow functions and `this`
+
+Arrow functions do not have their own `this`. They use `this` from the surrounding scope.
+
+```js
+const person = {
+  name: 'Alice',
+  greet: function() {
+    setTimeout(() => {
+      console.log(this.name); // "Alice"
+    }, 100);
+  }
+};
+person.greet();
+```
+
+### Example comparisons
+
+```js
+// Regular function
+function sum(a, b) {
+  return a + b;
+}
+
+// Arrow function
+const sumArrow = (a, b) => a + b;
+```
+
+### When not to use arrow functions
+
+- As object methods if you need `this` bound to the object
+- As constructors (`new` won’t work)
+- When you need `arguments` object directly
+
+### More examples
+
+```js
+const numbers = [1, 2, 3, 4];
+
+// map with arrow function
+const doubled = numbers.map(n => n * 2);
+
+// filter with arrow function
+const evens = numbers.filter(n => n % 2 === 0);
+
+// reduce with arrow function
+const total = numbers.reduce((acc, n) => acc + n, 0);
+```
+
+If you want, I can also show how arrow functions differ from normal functions in more detail.
