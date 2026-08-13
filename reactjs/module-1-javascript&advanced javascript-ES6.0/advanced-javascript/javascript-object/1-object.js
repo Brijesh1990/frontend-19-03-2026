@@ -1,0 +1,10 @@
+// object as literals 
+
+const employee={
+    id:1,
+    name:"brijesh",
+    age:35,
+    salary:115000,
+    department:"R&D"
+}
+console.log(employee)
