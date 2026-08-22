@@ -1,0 +1,35 @@
+<script>
+/*
+Array destructuring assigns array values to variables by position.
+
+Syntax:
+const [first, second] = array;
+*/
+
+const colors = ["red", "green", "blue"];
+const [firstColor, secondColor, thirdColor] = colors;
+
+console.log(firstColor);  // red
+console.log(secondColor); // green
+console.log(thirdColor);  // blue
+
+// Skip an item by leaving its position empty.
+const [, , selectedColor] = colors;
+console.log(selectedColor); // blue
+
+// Use a default value when the position does not contain a value.
+const [primaryColor, fallbackColor = "black"] =["yellow"];
+console.log(primaryColor);  // yellow
+console.log(fallbackColor);  // black
+
+// Collect the remaining values with the rest operator.
+const [mainColor, ...otherColors] = colors;
+console.log(mainColor);   // red
+console.log(otherColors); // ["green", "blue"]
+
+// Values can also be swapped without a temporary variable.
+let firstNumber = 10;
+let secondNumber = 20;
+[firstNumber, secondNumber] = [secondNumber, firstNumber];
+console.log(firstNumber, secondNumber); // 20 10
+</script>

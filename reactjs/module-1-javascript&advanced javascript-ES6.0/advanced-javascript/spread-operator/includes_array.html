@@ -1,0 +1,15 @@
+<script>
+// Use includes() to check whether an array contains a value.
+const fruits = ["apple", "banana", "mango"];
+
+console.log(fruits.includes("banana")); // true
+console.log(fruits.includes("orange")); // false
+
+// The in operator checks for an index/property, not an array value.
+console.log(1 in fruits); // true: index 1 exists
+console.log("banana" in fruits); // false: "banana" is not an index
+
+// Use indexOf() when you need the matching value's position.
+console.log(fruits.indexOf("mango")); // 2
+console.log(fruits.indexOf("orange")); // -1
+</script>
