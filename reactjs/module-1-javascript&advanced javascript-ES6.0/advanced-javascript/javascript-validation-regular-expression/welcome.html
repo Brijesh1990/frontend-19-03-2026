@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome | Event Registration</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="min-h-screen bg-slate-950 text-white">
+
+    <!-- Background -->
+    <div class="relative isolate overflow-hidden">
+
+        <!-- Gradient blobs -->
+        <div class="absolute -left-40 -top-40 -z-10 h-96 w-96 rounded-full bg-blue-600/30 blur-3xl"></div>
+        <div class="absolute -right-40 top-20 -z-10 h-96 w-96 rounded-full bg-purple-600/30 blur-3xl"></div>
+        <div class="absolute bottom-0 left-1/3 -z-10 h-80 w-80 rounded-full bg-cyan-500/20 blur-3xl"></div>
+
+        <!-- Navbar -->
+        <header class="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 lg:px-8">
+
+            <div class="flex items-center gap-3">
+                <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-blue-500 to-purple-600 shadow-lg shadow-blue-500/20">
+                    <svg
+                        class="h-6 w-6"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M15 5v2m0 4v2m0 4v2M5 5a2 2 0 00-2 2v10a2 2 0 002 2h14a2 2 0 002-2V7a2 2 0 00-2-2H5z"
+                        />
+                    </svg>
+                </div>
+
+                <div>
+                    <p class="text-lg font-bold">EVENT<span class="text-blue-400">X</span></p>
+                    <p class="text-xs text-slate-400">Registration Portal</p>
+                </div>
+            </div>
+
+            <div class="hidden rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-slate-300 backdrop-blur md:block">
+                Registration is now open
+            </div>
+
+        </header>
+
+
+        <!-- Hero -->
+        <main class="mx-auto max-w-7xl px-6 pb-20 pt-16 lg:px-8 lg:pb-28 lg:pt-24">
+
+            <div class="grid items-center gap-16 lg:grid-cols-2">
+
+                <!-- Left -->
+                <div>
+
+                    <!-- Badge -->
+                    <div class="mb-7 inline-flex items-center gap-2 rounded-full border border-blue-400/20 bg-blue-500/10 px-4 py-2 text-sm text-blue-300">
+                        <span class="relative flex h-2 w-2">
+                            <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-blue-400 opacity-75"></span>
+                            <span class="relative inline-flex h-2 w-2 rounded-full bg-blue-400"></span>
+                        </span>
+                        Welcome to the experience
+                    </div>
+
+                    <!-- Heading -->
+                    <h1 class="max-w-3xl text-5xl font-black leading-tight tracking-tight sm:text-6xl lg:text-7xl">
+                        Your
+                        <span class="bg-gradient-to-r from-blue-400 via-cyan-300 to-purple-500 bg-clip-text text-transparent">
+                            journey
+                        </span>
+                        starts here.
+                    </h1>
+
+                    <!-- Description -->
+                    <p class="mt-7 max-w-xl text-lg leading-8 text-slate-400">
+                        Get ready to connect, learn, collaborate, and experience
+                        something extraordinary. Register now and create your
+                        official event badge.
+                    </p>
+
+                    <!-- Buttons -->
+                    <div class="mt-9 flex flex-col gap-4 sm:flex-row">
+
+                        <a
+                            href="register.html"
+                            class="group inline-flex items-center justify-center gap-3 rounded-xl bg-blue-600 px-7 py-4 font-semibold text-white shadow-xl shadow-blue-600/20 transition hover:bg-blue-500 hover:shadow-blue-500/30"
+                        >
+                            Register Now
+
+                            <svg
+                                class="h-5 w-5 transition-transform group-hover:translate-x-1"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M13 7l5 5m0 0l-5 5m5-5H6"
+                                />
+                            </svg>
+                        </a>
+
+                        <a
+                            href="#about"
+                            class="inline-flex items-center justify-center rounded-xl border border-white/10 bg-white/5 px-7 py-4 font-semibold text-slate-200 backdrop-blur transition hover:bg-white/10"
+                        >
+                            Explore Event
+                        </a>
+
+                    </div>
+
+                    <!-- Stats -->
+                    <div class="mt-12 grid max-w-lg grid-cols-3 border-t border-white/10 pt-8">
+
+                        <div>
+                            <p class="text-2xl font-bold">5K+</p>
+                            <p class="mt-1 text-sm text-slate-500">Attendees</p>
+                        </div>
+
+                        <div class="border-l border-white/10 pl-5">
+                            <p class="text-2xl font-bold">50+</p>
+                            <p class="mt-1 text-sm text-slate-500">Speakers</p>
+                        </div>
+
+                        <div class="border-l border-white/10 pl-5">
+                            <p class="text-2xl font-bold">3 Days</p>
+                            <p class="mt-1 text-sm text-slate-500">Experience</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Right visual -->
+                <div class="relative">
+
+                    <!-- Main card -->
+                    <div class="relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.06] p-6 shadow-2xl backdrop-blur-xl">
+
+                        <!-- Card header -->
+                        <div class="flex items-center justify-between">
+
+                            <div>
+                                <p class="text-sm text-slate-400">
+                                    YOUR EVENT PASS
+                                </p>
+                                <h2 class="mt-1 text-xl font-bold">
+                                    Official Badge
+                                </h2>
+                            </div>
+
+                            <div class="rounded-lg bg-blue-500/10 px-3 py-2 text-xs font-semibold text-blue-300">
+                                2026
+                            </div>
+
+                        </div>
+
+
+                        <!-- Badge preview -->
+                        <div class="mt-8 rounded-2xl bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-700 p-6 shadow-xl">
+
+                            <div class="flex items-start justify-between">
+
+                                <div>
+                                    <p class="text-xs font-medium uppercase tracking-[0.2em] text-blue-100/70">
+                                        EVENTX
+                                    </p>
+
+                                    <p class="mt-10 text-2xl font-bold">
+                                        YOUR NAME
+                                    </p>
+
+                                    <p class="mt-1 text-sm text-blue-100">
+                                        Event Attendee
+                                    </p>
+                                </div>
+
+                                <!-- QR-style graphic -->
+                                <div class="rounded-xl bg-white p-3">
+                                    <div class="grid grid-cols-5 gap-1">
+
+                                        <span class="h-2 w-2 bg-slate-900"></span>
+                                        <span class="h-2 w-2 bg-white"></span>
+                                        <span class="h-2 w-2 bg-slate-900"></span>
+                                        <span class="h-2 w-2 bg-slate-900"></span>
+                                        <span class="h-2 w-2 bg-white"></span>
+
+                                        <span class="h-2 w-2 bg-white"></span>
+                                        <span class="h-2 w-2 bg-slate-900"></span>
+                                        <span class="h-2 w-2 bg-slate-900"></span>
+                                        <span class="h-2 w-2 bg-white"></span>
+                                        <span class="h-2 w-2 bg-slate-900"></span>
+
+                                        <span class="h-2 w-2 bg-slate-900"></span>
+                                        <span class="h-2 w-2 bg-slate-900"></span>
+                                        <span class="h-2 w-2 bg-white"></span>
+                                        <span class="h-2 w-2 bg-slate-900"></span>
+                                        <span class="h-2 w-2 bg-slate-900"></span>
+
+                                        <span class="h-2 w-2 bg-slate-900"></span>
+                                        <span class="h-2 w-2 bg-white"></span>
+                                        <span class="h-2 w-2 bg-slate-900"></span>
+                                        <span class="h-2 w-2 bg-slate-900"></span>
+                                        <span class="h-2 w-2 bg-white"></span>
+
+                                        <span class="h-2 w-2 bg-white"></span>
+                                        <span class="h-2 w-2 bg-slate-900"></span>
+                                        <span class="h-2 w-2 bg-slate-900"></span>
+                                        <span class="h-2 w-2 bg-white"></span>
+                                        <span class="h-2 w-2 bg-slate-900"></span>
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="mt-10 flex items-end justify-between border-t border-white/20 pt-4">
+
+                                <div>
+                                    <p class="text-[10px] uppercase tracking-wider text-blue-100/60">
+                                        Date
+                                    </p>
+                                    <p class="mt-1 text-sm font-semibold">
+                                        24–26 October 2026
+                                    </p>
+                                </div>
+
+                                <div class="text-right">
+                                    <p class="text-[10px] uppercase tracking-wider text-blue-100/60">
+                                        Location
+                                    </p>
+                                    <p class="mt-1 text-sm font-semibold">
+                                        Main Convention Center
+                                    </p>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Bottom info -->
+                        <div class="mt-6 grid grid-cols-2 gap-4">
+
+                            <div class="rounded-xl border border-white/10 bg-white/5 p-4">
+                                <div class="mb-2 flex h-9 w-9 items-center justify-center rounded-lg bg-cyan-500/10 text-cyan-400">
+                                    ✓
+                                </div>
+                                <p class="font-semibold">Easy Check-in</p>
+                                <p class="mt-1 text-xs text-slate-500">
+                                    Quick & seamless entry
+                                </p>
+                            </div>
+
+                            <div class="rounded-xl border border-white/10 bg-white/5 p-4">
+                                <div class="mb-2 flex h-9 w-9 items-center justify-center rounded-lg bg-purple-500/10 text-purple-400">
+                                    ★
+                                </div>
+                                <p class="font-semibold">Exclusive Access</p>
+                                <p class="mt-1 text-xs text-slate-500">
+                                    Unlock the full event
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Decorative circles -->
+                    <div class="absolute -right-6 -top-6 -z-10 h-24 w-24 rounded-full border border-blue-400/20"></div>
+                    <div class="absolute -bottom-8 -left-8 -z-10 h-32 w-32 rounded-full border border-purple-400/20"></div>
+
+                </div>
+
+            </div>
+
+        </main>
+    </div>
+
+
+    <!-- About -->
+    <section
+        id="about"
+        class="border-t border-white/10 bg-slate-900 px-6 py-20 lg:px-8"
+    >
+        <div class="mx-auto max-w-7xl">
+
+            <div class="mx-auto max-w-2xl text-center">
+
+                <p class="text-sm font-semibold uppercase tracking-widest text-blue-400">
+                    Everything starts with registration
+                </p>
+
+                <h2 class="mt-3 text-3xl font-bold sm:text-4xl">
+                    One badge. Endless possibilities.
+                </h2>
+
+                <p class="mt-4 leading-7 text-slate-400">
+                    Complete your registration in just a few minutes and get
+                    access to everything the event has to offer.
+                </p>
+
+            </div>
+
+
+            <div class="mt-12 grid gap-6 md:grid-cols-3">
+
+                <div class="rounded-2xl border border-white/10 bg-white/[0.03] p-6 transition hover:-translate-y-1 hover:bg-white/[0.06]">
+                    <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-500/10 text-xl text-blue-400">
+                        01
+                    </div>
+
+                    <h3 class="mt-5 text-lg font-semibold">
+                        Register
+                    </h3>
+
+                    <p class="mt-2 text-sm leading-6 text-slate-500">
+                        Enter your details and choose the badge that best
+                        represents you.
+                    </p>
+                </div>
+
+
+                <div class="rounded-2xl border border-white/10 bg-white/[0.03] p-6 transition hover:-translate-y-1 hover:bg-white/[0.06]">
+                    <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-purple-500/10 text-xl text-purple-400">
+                        02
+                    </div>
+
+                    <h3 class="mt-5 text-lg font-semibold">
+                        Get Your Badge
+                    </h3>
+
+                    <p class="mt-2 text-sm leading-6 text-slate-500">
+                        Your registration information is used to prepare your
+                        official event badge.
+                    </p>
+                </div>
+
+
+                <div class="rounded-2xl border border-white/10 bg-white/[0.03] p-6 transition hover:-translate-y-1 hover:bg-white/[0.06]">
+                    <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-cyan-500/10 text-xl text-cyan-400">
+                        03
+                    </div>
+
+                    <h3 class="mt-5 text-lg font-semibold">
+                        Join the Experience
+                    </h3>
+
+                    <p class="mt-2 text-sm leading-6 text-slate-500">
+                        Check in, meet new people, and make the most of the
+                        event.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <!-- CTA -->
+            <div class="mt-16 overflow-hidden rounded-3xl border border-blue-400/10 bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-cyan-500/20 p-8 text-center sm:p-12">
+
+                <h2 class="text-3xl font-bold">
+                    Ready to get started?
+                </h2>
+
+                <p class="mx-auto mt-3 max-w-xl text-slate-400">
+                    Secure your place and create your event badge today.
+                </p>
+
+                <a
+                    href="register.html"
+                    class="mt-7 inline-flex rounded-xl bg-white px-7 py-3.5 font-semibold text-slate-900 transition hover:bg-slate-100"
+                >
+                    Start Registration →
+                </a>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 bg-slate-950 px-6 py-8">
+
+        <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 text-sm text-slate-500 sm:flex-row">
+
+            <p>
+                © 2026 EVENTX. All rights reserved.
+            </p>
+
+            <p>
+                Registration Portal
+            </p>
+
+        </div>
+
+    </footer>
+
+</body>
+</html>

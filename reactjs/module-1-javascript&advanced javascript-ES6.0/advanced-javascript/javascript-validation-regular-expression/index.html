@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Badge Registration Form</title>
+
+<!-- Use your compiled Tailwind CSS file -->
+<link rel="stylesheet" href="css/style.css">
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> 
+<script src="js/main.js"></script>   
+</head>
+
+<body class="min-h-screen bg-slate-100 py-10 px-4">
+
+<div class="mx-auto max-w-6xl">
+
+<!-- Header -->
+<div class="mb-8 text-center">
+<h1 class="text-3xl font-bold text-slate-900">
+Badge Registration
+</h1>
+<p class="mt-2 text-sm text-slate-600">
+Please complete all required information to register for your event badge.
+</p>
+</div>
+
+<!-- Form Card -->
+<form onsubmit="return valid(this.value)"
+action="welcome.html"
+method="POST" name="frm"
+class="overflow-hidden rounded-2xl bg-white shadow-xl"
+>
+
+<!-- Personal Information -->
+<div class="border-b border-slate-200 p-6 sm:p-8">
+<div class="mb-6">
+<h2 class="text-xl font-semibold text-slate-900">
+Personal Information
+</h2>
+<p class="mt-1 text-sm text-slate-500">
+Enter your basic personal details.
+</p>
+</div>
+<div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+<!-- First Name -->
+<div>
+<label for="first_name"
+class="mb-2 block text-sm font-medium text-slate-700">
+First Name <span class="text-red-500">*</span>
+</label>
+<input
+type="text"
+id="first_name"
+name="first_name"
+autocomplete="given-name"
+placeholder="John"
+class="w-full rounded-lg border border-slate-300 px-4 py-3 text-sm outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+>
+<br>
+<div id="errorMessage1" class="text-red-600"></div>
+</div>
+
+<!-- Last Name -->
+<div>
+<label for="last_name"
+class="mb-2 block text-sm font-medium text-slate-700">
+Last Name <span class="text-red-500">*</span>
+</label>
+<input
+type="text"
+id="last_name"
+name="last_name"
+autocomplete="family-name"
+placeholder="Doe"
+class="w-full rounded-lg border border-slate-300 px-4 py-3 text-sm outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+>
+<br>
+<div id="errorMessage2" class="text-red-600"></div>
+</div>
+
+<!-- Email -->
+<div>
+<label for="email"
+class="mb-2 block text-sm font-medium text-slate-700">
+Email Address <span class="text-red-500">*</span>
+</label>
+<input
+type="text"
+id="email"
+name="email"
+autocomplete="email"
+placeholder="john@example.com"
+class="w-full rounded-lg border border-slate-300 px-4 py-3 text-sm outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+>
+<br>
+<div id="errorMessage3" class="text-red-600"></div>
+</div>
+
+<!-- Phone -->
+<div>
+<label for="password"
+class="mb-2 block text-sm font-medium text-slate-700">
+Password <span class="text-red-500">*</span>
+</label>
+<input
+type="password"
+id="password"
+name="password"
+autocomplete="password"
+placeholder="Password"
+class="w-full rounded-lg border border-slate-300 px-4 py-3 text-sm outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+>
+<br>
+<div id="errorMessage4" class="text-red-600"></div>
+</div>
+
+<!-- Date of Birth -->
+<div>
+<label for="dob"
+class="mb-2 block text-sm font-medium text-slate-700">
+Date of Birth
+</label>
+<input
+type="date"
+id="dob"
+name="dob"
+class="w-full rounded-lg border border-slate-300 px-4 py-3 text-sm outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+>
+<br>
+<div id="errorMessage"></div>
+</div>
+
+<!-- Gender -->
+<div>
+<label for="gender"
+class="mb-2 block text-sm font-medium text-slate-700">
+Gender
+</label>
+<select
+id="gender"
+name="gender"
+class="w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-sm outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+>
+<option value="">Select gender</option>
+<option value="male">Male</option>
+<option value="female">Female</option>
+<option value="non_binary">Non-binary</option>
+<option value="prefer_not_to_say">Prefer not to say</option>
+</select>
+</div>
+
+</div>
+</div>
+
+
+<!-- Organization Information -->
+<div class="border-b border-slate-200 p-6 sm:p-8">
+
+<div class="mb-6">
+<h2 class="text-xl font-semibold text-slate-900">
+Organization Information
+</h2>
+<p class="mt-1 text-sm text-slate-500">
+Tell us about your professional details.
+</p>
+</div>
+
+<div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+
+<!-- Company -->
+<div>
+<label for="company"
+class="mb-2 block text-sm font-medium text-slate-700">
+Company / Organization
+<span class="text-red-500">*</span>
+</label>
+<input
+type="text"
+id="company"
+name="company"
+placeholder="ABC Corporation"
+class="w-full rounded-lg border border-slate-300 px-4 py-3 text-sm outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+>
+</div>
+
+<!-- Job Title -->
+<div>
+<label for="job_title"
+class="mb-2 block text-sm font-medium text-slate-700">
+Job Title
+</label>
+<input
+type="text"
+id="job_title"
+name="job_title"
+placeholder="Marketing Manager"
+class="w-full rounded-lg border border-slate-300 px-4 py-3 text-sm outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+>
+</div>
+
+<!-- Industry -->
+<div>
+<label for="industry"
+class="mb-2 block text-sm font-medium text-slate-700">
+Industry
+</label>
+<select
+id="industry"
+name="industry"
+class="w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-sm outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+>
+<option value="">Select industry</option>
+<option value="technology">Technology</option>
+<option value="finance">Finance</option>
+<option value="healthcare">Healthcare</option>
+<option value="education">Education</option>
+<option value="retail">Retail</option>
+<option value="manufacturing">Manufacturing</option>
+<option value="government">Government</option>
+<option value="other">Other</option>
+</select>
+</div>
+
+<!-- Website -->
+<div>
+<label for="website"
+class="mb-2 block text-sm font-medium text-slate-700">
+Company Website
+</label>
+<input
+type="url"
+id="website"
+name="website"
+placeholder="https://example.com"
+class="w-full rounded-lg border border-slate-300 px-4 py-3 text-sm outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+>
+</div>
+
+</div>
+</div>
+
+
+<!-- Badge Information -->
+<div class="border-b border-slate-200 p-6 sm:p-8">
+
+<div class="mb-6">
+<h2 class="text-xl font-semibold text-slate-900">
+Badge Information
+</h2>
+<p class="mt-1 text-sm text-slate-500">
+Select the badge type and provide the information to display.
+</p>
+</div>
+
+<div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+
+<!-- Badge Type -->
+<div>
+<label for="badge_type"
+class="mb-2 block text-sm font-medium text-slate-700">
+Badge Type <span class="text-red-500">*</span>
+</label>
+<select
+id="badge_type"
+name="badge_type"
+class="w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-sm outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+>
+<option value="">Select badge type</option>
+<option value="attendee">Attendee</option>
+<option value="speaker">Speaker</option>
+<option value="exhibitor">Exhibitor</option>
+<option value="sponsor">Sponsor</option>
+<option value="media">Media</option>
+<option value="vip">VIP</option>
+<option value="staff">Staff</option>
+</select>
+</div>
+
+<!-- Badge Name -->
+<div>
+<label for="badge_name"
+class="mb-2 block text-sm font-medium text-slate-700">
+Name on Badge <span class="text-red-500">*</span>
+</label>
+<input
+type="text"
+id="badge_name"
+name="badge_name"
+placeholder="John Doe"
+class="w-full rounded-lg border border-slate-300 px-4 py-3 text-sm outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+>
+</div>
+
+<!-- Preferred Pronouns -->
+<div>
+<label for="pronouns"
+class="mb-2 block text-sm font-medium text-slate-700">
+Preferred Pronouns
+</label>
+<select
+id="pronouns"
+name="pronouns"
+class="w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-sm outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+>
+<option value="">Select</option>
+<option value="he_him">He / Him</option>
+<option value="she_her">She / Her</option>
+<option value="they_them">They / Them</option>
+<option value="other">Other</option>
+<option value="prefer_not_to_say">Prefer not to say</option>
+</select>
+</div>
+
+<!-- Registration ID -->
+<div>
+<label for="registration_id"
+class="mb-2 block text-sm font-medium text-slate-700">
+Registration ID
+</label>
+<input
+type="text"
+id="registration_id"
+name="registration_id"
+placeholder="REG-000123"
+class="w-full rounded-lg border border-slate-300 bg-slate-50 px-4 py-3 text-sm outline-none"
+>
+</div>
+
+</div>
+</div>
+
+
+<!-- Address -->
+<div class="border-b border-slate-200 p-6 sm:p-8">
+
+<div class="mb-6">
+<h2 class="text-xl font-semibold text-slate-900">
+Address Information
+</h2>
+</div>
+
+<div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+
+<!-- Address -->
+<div class="md:col-span-2">
+<label for="address"
+class="mb-2 block text-sm font-medium text-slate-700">
+Street Address <span class="text-red-500">*</span>
+</label>
+<input
+type="text"
+id="address"
+name="address"
+autocomplete="street-address"
+placeholder="123 Main Street"
+class="w-full rounded-lg border border-slate-300 px-4 py-3 text-sm outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+>
+</div>
+
+<!-- City -->
+<div>
+<label for="city"
+class="mb-2 block text-sm font-medium text-slate-700">
+City <span class="text-red-500">*</span>
+</label>
+<input
+type="text"
+id="city"
+name="city"
+autocomplete="address-level2"
+placeholder="New York"
+class="w-full rounded-lg border border-slate-300 px-4 py-3 text-sm outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+>
+</div>
+
+<!-- State -->
+<div>
+<label for="state"
+class="mb-2 block text-sm font-medium text-slate-700">
+State / Province <span class="text-red-500">*</span>
+</label>
+<input
+type="text"
+id="state"
+name="state"
+autocomplete="address-level1"
+placeholder="New York"
+class="w-full rounded-lg border border-slate-300 px-4 py-3 text-sm outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+>
+</div>
+
+<!-- Country -->
+<div>
+<label for="country"
+class="mb-2 block text-sm font-medium text-slate-700">
+Country <span class="text-red-500">*</span>
+</label>
+<select
+id="country"
+name="country"
+autocomplete="country-name"
+class="w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-sm outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+>
+<option value="">Select country</option>
+<option value="IN">India</option>
+<option value="US">United States</option>
+<option value="GB">United Kingdom</option>
+<option value="CA">Canada</option>
+<option value="AU">Australia</option>
+<option value="DE">Germany</option>
+<option value="FR">France</option>
+<option value="SG">Singapore</option>
+<option value="AE">United Arab Emirates</option>
+<option value="JP">Japan</option>
+<option value="other">Other</option>
+</select>
+</div>
+
+<!-- ZIP -->
+<div>
+<label for="postal_code"
+class="mb-2 block text-sm font-medium text-slate-700">
+Postal / ZIP Code <span class="text-red-500">*</span>
+</label>
+<input
+type="text"
+id="postal_code"
+name="postal_code"
+autocomplete="postal-code"
+placeholder="10001"
+class="w-full rounded-lg border border-slate-300 px-4 py-3 text-sm outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+>
+</div>
+
+</div>
+</div>
+
+
+<!-- Event Preferences -->
+<div class="border-b border-slate-200 p-6 sm:p-8">
+
+<div class="mb-6">
+<h2 class="text-xl font-semibold text-slate-900">
+Event Preferences
+</h2>
+</div>
+
+<div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+
+<!-- Attendance Date -->
+<div>
+<label for="attendance_date"
+class="mb-2 block text-sm font-medium text-slate-700">
+Attendance Date
+</label>
+<input
+type="date"
+id="attendance_date"
+name="attendance_date"
+class="w-full rounded-lg border border-slate-300 px-4 py-3 text-sm outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+>
+</div>
+
+<!-- Dietary -->
+<div>
+<label for="dietary"
+class="mb-2 block text-sm font-medium text-slate-700">
+Dietary Preference
+</label>
+<select
+id="dietary"
+name="dietary"
+class="w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-sm outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+>
+<option value="">No preference</option>
+<option value="vegetarian">Vegetarian</option>
+<option value="vegan">Vegan</option>
+<option value="halal">Halal</option>
+<option value="kosher">Kosher</option>
+<option value="gluten_free">Gluten Free</option>
+<option value="other">Other</option>
+</select>
+</div>
+
+<!-- Accessibility -->
+<div>
+<label for="accessibility"
+class="mb-2 block text-sm font-medium text-slate-700">
+Accessibility Requirements
+</label>
+<select
+id="accessibility"
+name="accessibility"
+class="w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-sm outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+>
+<option value="">None</option>
+<option value="wheelchair">Wheelchair Access</option>
+<option value="hearing">Hearing Assistance</option>
+<option value="visual">Visual Assistance</option>
+<option value="other">Other</option>
+</select>
+</div>
+
+<!-- T-Shirt Size -->
+<div>
+<label for="shirt_size"
+class="mb-2 block text-sm font-medium text-slate-700">
+T-Shirt Size
+</label>
+<select
+id="shirt_size"
+name="shirt_size"
+class="w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-sm outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+>
+<option value="">Select size</option>
+<option value="xs">XS</option>
+<option value="s">S</option>
+<option value="m">M</option>
+<option value="l">L</option>
+<option value="xl">XL</option>
+<option value="xxl">2XL</option>
+<option value="xxxl">3XL</option>
+</select>
+</div>
+
+<!-- Notes -->
+<div class="md:col-span-2">
+<label for="notes"
+class="mb-2 block text-sm font-medium text-slate-700">
+Additional Notes
+</label>
+<textarea
+id="notes"
+name="notes"
+rows="4"
+placeholder="Enter any additional information note more than 200 character..."
+class="w-full resize-none rounded-lg border border-slate-300 px-4 py-3 text-sm outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+></textarea>
+<br>
+<div id="errorMessage5" class="text-red-600"></div>
+</div>
+
+</div>
+</div>
+
+
+<!-- Emergency Contact -->
+<div class="border-b border-slate-200 p-6 sm:p-8">
+
+<div class="mb-6">
+<h2 class="text-xl font-semibold text-slate-900">
+Emergency Contact
+</h2>
+</div>
+
+<div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+
+<div>
+<label for="emergency_name"
+class="mb-2 block text-sm font-medium text-slate-700">
+Contact Name
+</label>
+<input
+type="text"
+id="emergency_name"
+name="emergency_name"
+placeholder="Jane Doe"
+class="w-full rounded-lg border border-slate-300 px-4 py-3 text-sm outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+>
+</div>
+
+<div>
+<label for="emergency_phone"
+class="mb-2 block text-sm font-medium text-slate-700">
+Contact Phone
+</label>
+<input
+type="tel"
+id="emergency_phone"
+name="emergency_phone"
+placeholder="+1 555 987 6543"
+class="w-full rounded-lg border border-slate-300 px-4 py-3 text-sm outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+>
+</div>
+
+<div>
+<label for="emergency_relation"
+class="mb-2 block text-sm font-medium text-slate-700">
+Relationship
+</label>
+<input
+type="text"
+id="emergency_relation"
+name="emergency_relation"
+placeholder="Spouse"
+class="w-full rounded-lg border border-slate-300 px-4 py-3 text-sm outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+>
+</div>
+
+<div>
+<label for="emergency_email"
+class="mb-2 block text-sm font-medium text-slate-700">
+Contact Email
+</label>
+<input
+type="email"
+id="emergency_email"
+name="emergency_email"
+placeholder="jane@example.com"
+class="w-full rounded-lg border border-slate-300 px-4 py-3 text-sm outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+>
+</div>
+
+</div>
+</div>
+
+
+<!-- Consent -->
+<div class="border-b border-slate-200 p-6 sm:p-8">
+
+<h2 class="mb-6 text-xl font-semibold text-slate-900">
+Consent & Agreement
+</h2>
+
+<div class="space-y-4">
+
+<label class="flex cursor-pointer items-start gap-3">
+<input
+type="checkbox"
+name="terms"
+class="mt-1 h-4 w-4 rounded border-slate-300 text-blue-600 focus:ring-blue-500"
+>
+<span class="text-sm leading-6 text-slate-600">
+I agree to the event terms and conditions.
+<span class="text-red-500">*</span>
+</span>
+</label>
+
+<label class="flex cursor-pointer items-start gap-3">
+<input
+type="checkbox"
+name="privacy"
+class="mt-1 h-4 w-4 rounded border-slate-300 text-blue-600 focus:ring-blue-500"
+>
+<span class="text-sm leading-6 text-slate-600">
+I agree to the privacy policy and processing of my registration information.
+<span class="text-red-500">*</span>
+</span>
+</label>
+
+<label class="flex cursor-pointer items-start gap-3">
+<input
+type="checkbox"
+name="marketing"
+class="mt-1 h-4 w-4 rounded border-slate-300 text-blue-600 focus:ring-blue-500"
+>
+<span class="text-sm leading-6 text-slate-600">
+I would like to receive event updates and promotional communications.
+</span>
+</label>
+
+</div>
+</div>
+
+
+<!-- Submit -->
+<div class="flex flex-col gap-4 bg-slate-50 p-6 sm:flex-row sm:items-center sm:justify-between sm:p-8">
+
+<p class="text-sm text-slate-500">
+<span class="text-red-500">*</span>
+Required fields
+</p>
+
+<div class="flex flex-col gap-3 sm:flex-row">
+
+<button
+type="reset"
+class="rounded-lg border border-slate-300 bg-white px-6 py-3 text-sm font-semibold text-slate-700 transition hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-slate-300"
+>
+Reset Form
+</button>
+
+<button
+type="submit"
+class="rounded-lg bg-blue-600 px-8 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+>
+Register Badge
+</button>
+
+</div>
+</div>
+
+</form>
+
+<!-- Footer -->
+<p class="mt-6 text-center text-xs text-slate-500">
+Your information will be handled securely according to our privacy policy.
+</p>
+
+</div>
+
+</body>
+</html>
