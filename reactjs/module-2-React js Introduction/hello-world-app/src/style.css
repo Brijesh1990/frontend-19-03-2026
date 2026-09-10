@@ -1,0 +1,24 @@
+body 
+{
+margin: 0;
+padding: 0;
+overflow-x: hidden;
+background-color: lightgray;    
+}
+
+.app
+{
+width: 50%;
+height: auto;
+margin: auto;
+margin-top: 5%;
+text-transform: capitalize;    
+}
+.app p 
+{
+color: red;    
+}
+.app h1
+{
+animation: infinite 2s heartBeat;    
+}
