@@ -1,0 +1,51 @@
+body 
+{
+margin: 0;
+padding: 0;
+overflow-x: hidden;
+background-color: antiquewhite;    
+}
+.app 
+{
+width: 50%;
+height: auto;
+margin: auto;
+margin-top: 5%;
+background-color: white;
+padding: 25px;    
+}
+
+main
+{
+width: 70%;
+height: auto;
+margin: auto;
+margin-top: 5%;    
+}
+main h1 
+{
+animation: 2s ease infinite swing;    
+}
+.app1
+{
+width: 100%;
+height: auto;
+padding: 10px;
+display: grid;
+grid-template-columns: auto auto auto;
+    
+}
+.box1
+{
+width: 50%;
+height: auto;
+margin: 25px;
+padding: 25px;
+box-shadow: 5px 3px 3px;    
+animation: 2s ease alternate backInLeft;
+}
+.box1 img 
+{
+width: 100%;
+height: auto;    
+}
