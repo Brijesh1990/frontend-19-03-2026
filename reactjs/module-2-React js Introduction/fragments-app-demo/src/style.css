@@ -1,0 +1,65 @@
+body{
+margin: 0;
+padding: 0; 
+overflow-x: hidden;
+background-color: aliceblue;   
+}
+
+.app
+{
+width: 30%;
+height: auto;
+margin: auto;
+padding: 20px;
+background-color: white;
+margin-top: 5%;    
+}
+.app:hover 
+{
+ background-color: blue;
+ color: white;
+ transition: 2s ease all;   
+}
+main 
+{
+width: 80%;
+height: auto;
+margin: 0 20px;
+padding: 20px;
+}
+main h1 
+{
+font-size: 45px;    
+text-align: center;
+}
+main hr 
+{
+width: 20%;
+text-align: left;    
+}
+.team-app
+{
+width: 100%;
+height: auto;
+margin: 5px;
+padding: 10px;
+display: grid;
+grid-template-columns: auto auto auto;
+}
+
+.team 
+{
+width: 80%;
+height: auto;
+margin: 10px;
+padding: 20px;    
+background-color: white;
+border-radius: 10px;
+margin-top: 5%;
+margin-left: 10%;
+}
+.team:hover  
+{
+background-color: blue;
+color: white;    
+}
