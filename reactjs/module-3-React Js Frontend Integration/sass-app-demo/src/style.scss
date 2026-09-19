@@ -1,0 +1,14 @@
+$primary-color: blue;
+$color:yellow;
+$font-size:18px;
+
+.button {
+  background-color: $primary-color;
+  color: $color;
+  padding: 10px 20px;
+  font-size: $font-size;
+
+  &:hover {
+    background-color: darken($primary-color, 50%);
+  }
+}

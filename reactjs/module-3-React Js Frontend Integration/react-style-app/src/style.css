@@ -1,0 +1,30 @@
+
+body 
+{
+margin: 0;
+padding: 0;
+overflow-x: hidden;
+background-color: antiquewhite;
+}
+.app
+
+{
+width: 30%;
+height: auto;
+margin: auto;
+margin-top: 5%;
+padding: 25px;
+background-color: black;
+color: white;
+
+}
+
+.app button 
+{
+margin: 5px;
+background-color: black;
+color: white;
+border: none;
+padding: 5px;
+border: solid 1px white; 
+}
