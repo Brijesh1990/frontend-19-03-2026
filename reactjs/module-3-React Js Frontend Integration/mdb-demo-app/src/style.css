@@ -1,0 +1,1660 @@
+
+html {
+scroll-behavior: smooth;
+}
+
+body {
+margin: 0;
+font-family: Arial, Helvetica, sans-serif;
+color: #123;
+background: #fff;
+}
+
+.health-page {
+overflow-x: hidden;
+}
+
+.section {
+padding: 75px 0;
+}
+
+.section-light {
+background: #f2fbff;
+}
+
+.section-blue {
+background: #e8f8ff;
+}
+
+.section-title {
+color: #053b68;
+font-size: 32px;
+font-weight: 700;
+margin-bottom: 12px;
+}
+
+.section-subtitle {
+color: #657b8b;
+max-width: 720px;
+margin: 0 auto 40px;
+line-height: 1.7;
+}
+
+.primary-color {
+color: #008bc9;
+}
+
+.btn-health {
+background: #008bc9 !important;
+border-radius: 8px !important;
+text-transform: none !important;
+font-weight: 600;
+box-shadow: none !important;
+}
+
+.btn-outline-health {
+color: #008bc9 !important;
+border: 1px solid #008bc9 !important;
+border-radius: 8px !important;
+text-transform: none !important;
+box-shadow: none !important;
+}
+
+/* ============================================================
+MAIN HEADER
+============================================================ */
+
+.hexa-header {
+width: 100%;
+background: #ffffff;
+border-bottom: 1px solid #eeeeee;
+position: relative;
+z-index: 1000;
+}
+
+
+/* ============================================================
+NAVBAR
+============================================================ */
+
+.hexa-navbar {
+background: #ffffff !important;
+min-height: 84px;
+padding: 0 !important;
+box-shadow: none !important;
+}
+
+
+.hexa-container {
+width: 100%;
+max-width: 1260px;
+margin: 0 auto;
+
+padding-left: 20px;
+padding-right: 20px;
+}
+
+
+/* ============================================================
+LOGO
+============================================================ */
+
+.hexa-logo {
+display: flex !important;
+
+align-items: center;
+
+gap: 7px;
+
+text-decoration: none;
+
+margin-right: 70px;
+
+padding: 0 !important;
+}
+
+
+/* Blue circle with plus */
+
+.logo-plus {
+width: 34px;
+height: 34px;
+
+border-radius: 50%;
+
+background: #0d91c5;
+
+color: #ffffff;
+
+display: flex;
+align-items: center;
+justify-content: center;
+
+font-size: 16px;
+}
+
+
+/* Logo content */
+
+.logo-content {
+display: flex;
+flex-direction: column;
+
+line-height: 1;
+}
+
+
+/* HexaHealth */
+
+.logo-title {
+font-size: 21px;
+
+font-weight: 700;
+
+letter-spacing: -0.7px;
+
+white-space: nowrap;
+}
+
+
+.logo-hexa {
+color: #008fc5;
+}
+
+
+.logo-health {
+color: #17232d;
+}
+
+
+/* Tagline */
+
+.logo-subtitle {
+font-size: 8px;
+
+color: #45515a;
+
+margin-top: 3px;
+
+white-space: nowrap;
+}
+
+
+/* ============================================================
+NAVIGATION
+============================================================ */
+
+.hexa-collapse {
+flex-grow: 1;
+}
+
+
+.hexa-nav {
+display: flex;
+
+align-items: center;
+
+width: 100%;
+
+gap: 30px;
+}
+
+
+.hexa-nav > .nav-item {
+display: flex;
+align-items: center;
+}
+
+
+/* Main navigation link */
+
+.hexa-nav-link {
+color: #005b8e !important;
+
+font-size: 15px;
+
+font-weight: 600;
+
+text-decoration: none;
+
+white-space: nowrap;
+
+padding: 10px 0 !important;
+
+display: flex !important;
+
+align-items: center;
+
+gap: 8px;
+
+transition: 0.2s ease;
+}
+
+
+.hexa-nav-link:hover {
+color: #008fc5 !important;
+}
+
+
+/* Dropdown arrow */
+
+.nav-arrow {
+font-size: 9px;
+
+margin-top: 2px;
+
+transition: transform 0.2s ease;
+}
+
+
+/* ============================================================
+DROPDOWN
+============================================================ */
+
+.hexa-dropdown {
+min-width: 230px !important;
+
+padding: 10px !important;
+
+margin-top: 10px !important;
+
+background: #ffffff !important;
+
+border: 1px solid #eeeeee !important;
+
+border-radius: 10px !important;
+
+box-shadow:
+0 12px 30px rgba(0, 0, 0, 0.12) !important;
+}
+
+
+/* Dropdown items */
+
+.hexa-dropdown .dropdown-item {
+color: #174a68 !important;
+
+font-size: 14px;
+
+font-weight: 500;
+
+padding: 11px 14px;
+
+border-radius: 7px;
+
+transition: 0.2s ease;
+}
+
+
+.hexa-dropdown .dropdown-item:hover {
+background: #eaf7fc !important;
+
+color: #008fc5 !important;
+}
+
+
+/* ============================================================
+RIGHT ACTIONS
+============================================================ */
+
+.hexa-actions {
+margin-left: auto;
+
+display: flex;
+
+align-items: center;
+
+gap: 10px;
+
+white-space: nowrap;
+}
+
+
+/* ============================================================
+SEARCH BUTTON
+============================================================ */
+
+.search-button {
+width: 44px;
+height: 44px;
+
+border-radius: 50%;
+
+border: 1.5px solid #008fc5;
+
+background: #ffffff;
+
+color: #007eae;
+
+display: flex;
+align-items: center;
+justify-content: center;
+
+font-size: 20px;
+
+cursor: pointer;
+
+transition: all 0.2s ease;
+}
+
+
+.search-button:hover {
+background: #eaf8fc;
+
+transform: scale(1.04);
+}
+
+
+/* ============================================================
+BOOK APPOINTMENT
+============================================================ */
+
+.appointment-button {
+height: 44px;
+
+padding: 0 20px !important;
+
+border-radius: 25px !important;
+
+border: none !important;
+
+background: #dff3fc !important;
+
+color: #005b8e !important;
+
+box-shadow: none !important;
+
+text-transform: none !important;
+
+font-size: 15px !important;
+
+font-weight: 600 !important;
+
+display: flex !important;
+
+align-items: center;
+
+gap: 10px;
+}
+
+
+.appointment-button i {
+font-size: 18px;
+}
+
+
+.appointment-button:hover {
+background: #ccecf8 !important;
+}
+
+
+/* ============================================================
+LOGIN
+============================================================ */
+
+.login-button {
+height: 44px;
+
+min-width: 130px;
+
+padding: 0 22px !important;
+
+border-radius: 25px !important;
+
+border: none !important;
+
+background: #087fa8 !important;
+
+color: #ffffff !important;
+
+box-shadow: none !important;
+
+text-transform: none !important;
+
+font-size: 15px !important;
+
+font-weight: 600 !important;
+
+display: flex !important;
+
+align-items: center;
+
+justify-content: center;
+
+gap: 9px;
+}
+
+
+.login-button i {
+font-size: 17px;
+}
+
+
+.login-button:hover {
+background: #056d91 !important;
+}
+
+
+/* ============================================================
+MOBILE TOGGLER
+============================================================ */
+
+.mobile-toggler {
+border: none !important;
+
+box-shadow: none !important;
+
+color: #007eae !important;
+}
+
+
+/* ============================================================
+RESPONSIVE
+============================================================ */
+
+@media (max-width: 1200px) {
+
+.hexa-logo {
+margin-right: 35px;
+}
+
+.hexa-nav {
+gap: 18px;
+}
+
+.appointment-button {
+padding: 0 14px !important;
+}
+
+.login-button {
+min-width: 110px;
+}
+}
+
+
+@media (max-width: 991px) {
+
+.hexa-navbar {
+min-height: 70px;
+}
+
+.hexa-container {
+padding: 10px 20px;
+}
+
+.hexa-logo {
+margin-right: 0;
+}
+
+.hexa-collapse {
+margin-top: 15px;
+}
+
+.hexa-nav {
+display: flex;
+
+flex-direction: column;
+
+align-items: stretch;
+
+gap: 5px;
+
+padding-bottom: 15px;
+}
+
+.hexa-nav-link {
+padding: 12px 10px !important;
+}
+
+.hexa-actions {
+margin-left: 0;
+
+margin-top: 10px;
+
+display: flex;
+
+flex-direction: column;
+
+align-items: stretch;
+
+gap: 10px;
+}
+
+.search-button {
+width: 100%;
+
+border-radius: 8px;
+}
+
+.appointment-button,
+.login-button {
+width: 100%;
+
+justify-content: center;
+}
+
+.hexa-dropdown {
+width: 100% !important;
+
+box-shadow: none !important;
+
+margin-top: 0 !important;
+}
+}
+
+
+@media (max-width: 500px) {
+
+.logo-title {
+font-size: 18px;
+}
+
+.logo-plus {
+width: 32px;
+height: 32px;
+}
+
+.logo-subtitle {
+font-size: 7px;
+}
+}
+
+
+
+* {
+box-sizing: border-box;
+}
+
+.hero-section {
+width: 100%;
+position: relative;
+overflow: hidden;
+background: #f5f9ff;
+}
+
+.hero-carousel-wrapper {
+width: 100%;
+position: relative;
+}
+
+/* =====================================================
+CAROUSEL
+===================================================== */
+
+.hero-carousel {
+width: 100%;
+}
+
+.hero-slide {
+position: relative;
+height: 650px;
+overflow: hidden;
+}
+
+.hero-background {
+position: absolute;
+width: 100%;
+height: 100%;
+object-fit: cover;
+object-position: center;
+top: 0;
+left: 0;
+}
+
+/* =====================================================
+OVERLAY
+===================================================== */
+
+.hero-overlay {
+position: absolute;
+inset: 0;
+background:
+linear-gradient(
+90deg,
+rgba(0, 35, 70, 0.88) 0%,
+rgba(0, 50, 90, 0.70) 35%,
+rgba(0, 80, 120, 0.25) 70%,
+rgba(0, 0, 0, 0.05) 100%
+);
+z-index: 1;
+}
+
+/* =====================================================
+CONTENT
+===================================================== */
+
+.hero-content {
+position: absolute !important;
+z-index: 2;
+left: 8% !important;
+right: auto !important;
+bottom: auto !important;
+top: 50% !important;
+transform: translateY(-50%);
+text-align: left !important;
+width: 650px;
+padding: 0 !important;
+}
+
+/* =====================================================
+REVIEW
+===================================================== */
+
+.review-badge {
+display: inline-flex;
+align-items: center;
+gap: 8px;
+background: rgba(255, 255, 255, 0.18);
+border: 1px solid rgba(255, 255, 255, 0.3);
+backdrop-filter: blur(10px);
+color: white;
+padding: 9px 16px;
+border-radius: 30px;
+font-size: 14px;
+margin-bottom: 22px;
+}
+
+.review-star {
+color: #ffc107;
+font-size: 18px;
+}
+
+.review-text {
+opacity: 0.9;
+}
+
+/* =====================================================
+TITLE
+===================================================== */
+
+.hero-title {
+font-size: 54px;
+line-height: 1.12;
+font-weight: 700;
+color: white;
+margin: 0 0 18px;
+letter-spacing: -1px;
+}
+
+.hero-description {
+color: rgba(255, 255, 255, 0.92);
+font-size: 18px;
+line-height: 1.6;
+max-width: 600px;
+margin-bottom: 30px;
+}
+
+/* =====================================================
+SEARCH
+===================================================== */
+
+.hero-search-row {
+display: flex;
+align-items: stretch;
+gap: 10px;
+width: 100%;
+max-width: 650px;
+margin-bottom: 25px;
+}
+
+.location-box {
+min-width: 130px;
+height: 55px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 0 18px;
+border-radius: 8px;
+background: white;
+color: #333;
+font-size: 15px;
+font-weight: 500;
+}
+
+.doctor-search {
+height: 55px;
+flex: 1;
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 0 18px;
+border-radius: 8px;
+background: white;
+color: #777;
+font-size: 14px;
+}
+
+.search-arrow {
+color: #087fca;
+font-size: 18px;
+}
+
+/* =====================================================
+ACTION BUTTONS
+===================================================== */
+
+.hero-actions {
+display: flex;
+gap: 12px;
+flex-wrap: wrap;
+}
+
+.hero-action-btn {
+min-width: 170px;
+min-height: 68px;
+border-radius: 10px !important;
+border: 1px solid rgba(255,255,255,0.35) !important;
+background: rgba(255,255,255,0.15) !important;
+backdrop-filter: blur(10px);
+box-shadow: none !important;
+
+display: flex !important;
+align-items: center;
+justify-content: space-between;
+
+padding: 12px 15px !important;
+text-align: left;
+color: white !important;
+text-transform: none !important;
+}
+
+.hero-action-btn:hover {
+background: white !important;
+color: #087fca !important;
+transform: translateY(-3px);
+}
+
+.action-arrow {
+font-size: 25px;
+display: flex;
+align-items: center;
+}
+
+/* =====================================================
+CUSTOM ARROWS
+===================================================== */
+
+.hero-carousel-btn {
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+z-index: 10;
+
+width: 48px;
+height: 48px;
+
+display: flex;
+align-items: center;
+justify-content: center;
+
+border: none;
+border-radius: 50%;
+
+background: rgba(255,255,255,0.90);
+color: #087fca;
+
+font-size: 25px;
+
+cursor: pointer;
+
+transition: all 0.3s ease;
+}
+
+.hero-carousel-btn:hover {
+background: #087fca;
+color: white;
+transform: translateY(-50%) scale(1.08);
+}
+
+.hero-prev {
+left: 25px;
+}
+
+.hero-next {
+right: 25px;
+}
+
+/* =====================================================
+MOBILE
+===================================================== */
+
+@media (max-width: 992px) {
+
+.hero-slide {
+height: 620px;
+}
+
+.hero-content {
+left: 7% !important;
+width: 75%;
+}
+
+.hero-title {
+font-size: 42px;
+}
+
+.hero-description {
+font-size: 16px;
+}
+
+}
+
+@media (max-width: 768px) {
+
+.hero-slide {
+height: 700px;
+}
+
+.hero-overlay {
+background:
+linear-gradient(
+180deg,
+rgba(0, 35, 70, 0.55),
+rgba(0, 35, 70, 0.90)
+);
+}
+
+.hero-content {
+left: 20px !important;
+right: 20px !important;
+width: auto;
+top: 50% !important;
+}
+
+.hero-title {
+font-size: 36px;
+line-height: 1.15;
+}
+
+.hero-description {
+font-size: 15px;
+}
+
+.hero-search-row {
+flex-direction: column;
+}
+
+.location-box,
+.doctor-search {
+width: 100%;
+}
+
+.hero-actions {
+display: grid;
+grid-template-columns: 1fr;
+}
+
+.hero-action-btn {
+width: 100%;
+min-height: 58px;
+}
+
+.hero-carousel-btn {
+width: 40px;
+height: 40px;
+font-size: 20px;
+}
+
+.hero-prev {
+left: 10px;
+}
+
+.hero-next {
+right: 10px;
+}
+
+.review-badge {
+font-size: 12px;
+}
+
+}
+
+@media (max-width: 480px) {
+
+.hero-slide {
+height: 720px;
+}
+
+.hero-content {
+left: 15px !important;
+right: 15px !important;
+}
+
+.hero-title {
+font-size: 30px;
+}
+
+.hero-description {
+font-size: 14px;
+margin-bottom: 20px;
+}
+
+.review-badge {
+padding: 7px 10px;
+gap: 5px;
+}
+
+.review-text {
+display: none;
+}
+
+.hero-action-btn {
+font-size: 13px !important;
+}
+
+}
+
+
+/* ====================================================
+SERVICE CARDS
+==================================================== */
+
+.service-card {
+border: 1px solid #e2edf3 !important;
+border-radius: 12px !important;
+height: 100%;
+transition: .3s;
+box-shadow: none !important;
+}
+
+.service-card:hover {
+transform: translateY(-7px);
+box-shadow: 0 10px 30px rgba(0,100,150,.12) !important;
+}
+
+.service-icon {
+width: 55px;
+height: 55px;
+display: flex;
+align-items: center;
+justify-content: center;
+background: #e7f8ff;
+color: #008bc9;
+border-radius: 50%;
+font-size: 22px;
+margin-bottom: 18px;
+}
+
+.service-card h5 {
+color: #053b68;
+font-weight: 700;
+}
+
+.service-card p {
+color: #71828d;
+font-size: 14px;
+line-height: 1.6;
+}
+
+/* ====================================================
+STEPS
+==================================================== */
+
+.step-card {
+border: 0 !important;
+box-shadow: none !important;
+background: transparent !important;
+}
+
+.step-number {
+width: 45px;
+height: 45px;
+background: #008bc9;
+color: white;
+display: flex;
+align-items: center;
+justify-content: center;
+border-radius: 50%;
+font-weight: 700;
+margin-bottom: 15px;
+}
+
+.step-image {
+height: 230px;
+object-fit: cover;
+border-radius: 15px;
+}
+
+/* ====================================================
+HEALTH GPT
+==================================================== */
+
+.gpt-box {
+background: linear-gradient(120deg, #d7f8fa, #e8f5ff);
+border-radius: 18px;
+padding: 40px;
+position: relative;
+overflow: hidden;
+}
+
+.gpt-title {
+font-size: 34px;
+font-weight: 800;
+color: #053b68;
+}
+
+.gpt-tags span {
+display: inline-block;
+background: white;
+border-radius: 20px;
+padding: 8px 14px;
+margin: 5px;
+font-size: 13px;
+}
+
+.gpt-avatar {
+width: 230px;
+height: 230px;
+border-radius: 50%;
+object-fit: cover;
+}
+
+/* ====================================================
+DOCTORS
+==================================================== */
+
+.doctor-card {
+border: 1px solid #e3edf2 !important;
+border-radius: 12px !important;
+overflow: hidden;
+box-shadow: none !important;
+}
+
+.doctor-image {
+width: 130px !important;
+height: 130px;
+object-fit: cover;
+border-radius: 50%;
+margin: 25px auto 10px;
+}
+
+.doctor-name {
+color: #053b68;
+font-weight: 700;
+}
+
+/* ====================================================
+SPECIALTIES
+==================================================== */
+
+.speciality-pill {
+padding: 15px 20px;
+border: 1px solid #dcecf3;
+border-radius: 10px;
+background: white;
+color: #126086;
+margin-bottom: 15px;
+transition: .3s;
+}
+
+.speciality-pill:hover {
+background: #008bc9;
+color: white;
+}
+
+/* ====================================================
+TESTIMONIALS
+==================================================== */
+
+.testimonial-card {
+border: 1px solid #e0edf2 !important;
+border-radius: 12px !important;
+height: 100%;
+box-shadow: none !important;
+}
+
+.testimonial-avatar {
+width: 50px;
+height: 50px;
+border-radius: 50%;
+}
+
+.stars {
+color: #ffb400;
+}
+
+/* ====================================================
+BLOG
+==================================================== */
+
+.blog-card {
+border: 1px solid #e4edf1 !important;
+border-radius: 12px !important;
+overflow: hidden;
+height: 100%;
+box-shadow: none !important;
+}
+
+.blog-image {
+height: 190px;
+object-fit: cover;
+}
+
+.blog-title {
+color: #053b68;
+font-weight: 700;
+}
+
+/* ====================================================
+CONTACT
+==================================================== */
+
+.contact-box {
+background: #e9f9ff;
+border-radius: 15px;
+padding: 45px;
+}
+
+.contact-input {
+margin-bottom: 18px;
+}
+
+/* ====================================================
+INDIA SECTION
+==================================================== */
+
+.india-map {
+width: 100%;
+max-width: 430px;
+}
+
+.city-list {
+max-height: 350px;
+overflow-y: auto;
+}
+
+.city-item {
+display: flex;
+align-items: center;
+gap: 12px;
+padding: 12px;
+border-bottom: 1px solid #edf2f5;
+}
+
+.city-icon {
+color: #008bc9;
+}
+
+/* ====================================================
+FAQ
+==================================================== */
+
+.faq-section .accordion-button {
+color: #053b68;
+font-weight: 600;
+}
+
+/* ====================================================
+APP
+==================================================== */
+
+.app-box {
+background: #e9faff;
+border-radius: 18px;
+padding: 40px;
+}
+
+.app-image {
+max-width: 280px;
+max-height: 350px;
+object-fit: contain;
+}
+
+/* ====================================================
+FOOTER
+==================================================== */
+
+.health-footer {
+background: #053b68;
+color: white;
+padding-top: 60px;
+}
+
+.health-footer h5 {
+font-weight: 700;
+}
+
+.health-footer a {
+color: #d9effa;
+text-decoration: none;
+display: block;
+margin-bottom: 10px;
+}
+
+.footer-bottom {
+border-top: 1px solid rgba(255,255,255,.15);
+padding: 20px 0;
+margin-top: 40px;
+}
+
+/* ====================================================
+MOBILE
+==================================================== */
+
+@media(max-width:768px) {
+
+.section {
+padding: 50px 0;
+}
+
+.hero-section,
+.hero-section .carousel,
+.hero-section .carousel-inner,
+.hero-section .carousel-item,
+.hero-image {
+height: 700px;
+}
+
+.hero-caption {
+left: 25px !important;
+right: 25px !important;
+max-width: none;
+}
+
+.hero-caption h1 {
+font-size: 35px;
+}
+
+.hero-caption p {
+font-size: 15px;
+}
+
+.search-container {
+flex-direction: column;
+}
+
+.location {
+width: 100%;
+border-right: 0;
+border-bottom: 1px solid #ddd;
+}
+
+.search-btn {
+width: 100%;
+height: 50px;
+}
+
+.hero-buttons {
+display: grid;
+grid-template-columns: 1fr;
+}
+
+.gpt-box {
+padding: 25px;
+}
+
+.gpt-avatar {
+width: 150px;
+height: 150px;
+margin-top: 25px;
+}
+
+.contact-box {
+padding: 25px;
+}
+
+.section-title {
+font-size: 27px;
+}
+
+}
+
+
+
+/* ====================================================
+SERVICE CARDS
+==================================================== */
+
+.service-card {
+border: 1px solid #e2edf3 !important;
+border-radius: 12px !important;
+height: 100%;
+transition: .3s;
+box-shadow: none !important;
+}
+
+.service-card:hover {
+transform: translateY(-7px);
+box-shadow: 0 10px 30px rgba(0,100,150,.12) !important;
+}
+
+.service-icon {
+width: 55px;
+height: 55px;
+display: flex;
+align-items: center;
+justify-content: center;
+background: #e7f8ff;
+color: #008bc9;
+border-radius: 50%;
+font-size: 22px;
+margin-bottom: 18px;
+}
+
+.service-card h5 {
+color: #053b68;
+font-weight: 700;
+}
+
+.service-card p {
+color: #71828d;
+font-size: 14px;
+line-height: 1.6;
+}
+
+/* ====================================================
+STEPS
+==================================================== */
+
+.step-card {
+border: 0 !important;
+box-shadow: none !important;
+background: transparent !important;
+}
+
+.step-number {
+width: 45px;
+height: 45px;
+background: #008bc9;
+color: white;
+display: flex;
+align-items: center;
+justify-content: center;
+border-radius: 50%;
+font-weight: 700;
+margin-bottom: 15px;
+}
+
+.step-image {
+height: 230px;
+object-fit: cover;
+border-radius: 15px;
+}
+
+/* ====================================================
+HEALTH GPT
+==================================================== */
+
+.gpt-box {
+background: linear-gradient(120deg, #d7f8fa, #e8f5ff);
+border-radius: 18px;
+padding: 40px;
+position: relative;
+overflow: hidden;
+}
+
+.gpt-title {
+font-size: 34px;
+font-weight: 800;
+color: #053b68;
+}
+
+.gpt-tags span {
+display: inline-block;
+background: white;
+border-radius: 20px;
+padding: 8px 14px;
+margin: 5px;
+font-size: 13px;
+}
+
+.gpt-avatar {
+width: 230px;
+height: 230px;
+border-radius: 50%;
+object-fit: cover;
+}
+
+/* ====================================================
+DOCTORS
+==================================================== */
+
+.doctor-card {
+border: 1px solid #e3edf2 !important;
+border-radius: 12px !important;
+overflow: hidden;
+box-shadow: none !important;
+}
+
+.doctor-image {
+width: 130px !important;
+height: 130px;
+object-fit: cover;
+border-radius: 50%;
+margin: 25px auto 10px;
+}
+
+.doctor-name {
+color: #053b68;
+font-weight: 700;
+}
+
+/* ====================================================
+SPECIALTIES
+==================================================== */
+
+.speciality-pill {
+padding: 15px 20px;
+border: 1px solid #dcecf3;
+border-radius: 10px;
+background: white;
+color: #126086;
+margin-bottom: 15px;
+transition: .3s;
+}
+
+.speciality-pill:hover {
+background: #008bc9;
+color: white;
+}
+
+/* ====================================================
+TESTIMONIALS
+==================================================== */
+
+.testimonial-card {
+border: 1px solid #e0edf2 !important;
+border-radius: 12px !important;
+height: 100%;
+box-shadow: none !important;
+}
+
+.testimonial-avatar {
+width: 50px;
+height: 50px;
+border-radius: 50%;
+}
+
+.stars {
+color: #ffb400;
+}
+
+/* ====================================================
+BLOG
+==================================================== */
+
+.blog-card {
+border: 1px solid #e4edf1 !important;
+border-radius: 12px !important;
+overflow: hidden;
+height: 100%;
+box-shadow: none !important;
+}
+
+.blog-image {
+height: 190px;
+object-fit: cover;
+}
+
+.blog-title {
+color: #053b68;
+font-weight: 700;
+}
+
+/* ====================================================
+CONTACT
+==================================================== */
+
+.contact-box {
+background: #e9f9ff;
+border-radius: 15px;
+padding: 45px;
+}
+
+.contact-input {
+margin-bottom: 18px;
+}
+
+/* ====================================================
+INDIA SECTION
+==================================================== */
+
+.india-map {
+width: 100%;
+max-width: 430px;
+}
+
+.city-list {
+max-height: 350px;
+overflow-y: auto;
+}
+
+.city-item {
+display: flex;
+align-items: center;
+gap: 12px;
+padding: 12px;
+border-bottom: 1px solid #edf2f5;
+}
+
+.city-icon {
+color: #008bc9;
+}
+
+/* ====================================================
+FAQ
+==================================================== */
+
+.faq-section .accordion-button {
+color: #053b68;
+font-weight: 600;
+}
+
+/* ====================================================
+APP
+==================================================== */
+
+.app-box {
+background: #e9faff;
+border-radius: 18px;
+padding: 40px;
+}
+
+.app-image {
+max-width: 280px;
+max-height: 350px;
+object-fit: contain;
+}
+
+/* ====================================================
+FOOTER
+==================================================== */
+
+.health-footer {
+background: #053b68;
+color: white;
+padding-top: 60px;
+}
+
+.health-footer h5 {
+font-weight: 700;
+}
+
+.health-footer a {
+color: #d9effa;
+text-decoration: none;
+display: block;
+margin-bottom: 10px;
+}
+
+.footer-bottom {
+border-top: 1px solid rgba(255,255,255,.15);
+padding: 20px 0;
+margin-top: 40px;
+}
+
+/* ====================================================
+MOBILE
+==================================================== */
+
+@media(max-width:768px) {
+
+.section {
+padding: 50px 0;
+}
+
+.hero-section,
+.hero-section .carousel,
+.hero-section .carousel-inner,
+.hero-section .carousel-item,
+.hero-image {
+height: 700px;
+}
+
+.hero-caption {
+left: 25px !important;
+right: 25px !important;
+max-width: none;
+}
+
+.hero-caption h1 {
+font-size: 35px;
+}
+
+.hero-caption p {
+font-size: 15px;
+}
+
+.search-container {
+flex-direction: column;
+}
+
+.location {
+width: 100%;
+border-right: 0;
+border-bottom: 1px solid #ddd;
+}
+
+.search-btn {
+width: 100%;
+height: 50px;
+}
+
+.hero-buttons {
+display: grid;
+grid-template-columns: 1fr;
+}
+
+.gpt-box {
+padding: 25px;
+}
+
+.gpt-avatar {
+width: 150px;
+height: 150px;
+margin-top: 25px;
+}
+
+.contact-box {
+padding: 25px;
+}
+
+.section-title {
+font-size: 27px;
+}
+
+}
+
+
+
+
