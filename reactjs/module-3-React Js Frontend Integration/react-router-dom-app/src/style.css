@@ -1,0 +1,268 @@
+body {
+  background: #f8f9fa;
+}
+.custom-navbar {
+  background: #ffffff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+.navbar-brand {
+  font-size: 25px;
+  font-weight: 700;
+}
+.navbar-brand span {
+  color: #0d6efd;
+}
+.navbar-nav .nav-link {
+  font-weight: 500;
+  margin: 0 8px;
+  color: #333;
+  transition: 0.3s;
+}
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: #0d6efd;
+}
+.login-btn {
+  border-radius: 8px;
+  padding: 9px 20px;
+}
+.signup-btn {
+  border-radius: 8px;
+  padding: 9px 20px;
+}
+.hero {
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+/* ========================================== FOOTER ========================================== */
+.footer-section {
+  color: #ffffff;
+  background: #111827;
+} /* ========================================== NEWSLETTER ========================================== */
+.footer-newsletter {
+  padding: 60px 0;
+  background: #0d6efd;
+}
+.newsletter-small-title {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  opacity: 0.85;
+}
+.newsletter-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 8px 0;
+}
+.newsletter-form .form-control {
+  height: 52px;
+  border: none;
+  padding-left: 20px;
+}
+.newsletter-form .btn {
+  padding: 0 25px;
+  font-weight: 600;
+  background: #111827;
+  border-color: #111827;
+} /* ========================================== MAIN FOOTER ========================================== */
+.footer-main {
+  padding: 70px 0 50px;
+  background: #111827;
+} /* ========================================== LOGO ========================================== */
+.footer-logo {
+  display: inline-block;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 27px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.footer-logo i {
+  color: #0d6efd;
+  margin-right: 6px;
+}
+.footer-logo span {
+  color: #0d6efd;
+} /* ========================================== DESCRIPTION ========================================== */
+.footer-description {
+  color: #9ca3af;
+  line-height: 1.8;
+  max-width: 390px;
+} /* ========================================== FOOTER HEADINGS ========================================== */
+.footer-heading {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  position: relative;
+  padding-bottom: 12px;
+}
+.footer-heading::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 40px;
+  height: 3px;
+  background: #0d6efd;
+} /* ========================================== FOOTER LINKS ========================================== */
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer-links li {
+  margin-bottom: 13px;
+}
+.footer-links a {
+  color: #9ca3af;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.footer-links a:hover {
+  color: #0d6efd;
+  padding-left: 5px;
+}
+.footer-links i {
+  font-size: 11px;
+  margin-right: 8px;
+  color: #0d6efd;
+} /* ========================================== CONTACT ========================================== */
+.contact-item {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+.contact-icon {
+  width: 38px;
+  height: 38px;
+  min-width: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0d6efd;
+  border-radius: 8px;
+}
+.contact-item strong {
+  font-size: 14px;
+}
+.contact-item p {
+  margin: 4px 0 0;
+  color: #9ca3af;
+  font-size: 14px;
+  line-height: 1.6;
+} /* ========================================== SOCIAL ICONS ========================================== */
+.social-links {
+  display: flex;
+  gap: 10px;
+  margin-top: 25px;
+}
+.social-links a {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #1f2937;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.social-links a:hover {
+  background: #0d6efd;
+  transform: translateY(-4px);
+} /* ========================================== FOOTER BOTTOM ========================================== */
+.footer-bottom {
+  padding: 22px 0;
+  border-top: 1px solid #273244;
+  background: #0b1120;
+}
+.footer-bottom p {
+  color: #9ca3af;
+  font-size: 14px;
+}
+.footer-bottom strong {
+  color: #ffffff;
+}
+.footer-bottom-links {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+.footer-bottom-links a {
+  color: #9ca3af;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+.footer-bottom-links a:hover {
+  color: #0d6efd;
+} /* ========================================== BACK TO TOP ========================================== */
+.back-to-top {
+  position: fixed;
+  right: 25px;
+  bottom: 25px;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0d6efd;
+  color: #ffffff;
+  border-radius: 50%;
+  text-decoration: none;
+  z-index: 999;
+  transition: 0.3s;
+}
+.back-to-top:hover {
+  background: #0b5ed7;
+  color: #ffffff;
+  transform: translateY(-4px);
+} /* ========================================== RESPONSIVE ========================================== */
+@media (max-width: 991px) {
+  .footer-main {
+    padding: 50px 0 35px;
+  }
+  .newsletter-title {
+    font-size: 28px;
+  }
+  .footer-bottom-links {
+    justify-content: center;
+    margin-top: 12px;
+  }
+}
+@media (max-width: 576px) {
+  .footer-newsletter {
+    padding: 45px 0;
+  }
+  .newsletter-title {
+    font-size: 25px;
+  }
+  .newsletter-form .input-group {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .newsletter-form .form-control,
+  .newsletter-form .btn {
+    width: 100%;
+    border-radius: 6px !important;
+  }
+  .footer-main {
+    padding: 45px 0 25px;
+  }
+  .footer-bottom-links {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+  .social-links {
+    margin-bottom: 20px;
+  }
+}
