@@ -1,8 +1,19 @@
 import React from 'react'
-import CustomerHome from './components/customer/CustomerHome'
-
+import HeaderApp from './HeaderApp'
+import BannerApp from './BannerApp'
+import ContentApp from './components/customer/ContentApp'
+import FooterApp from './FooterApp'
+import LoginApp from './components/customer/LoginApp'
+import ChangeLocationApp from './components/customer/ChangeLocationApp'
 export default function Layout() {
   return (
-    <CustomerHome />
+    <>
+    <HeaderApp />
+    <BannerApp />
+    <ContentApp />
+    <FooterApp />
+    <LoginApp />
+    <ChangeLocationApp />
+    </>
   )
 }

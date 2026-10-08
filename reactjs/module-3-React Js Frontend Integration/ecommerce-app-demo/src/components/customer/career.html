@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+<title>Everything delivered in a minutes in all cities clickIt App </title>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<!-- main css -->
+<link rel='stylesheet' type='text/css' media='screen' href='css/style.css'>
+<!-- icons cdn -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+<!-- tailwinds js  -->
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<!-- modal js -->
+<script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script>
+</head>
+<body>
+<!-- clickIt header here -->
+<section id="clickIt-header" class="sticky top-0 z-10 bg-white shadow">
+<!-- HEADER BAR -->
+<div class="flex items-center justify-between p-4 md:grid md:grid-cols-4">
+<!-- LOGO -->
+<div class="flex items-center justify-between w-full md:w-auto">
+<h1 class="text-5xl font-extrabold animate-bounce">
+<a href="index.html"><span class="text-yellow-500">Click</span>
+<span class="text-green-500">IT</span></a>
+</h1>
+<!-- MOBILE TOGGLER -->
+<button
+id="menu-btn"
+class="md:hidden text-3xl"
+onclick="document.getElementById('mobile-menu').classList.toggle('hidden')"
+>
+☰
+</button>
+</div>
+
+<!-- DELIVERY (DESKTOP) -->
+<div class="hidden md:flex items-center">
+<button
+type="button"
+command="show-modal"
+commandfor="dialog2"
+class="text-xl font-medium"
+>
+Delivery in 8 minutes
+</button>
+</div>
+
+<!-- SEARCH (DESKTOP) -->
+<div class="hidden md:flex">
+<input
+type="text"
+placeholder="Search products here..."
+class="border-2 border-gray-300 rounded-3xl w-full p-2"
+/>
+</div>
+<!-- LOGIN & CART (DESKTOP) -->
+<div class="hidden md:flex gap-4 items-center ms-20">
+<button
+type="button"
+command="show-modal"
+commandfor="dialog1"
+class="text-xl font-bold"
+>
+Login
+</button>
+<button
+type="button"
+class="p-3 bg-gray-400 rounded-2xl text-white font-bold"
+>
+<span class="bi bi-cart3"></span> My Cart
+</button>
+</div>
+</div>
+
+<!-- MOBILE MENU -->
+<div id="mobile-menu" class="hidden md:hidden border-t border-gray-200 p-4 space-y-4">
+<!-- DELIVERY -->
+<button
+type="button"
+command="show-modal"
+commandfor="dialog2"
+class="block text-lg font-medium"
+>
+Delivery in 8 minutes
+</button>
+
+<!-- SEARCH -->
+<input
+type="text"
+placeholder="Search products here..."
+class="border-2 border-gray-300 rounded-3xl w-full p-2"
+/>
+
+<!-- LOGIN -->
+<button
+type="button"
+command="show-modal"
+commandfor="dialog1"
+class="block text-lg font-bold"
+>
+Login
+</button>
+<!-- CART -->
+<button
+type="button"
+class="w-full p-3 bg-gray-400 rounded-2xl text-white font-bold"
+>
+<span class="bi bi-cart3"></span> My Cart
+</button>
+</div>
+</section>
+
+<!-- clickIt content here  -->
+<section id="clickIt-content" class="bg-gray-50">
+
+<!-- HERO -->
+<div class="max-w-7xl mx-auto px-4 py-16">
+<div class="grid md:grid-cols-2 gap-10 items-center">
+
+<div>
+<h1 class="text-4xl md:text-5xl font-bold text-gray-900">
+Build the Future of  
+<span class="text-green-600">Quick Commerce</span>
+</h1>
+<p class="mt-6 text-gray-600 text-lg">
+Join clickIT and help deliver happiness to millions in minutes.
+We’re building fast, scalable, and impactful technology.
+</p>
+<button class="mt-6 bg-green-600 text-white px-8 py-3 rounded-xl font-semibold hover:bg-green-700 transition">
+View Open Positions
+</button>
+</div>
+
+<div>
+<img
+src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d"
+alt="Team"
+class="rounded-2xl shadow-lg w-full object-cover"
+/>
+</div>
+
+</div>
+</div>
+
+<!-- WHY JOIN -->
+<div class="bg-white py-16">
+<div class="max-w-7xl mx-auto px-4">
+<h2 class="text-3xl font-bold text-center text-gray-900">
+Why Join clickIT?
+</h2>
+
+<div class="mt-12 grid md:grid-cols-3 gap-8">
+
+<div class="p-6 rounded-xl border hover:shadow-lg transition">
+<h3 class="text-xl font-semibold">Fast Growth</h3>
+<p class="mt-3 text-gray-600">
+Work in a high-growth environment where your impact is visible daily.
+</p>
+</div>
+
+<div class="p-6 rounded-xl border hover:shadow-lg transition">
+<h3 class="text-xl font-semibold">Ownership Mindset</h3>
+<p class="mt-3 text-gray-600">
+We empower teams to take ownership and innovate fearlessly.
+</p>
+</div>
+
+<div class="p-6 rounded-xl border hover:shadow-lg transition">
+<h3 class="text-xl font-semibold">People First</h3>
+<p class="mt-3 text-gray-600">
+Inclusive culture, flexible work, and strong support systems.
+</p>
+</div>
+
+</div>
+</div>
+</div>
+
+<!-- JOB OPENINGS -->
+<div class="py-16">
+<div class="max-w-7xl mx-auto px-4">
+
+<h2 class="text-3xl font-bold text-center text-gray-900">
+Current Openings
+</h2>
+
+<!-- Filters -->
+<div class="mt-8 flex flex-wrap justify-center gap-4">
+<span class="px-4 py-2 bg-green-100 text-green-600 rounded-full text-sm">
+Engineering
+</span>
+<span class="px-4 py-2 bg-gray-100 text-gray-600 rounded-full text-sm">
+Operations
+</span>
+<span class="px-4 py-2 bg-gray-100 text-gray-600 rounded-full text-sm">
+Marketing
+</span>
+<span class="px-4 py-2 bg-gray-100 text-gray-600 rounded-full text-sm">
+Design
+</span>
+</div>
+
+<!-- Job Cards -->
+<div class="mt-12 space-y-6">
+
+<!-- Job 1 -->
+<div class="bg-white rounded-xl p-6 shadow flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+<div>
+<h3 class="text-xl font-semibold text-gray-900">
+Frontend Engineer
+</h3>
+<p class="mt-1 text-gray-600 text-sm">
+Bengaluru · Full Time · Engineering
+</p>
+</div>
+<button command="show-modal"
+commandfor="dialog3" class="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition">
+Apply Now
+</button>
+</div>
+
+<!-- Job 2 -->
+<div class="bg-white rounded-xl p-6 shadow flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+<div>
+<h3 class="text-xl font-semibold text-gray-900">
+Backend Engineer
+</h3>
+<p class="mt-1 text-gray-600 text-sm">
+Remote · Full Time · Engineering
+</p>
+</div>
+<button command="show-modal"
+commandfor="dialog3" class="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition">
+Apply Now
+</button>
+</div>
+
+<!-- Job 3 -->
+<div class="bg-white rounded-xl p-6 shadow flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+<div>
+<h3 class="text-xl font-semibold text-gray-900">
+Operations Manager
+</h3>
+<p class="mt-1 text-gray-600 text-sm">
+Delhi · Full Time · Operations
+</p>
+</div>
+<button command="show-modal"
+commandfor="dialog3" class="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition">
+Apply Now
+</button>
+</div>
+
+<!-- Job 4 -->
+<div class="bg-white rounded-xl p-6 shadow flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+<div>
+<h3 class="text-xl font-semibold text-gray-900">
+Growth Marketing Lead
+</h3>
+<p class="mt-1 text-gray-600 text-sm">
+Mumbai · Full Time · Marketing
+</p>
+</div>
+<button command="show-modal"
+commandfor="dialog3" class="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition">
+Apply Now
+</button>
+</div>
+
+</div>
+</div>
+</div>
+
+<!-- HIRING PROCESS -->
+<div class="bg-white py-16">
+<div class="max-w-7xl mx-auto px-4">
+
+<h2 class="text-3xl font-bold text-center text-gray-900">
+Our Hiring Process
+</h2>
+
+<div class="mt-12 grid md:grid-cols-4 gap-8 text-center">
+
+<div>
+<div class="w-14 h-14 mx-auto bg-green-100 text-green-600 rounded-full flex items-center justify-center font-bold">
+1
+</div>
+<h3 class="mt-4 font-semibold">Apply</h3>
+<p class="mt-2 text-gray-600">
+Submit your application online.
+</p>
+</div>
+
+<div>
+<div class="w-14 h-14 mx-auto bg-green-100 text-green-600 rounded-full flex items-center justify-center font-bold">
+2
+</div>
+<h3 class="mt-4 font-semibold">Screening</h3>
+<p class="mt-2 text-gray-600">
+Initial discussion with our team.
+</p>
+</div>
+
+<div>
+<div class="w-14 h-14 mx-auto bg-green-100 text-green-600 rounded-full flex items-center justify-center font-bold">
+3
+</div>
+<h3 class="mt-4 font-semibold">Interviews</h3>
+<p class="mt-2 text-gray-600">
+Technical and culture-fit interviews.
+</p>
+</div>
+
+<div>
+<div class="w-14 h-14 mx-auto bg-green-100 text-green-600 rounded-full flex items-center justify-center font-bold">
+4
+</div>
+<h3 class="mt-4 font-semibold">Offer</h3>
+<p class="mt-2 text-gray-600">
+Welcome to the clickIT family!
+</p>
+</div>
+
+</div>
+</div>
+</div>
+
+<!-- CTA -->
+<div class="bg-green-600 py-14">
+<div class="max-w-7xl mx-auto px-4 text-center text-white">
+<h2 class="text-3xl font-bold">
+Ready to Make an Impact?
+</h2>
+<p class="mt-4 text-green-100">
+Apply today and be part of a fast-moving team.
+</p>
+<a href="contact.html"><button class="mt-6 bg-white text-green-600 px-8 py-3 rounded-xl font-semibold hover:bg-gray-100 transition">
+Explore Careers
+</button></a>
+</div>
+</div>
+
+</section>
+
+<!-- clickIt footer here -->
+<footer class="bg-gray-50 border-t border-gray-200">
+<div class="max-w-7xl mx-auto px-4 py-12">
+
+<!-- Top Grid -->
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 text-sm text-gray-700">
+
+<!-- Logo & Description -->
+<div class="col-span-2">
+<h2 class="text-2xl font-bold text-green-600">clickIT</h2>
+<p class="mt-3 text-gray-600 leading-relaxed">
+clickIT delivers groceries and essentials in minutes. Fast, reliable, and affordable.
+</p>
+</div>
+
+<!-- Useful Links -->
+<div>
+<h3 class="font-semibold text-gray-900 mb-3">Useful Links</h3>
+<ul class="space-y-2">
+<li><a href="about.html" class="hover:text-green-600">About Us</a></li>
+<li><a href="career.html" class="hover:text-green-600">Careers</a></li>
+<li><a href="blogs.html" class="hover:text-green-600">Blog</a></li>
+<li><a href="faq.html" class="hover:text-green-600">FAQs</a></li>
+</ul>
+</div>
+
+<!-- Categories -->
+<div>
+<h3 class="font-semibold text-gray-900 mb-3">Categories</h3>
+<ul class="space-y-2">
+<li><a href="products.html" class="hover:text-green-600">Fruits & Vegetables</a></li>
+<li><a href="products.html" class="hover:text-green-600">Dairy & Bakery</a></li>
+<li><a href="products.html" class="hover:text-green-600">Snacks & Beverages</a></li>
+<li><a href="404.html" class="hover:text-green-600">Personal Care</a></li>
+</ul>
+</div>
+
+<!-- Policies -->
+<div>
+<h3 class="font-semibold text-gray-900 mb-3">Policies</h3>
+<ul class="space-y-2">
+<li><a href="privacy.html" class="hover:text-green-600">Privacy Policy</a></li>
+<li><a href="terms.html" class="hover:text-green-600">Terms & Conditions</a></li>
+<li><a href="404.html" class="hover:text-green-600">Refund Policy</a></li>
+<li><a href="404.html" class="hover:text-green-600">Security</a></li>
+</ul>
+</div>
+
+<!-- App & Social -->
+<div>
+<h3 class="font-semibold text-gray-900 mb-3">Connect With Us</h3>
+
+<!-- Social Icons -->
+<div class="flex space-x-4 mb-4">
+<a href="#" class="text-gray-500 hover:text-green-600">
+<i class="fab fa-facebook-f"></i>
+</a>
+<a href="#" class="text-gray-500 hover:text-green-600">
+<i class="fab fa-instagram"></i>
+</a>
+<a href="#" class="text-gray-500 hover:text-green-600">
+<i class="fab fa-twitter"></i>
+</a>
+<a href="#" class="text-gray-500 hover:text-green-600">
+<i class="fab fa-linkedin-in"></i>
+</a>
+</div>
+
+<!-- App Buttons -->
+<div class="space-y-2">
+<button class="w-full bg-black text-white py-2 rounded-lg text-xs">
+Download on App Store
+</button>
+<button class="w-full bg-black text-white py-2 rounded-lg text-xs">
+Get it on Google Play
+</button>
+</div>
+</div>
+
+</div>
+
+<!-- Divider -->
+<div class="border-t border-gray-200 mt-10 pt-6">
+
+<!-- Bottom Bar -->
+<div class="flex flex-col md:flex-row justify-between items-center text-sm text-gray-500 gap-3">
+<p>© 2025 clickIT. All rights reserved.</p>
+<p>Made with ❤️ in India</p>
+</div>
+</div>
+</div>
+</footer>
+
+<!-- clickIt login modal  -->
+<el-dialog> 
+<dialog id="dialog1" aria-labelledby="dialog-title" class="fixed inset-0 size-auto max-h-none max-w-none overflow-y-auto bg-transparent backdrop:bg-transparent">
+<el-dialog-backdrop class="fixed inset-0 bg-gray-500/75 transition-opacity data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in"></el-dialog-backdrop>
+
+<div tabindex="0" class="flex min-h-full items-end justify-center p-4 text-center focus:outline-none sm:items-center sm:p-0 -mt-15">
+<el-dialog-panel class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all data-closed:translate-y-4 data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in sm:my-8 sm:w-full sm:max-w-lg data-closed:sm:translate-y-0 data-closed:sm:scale-95">
+<div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+<div class="mt-3 text-center">
+<h2 class="p-3 bg-amber-500 rounded-4xl w-30 text-white text-center mx-auto text-2xl">clickIt</h2>    
+<h3  class="text-2xl font-bold text-gray-900 text-center">India's last minute app <br/>
+<span class="font-light">Log in or Sign up</span>
+</h3>
+<div class="mt-2 p-8">
+<form>
+<div class="mb-3">
+<input type="text" placeholder="Enter a mobile for Login *" class="w-full border border-2 border-gray-300 p-3 rounded-2xl">
+</div>
+<div class="mb-3">
+<input type="submit" value="Continue" class="bg-gray-600 text-white w-full p-3 rounded-2xl">
+</div>
+<p>By continuing, you agree to our Terms of service & Privacy policy</p>
+</form>
+</div>
+</div>
+</div>
+
+</el-dialog-panel>
+</div>
+</dialog>
+</el-dialog>
+
+<!-- change location or detect location modal -->
+<el-dialog> 
+<dialog id="dialog2" aria-labelledby="dialog-title" class="fixed inset-0 size-auto max-h-none max-w-none overflow-y-auto bg-transparent backdrop:bg-transparent">
+<el-dialog-backdrop class="fixed inset-0 bg-gray-500/75 transition-opacity data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in"></el-dialog-backdrop>
+
+<div tabindex="0" class="w-180 mt-25 ms-5  justify-center p-4 text-center focus:outline-none sm:items-center sm:p-0">
+
+<el-dialog-panel class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all data-closed:translate-y-4 data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in sm:my-8 sm:w-full sm:max-w-lg data-closed:sm:translate-y-0 data-closed:sm:scale-95">
+
+<div class="bg-white px-0 pt-0 pb-0 sm:p-6 sm:pb-4">
+<div class="mt-3 text-center">
+<h2 class="p-0  rounded-4xl w-30 text-white ms-3">Change location</h2>    
+<div class="mt-2 p-0">
+<form>
+<div class="mb-3 flex">
+<button type="button"  class="bg-green-600 text-white w-70 p-3 rounded-xl">Detect my location</button>-<span class="p-2 rounded-full border-2 bg-gray-100">OR</span>-
+<button type="button" class="bg-gray-400 text-white w-70 p-3">Search Delivery location</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</el-dialog-panel>
+</div>
+</dialog>
+</el-dialog>
+<!-- clickIt Register modal  -->
+<!-- clickIt forget password modal  --> 
+<!--apply for job modal  -->
+
+<el-dialog>
+<dialog
+id="dialog3"
+aria-labelledby="dialog-title"
+class="fixed inset-0 z-50 size-auto max-h-none max-w-none overflow-y-auto bg-transparent backdrop:bg-transparent"
+>
+<!-- Backdrop -->
+<el-dialog-backdrop
+class="fixed inset-0 bg-gray-500/75 transition-opacity data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in">
+</el-dialog-backdrop>
+
+<div tabindex="0"
+class="flex min-h-full items-center justify-center p-4 text-center focus:outline-none">
+
+<!-- Modal Panel -->
+<el-dialog-panel
+class="relative w-full max-w-xl transform overflow-hidden rounded-2xl bg-white text-left shadow-xl transition-all">
+
+<!-- Header -->
+<div class="px-6 py-4 border-b">
+<h2 id="dialog-title"
+class="text-2xl font-bold text-gray-900 text-center">
+Apply for a Job
+</h2>
+<p class="mt-1 text-sm text-gray-600 text-center">
+Fill in your details and we’ll get back to you
+</p>
+</div>
+
+<!-- Form -->
+<div class="px-6 py-6 max-h-[70vh] overflow-y-auto">
+<form class="space-y-4">
+
+<!-- Full Name -->
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-1">
+Full Name *
+</label>
+<input type="text" required
+class="w-full rounded-xl border border-gray-300 p-3 focus:border-green-500 focus:ring-green-500"
+placeholder="Enter your full name">
+</div>
+
+<!-- Email -->
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-1">
+Email Address *
+</label>
+<input type="email" required
+class="w-full rounded-xl border border-gray-300 p-3 focus:border-green-500 focus:ring-green-500"
+placeholder="example@email.com">
+</div>
+
+<!-- Phone -->
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-1">
+Mobile Number *
+</label>
+<input type="tel" required
+class="w-full rounded-xl border border-gray-300 p-3 focus:border-green-500 focus:ring-green-500"
+placeholder="+91 XXXXX XXXXX">
+</div>
+
+<!-- Job Role -->
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-1">
+Applying For *
+</label>
+<select required
+class="w-full rounded-xl border border-gray-300 p-3 focus:border-green-500 focus:ring-green-500">
+<option>Select Job Role</option>
+<option>Frontend Engineer</option>
+<option>Backend Engineer</option>
+<option>Operations Manager</option>
+<option>Marketing Executive</option>
+<option>UI/UX Designer</option>
+</select>
+</div>
+
+<!-- Experience -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-1">
+Experience (Years)
+</label>
+<input type="number"
+class="w-full rounded-xl border border-gray-300 p-3 focus:border-green-500 focus:ring-green-500"
+placeholder="0 - 10">
+</div>
+
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-1">
+Current Location
+</label>
+<input type="text"
+class="w-full rounded-xl border border-gray-300 p-3 focus:border-green-500 focus:ring-green-500"
+placeholder="City">
+</div>
+</div>
+
+<!-- Resume -->
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-1">
+Upload Resume *
+</label>
+<input type="file" required
+class="w-full rounded-xl border border-gray-300 p-2 file:mr-4 file:rounded-lg file:border-0 file:bg-green-100 file:px-4 file:py-2 file:text-green-600 hover:file:bg-green-200">
+</div>
+
+<!-- Cover Letter -->
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-1">
+Cover Letter
+</label>
+<textarea rows="4"
+class="w-full rounded-xl border border-gray-300 p-3 focus:border-green-500 focus:ring-green-500"
+placeholder="Tell us why you are a great fit..."></textarea>
+</div>
+
+<!-- Terms -->
+<div class="flex items-start gap-2 text-sm text-gray-600">
+<input type="checkbox" required class="mt-1">
+<p>
+I agree to the processing of my data as per the
+<a href="#" class="text-green-600 underline">Privacy Policy</a>.
+</p>
+</div>
+
+<!-- Submit -->
+<button type="submit"
+class="w-full bg-green-600 text-white py-3 rounded-xl font-semibold hover:bg-green-700 transition">
+Submit Application
+</button>
+
+</form>
+</div>
+
+</el-dialog-panel>
+</div>
+</dialog>
+</el-dialog>
+
+</body>
+</html>
