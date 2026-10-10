@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 export default function HeaderApp() {
   return (
     <>
@@ -9,10 +10,10 @@ export default function HeaderApp() {
       {/* LOGO */}
       <div className="flex items-center justify-between w-full md:w-auto">
         <h1 className="text-5xl font-extrabold animate-bounce">
-          <a href="index.html">
+          <Link to="/">
             <span className="text-yellow-500">Click</span>
             <span className="text-green-500">IT</span>
-          </a>
+          </Link>
         </h1>
         {/* MOBILE TOGGLER */}
         <button

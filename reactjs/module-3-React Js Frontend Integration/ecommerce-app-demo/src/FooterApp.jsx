@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 export default function FooterApp() {
   return (
     <>
@@ -20,14 +21,14 @@ export default function FooterApp() {
           <h3 className="font-semibold text-gray-900 mb-3">Useful Links</h3>
           <ul className="space-y-2">
             <li>
-              <a href="about.html" className="hover:text-green-600">
+              <Link to="/about-us" className="hover:text-green-600">
                 About Us
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="career.html" className="hover:text-green-600">
+              <Link to="/career" className="hover:text-green-600">
                 Careers
-              </a>
+              </Link>
             </li>
             <li>
               <a href="blogs.html" className="hover:text-green-600">
