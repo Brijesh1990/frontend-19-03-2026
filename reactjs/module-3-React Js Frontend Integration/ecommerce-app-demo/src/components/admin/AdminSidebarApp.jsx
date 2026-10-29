@@ -63,8 +63,7 @@ className="nav-link flex items-center gap-3 rounded-xl px-3 py-3 text-sm text-sl
 </span>
 Add Category
 </Link>
-<a
-href="#categories"
+<Link to="/admin-login/addproducts"
 data-page="Categories"
 className="nav-link flex items-center gap-3 rounded-xl px-3 py-3 text-sm text-slate-600 hover:bg-slate-50"
 >
@@ -72,25 +71,13 @@ className="nav-link flex items-center gap-3 rounded-xl px-3 py-3 text-sm text-sl
 ▤
 </span>
 Add Products
-</a>
-<a
-href="#customers"
-data-page="Customers"
-className="nav-link flex items-center gap-3 rounded-xl px-3 py-3 text-sm text-slate-600 hover:bg-slate-50"
->
-<span className="nav-icon grid h-9 w-9 place-items-center rounded-lg bg-slate-100">
-👥
-</span>
-Customers
-</a>
-
+</Link>
 </nav>
 <p className="px-3 pb-3 pt-8 text-[11px] font-extrabold uppercase tracking-[0.16em] text-slate-400">
 Manage
 </p>
 <nav className="space-y-1">
-<a
-href="#delivery"
+<Link to="/admin-login/manage-orders"
 data-page="Delivery"
 className="nav-link flex items-center gap-3 rounded-xl px-3 py-3 text-sm text-slate-600 hover:bg-slate-50"
 >
@@ -98,9 +85,8 @@ className="nav-link flex items-center gap-3 rounded-xl px-3 py-3 text-sm text-sl
 🛵
 </span>
 Manage Orders
-</a>
-<a
-href="#reports"
+</Link>
+<Link to="/admin-login/manage-feedback"
 data-page="Reports"
 className="nav-link flex items-center gap-3 rounded-xl px-3 py-3 text-sm text-slate-600 hover:bg-slate-50"
 >
@@ -108,7 +94,7 @@ className="nav-link flex items-center gap-3 rounded-xl px-3 py-3 text-sm text-sl
 ▥
 </span>
 Manage Feedback
-</a>
+</Link>
 
 </nav>
 </div>
@@ -116,12 +102,11 @@ Manage Feedback
 <div className="rounded-2xl bg-emerald-50 p-4">
 
 
-<a
-href="mailto:support@clickit.com"
+<Link to="mailto:support@clickit.com"
 className="mt-3 inline-block text-xs font-bold text-emerald-700 hover:underline"
 >
 Contact support →
-</a>
+</Link>
 </div>
 <button
 id="logoutButton"

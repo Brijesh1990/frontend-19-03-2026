@@ -25,18 +25,24 @@ export default function FooterApp() {
                 About Us
               </Link>
             </li>
+
+             <li>
+              <Link to="/contact" className="hover:text-green-600">
+                Contact Us
+              </Link>
+            </li>
             <li>
               <Link to="/career" className="hover:text-green-600">
                 Careers
               </Link>
             </li>
             <li>
-              <a href="blogs.html" className="hover:text-green-600">
+              <a href="/blogs" className="hover:text-green-600">
                 Blog
               </a>
             </li>
             <li>
-              <a href="faq.html" className="hover:text-green-600">
+              <a href="/faq" className="hover:text-green-600">
                 FAQs
               </a>
             </li>
@@ -47,22 +53,22 @@ export default function FooterApp() {
           <h3 className="font-semibold text-gray-900 mb-3">Categories</h3>
           <ul className="space-y-2">
             <li>
-              <a href="products.html" className="hover:text-green-600">
+              <a href="/products" className="hover:text-green-600">
                 Fruits &amp; Vegetables
               </a>
             </li>
             <li>
-              <a href="products.html" className="hover:text-green-600">
+              <a href="/products" className="hover:text-green-600">
                 Dairy &amp; Bakery
               </a>
             </li>
             <li>
-              <a href="products.html" className="hover:text-green-600">
+              <a href="/products" className="hover:text-green-600">
                 Snacks &amp; Beverages
               </a>
             </li>
             <li>
-              <a href="404.html" className="hover:text-green-600">
+              <a href="/products" className="hover:text-green-600">
                 Personal Care
               </a>
             </li>
@@ -73,22 +79,22 @@ export default function FooterApp() {
           <h3 className="font-semibold text-gray-900 mb-3">Policies</h3>
           <ul className="space-y-2">
             <li>
-              <a href="privacy.html" className="hover:text-green-600">
+              <a href="/privacy" className="hover:text-green-600">
                 Privacy Policy
               </a>
             </li>
             <li>
-              <a href="terms.html" className="hover:text-green-600">
+              <a href="/terms" className="hover:text-green-600">
                 Terms &amp; Conditions
               </a>
             </li>
             <li>
-              <a href="404.html" className="hover:text-green-600">
+              <a href="/terms" className="hover:text-green-600">
                 Refund Policy
               </a>
             </li>
             <li>
-              <a href="404.html" className="hover:text-green-600">
+              <a href="/terms" className="hover:text-green-600">
                 Security
               </a>
             </li>
