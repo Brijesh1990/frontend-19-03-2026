@@ -1,37 +1,126 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ecommerce-app-demo</title>
-    <!-- modal js -->
+<head>
+<meta charset="UTF-8" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ecommerce-app-demo</title>
+<!-- modal js -->
 <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  
-    
-<!-- Google Translate Script -->
-  <!-- Google Translate script -->
-    <script type="text/javascript">
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement(
-                {
-                    pageLanguage: 'en',         // source language
-                    includedLanguages: '',       // empty = all languages
-                    layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL
-                },
-                'google_translate_element'
-            );
-        }
-    </script>
+</head>
+<body>
+<div id="root"></div>
+<script type="module" src="/src/main.jsx"></script>>
+  <script>
+    const form = document.getElementById('loginForm');
+    const password = document.getElementById('password');
+    const message = document.getElementById('message');
+    document.getElementById('togglePassword').addEventListener('click', function () {
+      const isPassword = password.type === 'password';
+      password.type = isPassword ? 'text' : 'password';
+      this.textContent = isPassword ? 'Hide password' : 'Show password';
+    });
+    document.getElementById('forgotLink').addEventListener('click', function (event) {
+      event.preventDefault();
+      message.className = 'rounded-xl bg-amber-50 px-4 py-3 text-sm text-amber-800';
+      message.textContent = 'Password reset is a demo action. Connect your email/password reset flow.';
+    });
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+      // Demo credentials only. Replace this block with a real authentication API.
+      const email = document.getElementById('email').value.trim();
+      const pass = password.value;
+      if (email === 'admin@clickit.com' && pass === 'admin123') {
+        sessionStorage.setItem('clickitAdminDemo', 'true');
+        window.location.href = 'dashboard.html';
+      } else {
+        message.className = 'rounded-xl bg-rose-50 px-4 py-3 text-sm text-rose-700';
+        message.textContent = 'Invalid demo credentials. Use admin@clickit.com / admin123.';
+      }
+    });
+  </script>
 
-    <script
-        type="text/javascript"
-        src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
-    </script>
 
-  </body>
+
+  <script>
+    const sidebar = document.getElementById('sidebar');
+    const overlay = document.getElementById('sidebarOverlay');
+    const toast = document.getElementById('toast');
+    const productDialog = document.getElementById('productDialog');
+    let toastTimer;
+    function showToast(text) {
+      toast.textContent = text;
+      toast.classList.remove('hidden');
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => toast.classList.add('hidden'), 3000);
+    }
+    function openSidebar() { sidebar.classList.remove('-translate-x-full'); overlay.classList.remove('hidden'); }
+    function closeSidebar() { sidebar.classList.add('-translate-x-full'); overlay.classList.add('hidden'); }
+    document.getElementById('openSidebar').addEventListener('click', openSidebar);
+    document.getElementById('closeSidebar').addEventListener('click', closeSidebar);
+    overlay.addEventListener('click', closeSidebar);
+    document.getElementById('logoutButton').addEventListener('click', () => {
+      sessionStorage.removeItem('clickitAdminDemo');
+      window.location.href = 'index.html';
+    });
+    document.querySelectorAll('.nav-link').forEach(link => link.addEventListener('click', event => {
+      event.preventDefault();
+      document.querySelectorAll('.nav-link').forEach(item => item.classList.remove('active'));
+      link.classList.add('active');
+      const page = link.dataset.page;
+      document.getElementById('pageTitle').textContent = page;
+      document.getElementById('breadcrumb').textContent = page;
+      closeSidebar();
+      if (page !== 'Overview') showToast(page + ' selected — connect this menu to your ' + page.toLowerCase() + ' page/API.');
+    }));
+    document.querySelectorAll('[data-goto]').forEach(button => button.addEventListener('click', () => {
+      const page = button.dataset.goto;
+      const target = document.querySelector('.nav-link[data-page="' + page + '"]');
+      if (target) target.click();
+    }));
+    document.getElementById('notificationButton').addEventListener('click', () => showToast('You have 3 new store notifications.'));
+    document.getElementById('profileMenu').addEventListener('click', () => showToast('Signed in as Brijesh Kumar — Administrator.'));
+    document.getElementById('chartRange').addEventListener('change', event => showToast('Chart range changed to last ' + event.target.value + ' days. Connect analytics data for live values.'));
+    document.getElementById('exportButton').addEventListener('click', () => {
+      const rows = [['Order ID','Customer','Date','Amount','Status'],['CK10248','Aarav Shah','27 Oct 2026','1240','Delivered'],['CK10247','Diya Patel','27 Oct 2026','865','Processing'],['CK10246','Rohan Mehta','26 Oct 2026','2110','Out for delivery'],['CK10245','Anaya Joshi','26 Oct 2026','540','Cancelled']];
+      const csv = rows.map(row => row.map(value => '"' + String(value).replaceAll('"','""') + '"').join(',')).join('\n');
+      const blob = new Blob([csv], {type: 'text/csv;charset=utf-8;'});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a'); a.href = url; a.download = 'clickit-orders.csv'; a.click(); URL.revokeObjectURL(url);
+      showToast('Orders exported to CSV.');
+    });
+    document.getElementById('globalSearch').addEventListener('input', event => {
+      const query = event.target.value.toLowerCase();
+      document.querySelectorAll('#ordersTable tr').forEach(row => row.classList.toggle('hidden', !row.textContent.toLowerCase().includes(query)));
+    });
+    document.querySelectorAll('.order-detail').forEach(button => button.addEventListener('click', () => {
+      const row = button.closest('tr');
+      showToast(row.cells[0].textContent + ' • ' + row.cells[1].querySelector('div').textContent + ' • ' + row.cells[4].textContent.trim());
+    }));
+    document.getElementById('addProductButton').addEventListener('click', () => productDialog.showModal());
+    document.getElementById('closeProductDialog').addEventListener('click', () => productDialog.close());
+    document.getElementById('cancelProduct').addEventListener('click', () => productDialog.close());
+    document.getElementById('productForm').addEventListener('submit', event => {
+      event.preventDefault();
+      const name = document.getElementById('productName').value.trim();
+      const price = Number(document.getElementById('productPrice').value);
+      const stock = Number(document.getElementById('productStock').value);
+      if (!name || price < 1 || stock < 0) return;
+      const row = document.createElement('div');
+      row.className = 'flex items-center gap-3 border-b border-slate-100 py-3';
+      const icon = document.createElement('div'); icon.className = 'grid h-10 w-10 place-items-center rounded-xl bg-emerald-50'; icon.textContent = '📦';
+      const info = document.createElement('div'); info.className = 'min-w-0 flex-1';
+      const title = document.createElement('p'); title.className = 'truncate text-sm font-bold'; title.textContent = name;
+      const sub = document.createElement('p'); sub.className = 'text-xs text-slate-400'; sub.textContent = 'New product • ₹' + price;
+      info.append(title, sub);
+      const qty = document.createElement('span'); qty.className = 'rounded-lg px-2.5 py-1.5 text-xs font-bold ' + (stock < 10 ? 'bg-rose-50 text-rose-700' : 'bg-emerald-50 text-emerald-700'); qty.textContent = stock + ' left';
+      row.append(icon, info, qty);
+      const inventory = document.querySelector('section.grid article:last-child .divide-y');
+      inventory.prepend(row);
+      productDialog.close();
+      event.target.reset();
+      showToast('Product "' + name + '" added to the demo inventory.');
+    });
+  </script>
+</body>
 </html>
