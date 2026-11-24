@@ -1,5 +1,8 @@
-import React,{useState} from 'react'
+import React,{useState, useEffect} from 'react'
+import AOS from 'aos';
+import 'aos/dist/aos.css'
 export default function CartApp() {
+
     const[cart,setCart]=useState([]);
     const products=[
         {id:1,pname:"samsung galaxy",price:45000},
@@ -18,10 +21,19 @@ export default function CartApp() {
         (sum,product) =>sum + product.price, 0
     );
 
-  return (
-    <div className='w-50 mx-auto mt-5 p-3'>
+    // Aos initialzed & used in react components
+     useEffect(() => {
+     AOS.init({
+      duration: 1000,
+      once: true,
+      offset: 100,
+    });
+  }, []);
 
-    <h2>Products</h2>
+  return (
+    <div className='w-50 mx-auto mt-5 p-3' data-aos="fade-right">
+
+    <h2 data-aos="fade-up">Products</h2>
 
     <hr />
 
@@ -30,7 +42,7 @@ export default function CartApp() {
       return(
       <>   
       <div key={product.id}> 
-      <table>
+      <table data-aos="fade-up">
       <tr>
       <td>
       {product.pname} - 💲 {product.price} 
@@ -45,8 +57,8 @@ export default function CartApp() {
       
     })}
 
-    <h2>Cart Items : <span className='badge badge-sm  bg-danger text-white rounded-circle'> {cart.length} </span></h2>
-    <h3>Subtotal of Products Price : 💲 {total}</h3>
+    <h2 data-aos="fade-up">Cart Items : <span className='badge badge-sm  bg-danger text-white rounded-circle'> {cart.length} </span></h2>
+    <h3 data-aos="fade-up">Subtotal of Products Price : 💲 {total}</h3>
       
     </div>
   )
